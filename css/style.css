@@ -38,32 +38,48 @@ header .menu-wraper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  felx-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 570px;
+  padding: 10px 20px;
   margin-bottom: 130px;
 }
 
 header .menu-wraper .logo {
-  min-width: 110px;
-}
-
-header .menu-wraper ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 110px;
 }
 
 header .menu-wraper ul li {
+  position: relative;
   padding: 20px 20px;
+  display: inline-block;
+}
+
+header .menu-wraper ul li:hover:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header .menu-wraper ul li:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  background-color: #000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 header .menu-wraper ul li a {
@@ -75,17 +91,12 @@ header .menu-wraper ul li a {
 }
 
 header .menu-wraper .btn-wraper {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  max-width: 450px;
+  max-width: 600px;
 }
 
 header .menu-wraper .btn-wraper .btn {
   height: 40px;
-  width: 280px;
+  min-width: 270px;
 }
 
 header .header-head {
@@ -120,6 +131,25 @@ header .get-btn:hover {
   background-color: #782ad1;
 }
 
+.responsive-btn {
+  display: none;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  cursor: pointer;
+}
+
+.responsive-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+}
+
 .clouds {
   padding: 25px 10px;
   background-color: #fff;
@@ -135,6 +165,8 @@ header .get-btn:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -596,5 +628,36 @@ footer .container .btn-container .btn-desc {
 footer .container .btn-container a {
   display: block;
   margin-top: 16px;
+}
+
+@media screen and (max-width: 935px) {
+  .responsive-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    z-index: 99;
+  }
+  .hide {
+    display: none;
+  }
+  .menu-wraper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0, 0, 0, 0.452);
+  }
+  .menu-wraper .logo {
+    margin-right: 85%;
+  }
+  .menu-wraper li {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -28,19 +28,39 @@ header {
     }
     .menu-wraper {
         display: flex;
-        felx-wrap: wrap;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        max-width: 570px;
+        padding: 10px 20px;
         margin-bottom: 130px;
         .logo {
-            min-width: 110px;
+            width: 110px;
         }
         ul {
-            display: inline-flex;
-            justify-content: space-between;
             li {
+                position: relative;
                 padding: 20px 20px;
+                display: inline-block;
+                &:hover {
+                    &:after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 3px;
+                        width: 100%;
+                        background-color: #000;
+                        transition: 0.4s;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 0;
+                    width: 0;
+                    background-color: #000;
+                    transition: 0.4s;
+                }
                 a {
                     font-family: inter, sans-serif;
                     font-size: 14px;
@@ -51,12 +71,10 @@ header {
             }
         }
         .btn-wraper {
-            display: inline-flex;
-            justify-content: space-around;
-            max-width: 450px;
+            max-width: 600px;
             .btn {
                 height: 40px;
-                width: 280px;
+                min-width: 270px;
             }
         }
     }
@@ -90,6 +108,24 @@ header {
     }
 }
 
+.responsive-btn {
+    display: none;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    cursor: pointer;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 3px;
+        width: 100%;
+        background-color: #000;
+    }
+}
+
 // clouds
 .clouds {
     padding: 25px 10px;
@@ -100,6 +136,7 @@ header {
         border-bottom: 1px solid #C0CCDA1A;
         .cloud-list {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
     }
@@ -479,4 +516,28 @@ footer {
 }
 
 // media queris
-@media screen and (max-width:) {}
+@media screen and (max-width: 935px) {
+    .responsive-btn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        z-index: 99;
+    }
+    .hide {
+        display: none;
+    }
+    .menu-wraper {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.452);
+        .logo {
+            margin-right: 85%;
+        }
+        li {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
