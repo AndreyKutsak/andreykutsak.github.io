@@ -61,6 +61,23 @@ header {
                 position: relative;
                 padding: 20px 20px;
                 display: inline-block;
+                a {
+                    font-family: inter, sans-serif;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-transform: capitalize;
+                    color: #18191F;
+                }
+                .hide {
+                    transform: translateY(-200%);
+                    opacity: 0;
+                }
+                .dropdown {
+                    transition: 0.4s;
+                    position: absolute;
+                }
+            }
+            .h-line {
                 &:after {
                     content: "";
                     position: absolute;
@@ -82,21 +99,6 @@ header {
                         background-color: #000;
                         transition: 0.4s;
                     }
-                }
-                a {
-                    font-family: inter, sans-serif;
-                    font-size: 14px;
-                    line-height: 20px;
-                    text-transform: capitalize;
-                    color: #18191F;
-                }
-                .hide {
-                    transform: translateY(-1000%);
-                    opacity: 0;
-                }
-                .dropdown {
-                    transition: 0.4s;
-                    position: absolute;
                 }
             }
             .arrow {
@@ -574,6 +576,7 @@ footer {
 @media screen and(max-width: 1115px) {
     .header-head {
         font-size: 45px;
+        line-height: 50px;
         text-align: center;
     }
     .get-btn {
@@ -653,6 +656,7 @@ footer {
     }
     header .header-head {
         font-size: 38px;
+        line-height: 43px;
     }
 }
 
