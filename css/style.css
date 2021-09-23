@@ -16,6 +16,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .head-desc {
@@ -649,7 +650,6 @@ footer .container .footer-nav {
 
 footer .container .footer-nav li {
   display: inline-block;
-  padding-right: 20px;
 }
 
 footer .container .footer-nav li a {
