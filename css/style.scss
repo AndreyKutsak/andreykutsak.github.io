@@ -556,7 +556,7 @@ footer {
 
 // media queris
 @media screen and (max-width: 1040px) {
-    .shadow-header {
+    header .head-content-wraper .shadow-header {
         font-size: 55px;
         line-height: 60px;
     }
@@ -677,10 +677,11 @@ footer {
                 position: absolute;
                 padding: 10px 0;
                 top: 55px;
+                left: 0;
                 align-items: center;
                 flex-direction: column;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.663);
+                width: 100vw;
+                background-color: rgba(74, 76, 102, 0.788);
                 .menu {
                     align-items: center;
                     flex-direction: column;
@@ -695,13 +696,18 @@ footer {
                         }
                         .dropdown {
                             width: inherit;
-                            background-color: rgb(73, 73, 73);
+                            background-color: rgba(28, 28, 29, 0.329);
                             left: 0;
                             li {
                                 width: inherit;
                                 padding: 10px 20px;
                                 border-bottom: 2px solid #36aeae;
                             }
+                        }
+                    }
+                    .arrow {
+                        &:before {
+                            left: 50%;
                         }
                     }
                 }

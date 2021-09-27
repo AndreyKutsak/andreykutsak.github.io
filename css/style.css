@@ -681,7 +681,7 @@ footer .container .btn-container a {
 }
 
 @media screen and (max-width: 1040px) {
-  .shadow-header {
+  header .head-content-wraper .shadow-header {
     font-size: 55px;
     line-height: 60px;
   }
@@ -800,6 +800,7 @@ footer .container .btn-container a {
     position: absolute;
     padding: 10px 0;
     top: 55px;
+    left: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -807,8 +808,8 @@ footer .container .btn-container a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.663);
+    width: 100vw;
+    background-color: rgba(74, 76, 102, 0.788);
   }
   header .menu-wraper .wraper .menu {
     -webkit-box-align: center;
@@ -831,13 +832,16 @@ footer .container .btn-container a {
   }
   header .menu-wraper .wraper .menu .menu-item .dropdown {
     width: inherit;
-    background-color: #494949;
+    background-color: rgba(28, 28, 29, 0.329);
     left: 0;
   }
   header .menu-wraper .wraper .menu .menu-item .dropdown li {
     width: inherit;
     padding: 10px 20px;
     border-bottom: 2px solid #36aeae;
+  }
+  header .menu-wraper .wraper .menu .arrow:before {
+    left: 50%;
   }
   header .hide {
     -webkit-transform: translateX(-500%);
