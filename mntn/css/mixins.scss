@@ -1,0 +1,117 @@
+@mixin header-head {
+    font-family: $Chronic;
+    font-weight: 600;
+    font-size: getSize(88);
+    line-height: getHeight(100);
+    text-transform: capitalize;
+    color: $white;
+    margin-bottom: 32px;
+}
+@mixin logo{
+    font-family: $Chronic;
+    font-size: getSize(32);
+    line-height: getHeight(32);
+    letter-spacing: 0.01em;
+    color: $white;
+    text-transform: uppercase;
+}
+@mixin sidebar-item{
+    font-family: $Gilroy;
+    font-size: getSize(18);
+    line-height: getHeight(22);
+    text-align: right;
+    color: $white;
+}
+@mixin menu-items{
+    font-family: $Gilroy;   
+    font-weight: bold;
+    font-size: getSize(18);
+    line-height: getHeight(22);
+    color: $white;
+}
+@mixin line-text {
+    position: relative;
+    font-family: Gilroy;
+    font-weight: 800;
+    font-size: getSize(18);
+    line-height: getHeight(22);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: $yellow;
+    margin-left: 100px;
+    margin-bottom: 32px;
+    &:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: -100px;
+        height: 2px;
+        width: 72px;
+        background-color: $yellow;
+        transform: translateY(-50%);
+    } 
+}
+@mixin block-head {
+    font-family:$Chronic;
+    font-weight: 600;
+    font-size: getSize(64);
+    line-height: getHeight(77);
+    max-width: getSize(555);
+    text-align: left;
+    color: $white;
+    margin-bottom: 27px;
+}
+@mixin block-desc{
+    font-family: $Gilroy;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+
+text-align: left;
+color: $white;
+margin-bottom: 27px;
+}
+@mixin blog-head{
+    font-family: $Gilroy;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: $yellow;
+}
+@mixin block-link {
+    position: relative;        
+        font-family: $Gilroy;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+color: $yellow;
+&:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 16px;
+    background-color: $yellow;
+}
+&:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(-45deg);
+    border: solid $yellow;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+}
+@mixin footer-link{
+    font-family: $Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: $white;
+}
