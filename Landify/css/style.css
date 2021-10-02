@@ -16,7 +16,7 @@ img {
 }
 
 .shadow-header {
-  font-family: inter, sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: bold;
   color: #18191F;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.28);
@@ -98,7 +98,7 @@ header .menu-wraper .wraper .menu .menu-item {
 }
 
 header .menu-wraper .wraper .menu .menu-item a {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -252,7 +252,7 @@ header .head-content-wraper .text-container {
 }
 
 .features .feature-head {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: 800;
   font-size: 48px;
   line-height: 64px;
@@ -289,7 +289,7 @@ header .head-content-wraper .text-container {
 }
 
 .features .block-wraper .block .block-head {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -299,7 +299,7 @@ header .head-content-wraper .text-container {
 }
 
 .features .block-wraper .block .block-desc {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -364,7 +364,7 @@ header .head-content-wraper .text-container {
 
 .stories .container .story-wraper .story-desc {
   position: relative;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -387,7 +387,7 @@ header .head-content-wraper .text-container {
 }
 
 .stories .container .story-wraper .story-author {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -396,7 +396,7 @@ header .head-content-wraper .text-container {
 }
 
 .stories .container .story-wraper .story-sub {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -457,7 +457,7 @@ header .head-content-wraper .text-container {
 }
 
 .achievements .container .info-head {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: bold;
   font-size: 28px;
   line-height: 40px;
@@ -465,7 +465,7 @@ header .head-content-wraper .text-container {
 }
 
 .achievements .container .info-desc {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: #18191F;
@@ -504,7 +504,7 @@ header .head-content-wraper .text-container {
 
 .headline .container .headline-text-wraper .headline-link {
   position: relative;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -595,7 +595,7 @@ header .head-content-wraper .text-container {
 }
 
 .manage .container .block .manage-btn-desc {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
@@ -635,7 +635,7 @@ footer .container .link-wraper {
 
 footer .container .link-wraper a {
   display: inline-block;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: #FFFFFF;
@@ -652,14 +652,14 @@ footer .container .footer-nav li {
 }
 
 footer .container .footer-nav li a {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: #FFFFFF;
 }
 
 footer .container .copyright {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #D9DBE1;
@@ -667,7 +667,7 @@ footer .container .copyright {
 }
 
 footer .container .btn-container .btn-desc {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;

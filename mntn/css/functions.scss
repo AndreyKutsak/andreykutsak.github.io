@@ -1,0 +1,8 @@
+@function getSize($imgWidth){
+    $realWidth: $imgWidth*100*1vw/1920;
+    @return $realWidth;
+}
+@function getHeight($height){
+    $realHeight: $height*100*1vh/1200;
+    @return $realHeight;
+}

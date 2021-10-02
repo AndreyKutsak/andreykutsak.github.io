@@ -14,7 +14,7 @@ img {
 }
 
 .shadow-header {
-    font-family: inter, sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: bold;
     color: #18191F;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.28);
@@ -70,7 +70,7 @@ header {
                     position: relative;
                     padding: 0 10px;
                     a {
-                        font-family: Inter;
+                        font-family: Inter, sans-serif;
                         font-style: normal;
                         font-weight: 500;
                         font-size: 14px;
@@ -208,7 +208,7 @@ header {
     padding: 64px 10px;
     background-color: #fff;
     .feature-head {
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-weight: 800;
         font-size: 48px;
         line-height: 64px;
@@ -233,7 +233,7 @@ header {
                 margin: 25px auto;
             }
             .block-head {
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-style: normal;
                 font-weight: 600;
                 font-size: 24px;
@@ -242,7 +242,7 @@ header {
                 text-align: center;
             }
             .block-desc {
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 16px;
@@ -297,7 +297,7 @@ header {
             }
             .story-desc {
                 position: relative;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 18px;
@@ -318,7 +318,7 @@ header {
                 }
             }
             .story-author {
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 18px;
@@ -326,7 +326,7 @@ header {
                 color: #18191F;
             }
             .story-sub {
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 14px;
@@ -372,14 +372,14 @@ header {
             margin-right: 10px;
         }
         .info-head {
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-weight: bold;
             font-size: 28px;
             line-height: 40px;
             color: #18191F;
         }
         .info-desc {
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 16px;
             line-height: 26px;
             color: #18191F;
@@ -407,7 +407,7 @@ header {
             }
             .headline-link {
                 position: relative;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 24px;
@@ -479,7 +479,7 @@ header {
                 margin-bottom: 40px;
             }
             .manage-btn-desc {
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 28px;
@@ -510,7 +510,7 @@ footer {
             margin-top: 24px;
             a {
                 display: inline-block;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 16px;
                 line-height: 26px;
                 color: #FFFFFF;
@@ -523,7 +523,7 @@ footer {
                 padding: 20px;
                 display: inline-block;
                 a {
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 16px;
                     line-height: 26px;
                     color: #FFFFFF;
@@ -531,7 +531,7 @@ footer {
             }
         }
         .copyright {
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 14px;
             line-height: 24px;
             color: #D9DBE1;
@@ -539,7 +539,7 @@ footer {
         }
         .btn-container {
             .btn-desc {
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 28px;
