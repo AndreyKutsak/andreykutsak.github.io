@@ -42,6 +42,8 @@ section, footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -64,8 +66,8 @@ section, footer {
   letter-spacing: 6px;
   text-transform: uppercase;
   color: #FBD784;
-  margin-left: 100px;
-  margin-bottom: 32px;
+  margin-left: 5.20833vw;
+  margin-bottom: 2.66667vh;
 }
 
 .line-text:before {
@@ -89,22 +91,24 @@ section, footer {
   max-width: 28.90625vw;
   text-align: left;
   color: #fff;
-  margin-bottom: 27px;
+  margin-bottom: 2.66667vh;
 }
 
 .block-head:before {
   position: absolute;
   font-family: "Gilroy", sans-serif, Arial;
-  font-size: 240px;
+  font-size: 12.5vw;
   color: #fff;
   opacity: 0.5;
+  top: -3.125vw;
+  left: -5.78125vw;
 }
 
 .block-desc {
   font-family: "Gilroy", sans-serif, Arial;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 0.9375vw;
+  line-height: 2.66667vh;
   text-align: left;
   color: #fff;
   margin-bottom: 27px;
@@ -115,8 +119,8 @@ section, footer {
   position: relative;
   font-family: "Gilroy", sans-serif, Arial;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 0.9375vw;
+  line-height: 1.83333vh;
   color: #FBD784;
 }
 
@@ -146,11 +150,11 @@ section, footer {
 }
 
 .right {
-  margin-left: 114px;
+  margin-left: 5.9375vw;
 }
 
 .left {
-  margin-right: 114px;
+  margin-right: 5.9375vw;
 }
 
 .sidebar {
@@ -186,6 +190,7 @@ section, footer {
 header {
   position: relative;
   height: 100vh;
+  overflow: hidden;
   background-image: url(../img/HG.png), url(../img/clouds.png);
   background-position: center center, 0 20%;
   background-size: cover, cover;
@@ -195,7 +200,7 @@ header {
 
 header .paralax-img {
   position: absolute;
-  min-height: 100vh;
+  min-height: 98vh;
   min-width: 120vw;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -230,7 +235,7 @@ header .main-wraper {
 }
 
 header .menu-wrap {
-  max-width: 1780px;
+  max-width: 148.33333vh;
   margin: 0 auto 199px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,20 +359,14 @@ header .text-wraper .head-btn img {
 .level .block-head::before {
   content: "01";
   top: -59px;
-  left: -131px;
-  z-index: -1;
 }
 
 .gear .block-head:before {
   content: "02";
-  top: -59px;
-  left: -111px;
 }
 
 .timing .block-head:before {
   content: "03";
-  top: -59px;
-  left: -111px;
 }
 
 section {
@@ -397,8 +396,8 @@ footer .container .logo {
 footer .container .footer-desc {
   font-family: "Gilroy", sans-serif, Arial;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 0.9375vw;
+  line-height: 2.66667vh;
   text-align: left;
   color: #fff;
   margin-bottom: 27px;
@@ -425,15 +424,15 @@ footer .list-wraper {
 }
 
 footer .list-wraper .blog-wraper {
-  width: 40%;
+  width: 10.41667vw;
   margin: 0 106px;
 }
 
 footer .list-wraper .blog-head {
   font-family: "Gilroy", sans-serif, Arial;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.19792vw;
+  line-height: 2.66667vh;
   color: #FBD784;
   margin-bottom: 24px;
 }
@@ -444,10 +443,38 @@ footer .list-wraper li {
 
 footer .list-wraper li a {
   font-family: "Gilroy", sans-serif, Arial;
-  font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 0.9375vw;
+  line-height: 1.83333vh;
   color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .responsive-btn {
+    height: 30px;
+    width: 30px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  .responsive-btn:after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: 47%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+  .menu-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

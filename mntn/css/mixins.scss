@@ -38,8 +38,8 @@
     letter-spacing: 6px;
     text-transform: uppercase;
     color: $yellow;
-    margin-left: 100px;
-    margin-bottom: 32px;
+    margin-left: getSize(100);
+    margin-bottom: getHeight(32);
     &:before {
         position: absolute;
         content: "";
@@ -59,13 +59,13 @@
     max-width: getSize(555);
     text-align: left;
     color: $white;
-    margin-bottom: 27px;
+    margin-bottom: getHeight(32);
 }
 @mixin block-desc{
     font-family: $Gilroy;
 font-weight: 400;
-font-size: 18px;
-line-height: 32px;
+font-size: getSize(18);
+line-height: getHeight(32);
 
 text-align: left;
 color: $white;
@@ -74,16 +74,16 @@ margin-bottom: 27px;
 @mixin blog-head{
     font-family: $Gilroy;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: getSize(23);
+    line-height: getHeight(32);
     color: $yellow;
 }
 @mixin block-link {
     position: relative;        
         font-family: $Gilroy;
 font-weight: bold;
-font-size: 18px;
-line-height: 22px;
+font-size: getSize(18);
+line-height: getHeight(22);
 color: $yellow;
 &:after{
     content: "";
@@ -109,9 +109,9 @@ color: $yellow;
 }
 @mixin footer-link{
     font-family: $Gilroy;
-    font-style: normal;
+  
     font-weight: 500;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: getSize(18);
+    line-height: getHeight(22);
     color: $white;
 }
