@@ -3,8 +3,7 @@
 @import "mixins.scss";
 @import"functions.scss";
 * {
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 img {
     height: auto;
@@ -26,6 +25,7 @@ section,footer{
     margin: 0 auto;
     padding: 0 10px;
     display: flex;   
+    flex-wrap: wrap;
     justify-content: center;
     .text-container{
         max-width: getSize(635);
@@ -103,8 +103,7 @@ header {
     }
     .img-mountain{
         left: -5vw;
-        top: 50px;
-     
+        top: 50px;     
         background-image: url("../img/MG.png");
         background-size: cover;
         
