@@ -12,5 +12,10 @@ a{
     border-radius: 5px;
     font-family: sans-serif;
     text-transform: uppercase;color: #fff;
+    transition: 0.4s;
 
+}
+li a:hover{
+    background-color: rgb(43, 151, 151);
+    transform: scale(1.1);
 }
