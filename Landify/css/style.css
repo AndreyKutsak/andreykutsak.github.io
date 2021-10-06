@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(variblex.scss);
-@import url(fonts.scss);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,7 +14,7 @@ img {
 }
 
 .shadow-header {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   color: #18191F;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.28);
@@ -29,8 +27,7 @@ img {
 }
 
 .heads {
-  font-family: Inter, sans-serif;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 48px;
   line-height: 64px;
@@ -38,7 +35,7 @@ img {
 }
 
 .head-desc {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #18191F;
@@ -98,8 +95,7 @@ header .menu-wraper .wraper .menu .menu-item {
 }
 
 header .menu-wraper .wraper .menu .menu-item a {
-  font-family: Inter, sans-serif;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
@@ -172,7 +168,7 @@ header .shadow-header {
 }
 
 header .get-btn {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -214,7 +210,7 @@ header .head-content-wraper .text-container {
 .responsive-btn:after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 47%;
   height: 3px;
   width: 100%;
   background-color: #000;
@@ -228,7 +224,7 @@ header .head-content-wraper .text-container {
 .clouds .container {
   padding: 24px 10px;
   border-top: 1px solid #C0CCDA1A;
-  border-bottom: 1px solid #C0CCDA1A;
+  border-bottom: 2px solid #C0CCDA1A;
 }
 
 .clouds .container .cloud-list {
@@ -252,7 +248,7 @@ header .head-content-wraper .text-container {
 }
 
 .features .feature-head {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 48px;
   line-height: 64px;
@@ -289,8 +285,7 @@ header .head-content-wraper .text-container {
 }
 
 .features .block-wraper .block .block-head {
-  font-family: Inter, sans-serif;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -299,9 +294,7 @@ header .head-content-wraper .text-container {
 }
 
 .features .block-wraper .block .block-desc {
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 26px;
   text-align: center;
@@ -364,9 +357,7 @@ header .head-content-wraper .text-container {
 
 .stories .container .story-wraper .story-desc {
   position: relative;
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #18191F;
@@ -387,8 +378,7 @@ header .head-content-wraper .text-container {
 }
 
 .stories .container .story-wraper .story-author {
-  font-family: Inter, sans-serif;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 28px;
@@ -396,8 +386,7 @@ header .head-content-wraper .text-container {
 }
 
 .stories .container .story-wraper .story-sub {
-  font-family: Inter, sans-serif;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -457,7 +446,7 @@ header .head-content-wraper .text-container {
 }
 
 .achievements .container .info-head {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 28px;
   line-height: 40px;
@@ -465,7 +454,7 @@ header .head-content-wraper .text-container {
 }
 
 .achievements .container .info-desc {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: #18191F;
@@ -504,7 +493,7 @@ header .head-content-wraper .text-container {
 
 .headline .container .headline-text-wraper .headline-link {
   position: relative;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -537,6 +526,7 @@ header .head-content-wraper .text-container {
 
 .trends {
   padding: 64px 10px;
+  background-color: #fff;
 }
 
 .trends .fx-container {
@@ -595,7 +585,7 @@ header .head-content-wraper .text-container {
 }
 
 .manage .container .block .manage-btn-desc {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
@@ -635,10 +625,10 @@ footer .container .link-wraper {
 
 footer .container .link-wraper a {
   display: inline-block;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 26px;
-  color: #FFFFFF;
+  color: #fff;
   margin-bottom: 12px;
 }
 
@@ -651,15 +641,19 @@ footer .container .footer-nav li {
   display: inline-block;
 }
 
+footer .container .footer-nav li:first-child {
+  padding-left: 0;
+}
+
 footer .container .footer-nav li a {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 26px;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 footer .container .copyright {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #D9DBE1;
@@ -667,7 +661,7 @@ footer .container .copyright {
 }
 
 footer .container .btn-container .btn-desc {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
@@ -785,7 +779,7 @@ footer .container .btn-container a {
   .responsive-btn {
     display: block;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 50px;
     z-index: 99;
   }

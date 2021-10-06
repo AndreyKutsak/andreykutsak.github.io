@@ -1,5 +1,5 @@
-@import url(variblex.scss);
-@import url(fonts.scss);
+@import "varibles.scss";
+@import "mixins.scss";
 * {
     box-sizing: border-box;
 }
@@ -14,10 +14,7 @@ img {
 }
 
 .shadow-header {
-    font-family: Inter, sans-serif;
-    font-weight: bold;
-    color: #18191F;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.28);
+   @include shadow-header;
 }
 
 //common styles
@@ -28,19 +25,11 @@ img {
 }
 
 .heads {
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 64px;
-    color: #18191F;
+ @include heads; 
 }
 
 .head-desc {
-    font-family: Inter, sans-serif;
-    font-size: 18px;
-    line-height: 32px;
-    color: #18191F;
+   @include head-desc;
 }
 
 // header
@@ -70,13 +59,7 @@ header {
                     position: relative;
                     padding: 0 10px;
                     a {
-                        font-family: Inter, sans-serif;
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 14px;
-                        line-height: 20px;
-                        text-transform: capitalize;
-                        color: #18191F;
+                       @include menu-links;
                     }
                     .hide {
                         transform: translateY(-200%);
@@ -97,7 +80,7 @@ header {
                         left: 0;
                         height: 3px;
                         width: 0px;
-                        background-color: #000;
+                        background-color: $black;
                         transition: 0.4s;
                     }
                     &:hover {
@@ -142,20 +125,20 @@ header {
         margin-bottom: 32px;
     }
     .get-btn {
-        font-family: Inter, sans-serif;
+        font-family: $inter;
         font-size: 16px;
         line-height: 24px;
         font-weight: 500;
         text-transform: capitalize;
-        color: #fff;
+        color: $white;
         display: block;
         padding: 12px 32px;
         width: 154px;
-        background: #8C30F5;
+        background: $getBtnBg;
         border-radius: 6px;
         transition: 0.4s;
         &:hover {
-            background-color: #782ad1;
+            background-color: $getBtnHov;
         }
     }
     .head-content-wraper {
@@ -171,27 +154,27 @@ header {
     position: relative;
     height: 30px;
     width: 30px;
-    border-top: 3px solid #000;
-    border-bottom: 3px solid #000;
+    border-top: 3px solid $black;
+    border-bottom: 3px solid $black;
     cursor: pointer;
     &:after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 47%;
         height: 3px;
         width: 100%;
-        background-color: #000;
+        background-color: $black;
     }
 }
 
 // clouds
 .clouds {
     padding: 25px 10px;
-    background-color: #fff;
+    background-color: $white;
     .container {
         padding: 24px 10px;
         border-top: 1px solid #C0CCDA1A;
-        border-bottom: 1px solid #C0CCDA1A;
+        border-bottom: 2px solid #C0CCDA1A;
         .cloud-list {
             display: flex;
             flex-wrap: wrap;
@@ -206,9 +189,9 @@ header {
 // features
 .features {
     padding: 64px 10px;
-    background-color: #fff;
+    background-color: $white;
     .feature-head {
-        font-family: Inter, sans-serif;
+        font-family: $inter;
         font-weight: 800;
         font-size: 48px;
         line-height: 64px;
@@ -233,22 +216,19 @@ header {
                 margin: 25px auto;
             }
             .block-head {
-                font-family: Inter, sans-serif;
-                font-style: normal;
+                font-family: $inter;              
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 32px;
-                color: #18191F;
+                color: $textColor;
                 text-align: center;
             }
             .block-desc {
-                font-family: Inter, sans-serif;
-                font-style: normal;
-                font-weight: normal;
+                font-family: $inter;             
                 font-size: 16px;
                 line-height: 26px;
                 text-align: center;
-                color: #18191F;
+                color: $textColor;
                 margin-bottom: 30px;
             }
         }
@@ -258,7 +238,7 @@ header {
 // story
 .stories {
     padding: 120px 10px 80px;
-    background-color: #D5FAFC;
+    background-color: $storiesBg;
     .container {
         display: flex;
         flex-wrap: wrap;
@@ -286,7 +266,7 @@ header {
         .story-wraper {
             max-width: 350px;
             padding: 32px 32px;
-            background-color: #fff;
+            background-color: $white;
             border-radius: 8px;
             -webkit-box-shadow: 4px 6px 8px 0px rgba(41, 42, 18, 0.2);
             -moz-box-shadow: 4px 6px 8px 0px rgba(41, 42, 18, 0.2);
@@ -297,12 +277,10 @@ header {
             }
             .story-desc {
                 position: relative;
-                font-family: Inter, sans-serif;
-                font-style: normal;
-                font-weight: normal;
+                font-family: $inter;              
                 font-size: 18px;
                 line-height: 32px;
-                color: #18191F;
+                color: $textColor;
                 margin-bottom: 24px;
                 &:before {
                     content: "“";
@@ -318,16 +296,14 @@ header {
                 }
             }
             .story-author {
-                font-family: Inter, sans-serif;
-                font-style: normal;
+                font-family: $inter;               
                 font-weight: bold;
                 font-size: 18px;
                 line-height: 28px;
-                color: #18191F;
+                color: $textColor;
             }
             .story-sub {
-                font-family: Inter, sans-serif;
-                font-style: normal;
+                font-family: $inter;           
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 24px;
@@ -343,7 +319,7 @@ header {
 // 
 .achievements {
     padding: 82px 10px;
-    background-color: #fff;
+    background-color: $white;
     .container {
         display: flex;
         justify-content: space-between;
@@ -372,17 +348,17 @@ header {
             margin-right: 10px;
         }
         .info-head {
-            font-family: Inter, sans-serif;
+            font-family: $inter;
             font-weight: bold;
             font-size: 28px;
             line-height: 40px;
-            color: #18191F;
+            color: $textColor;
         }
         .info-desc {
-            font-family: Inter, sans-serif;
+            font-family: $inter;
             font-size: 16px;
             line-height: 26px;
-            color: #18191F;
+            color: $textColor;
         }
     }
 }
@@ -407,11 +383,11 @@ header {
             }
             .headline-link {
                 position: relative;
-                font-family: Inter, sans-serif;
+                font-family: $inter;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 24px;
-                color: #8C30F5;
+                color: $getBtnBg;
                 &:after {
                     content: "";
                     position: absolute;
@@ -419,7 +395,7 @@ header {
                     right: -50%;
                     height: 2px;
                     width: 40px;
-                    background-color: #8C30F5;
+                    background-color: $getBtnBg;
                 }
                 &:before {
                     position: absolute;
@@ -441,12 +417,13 @@ header {
 // trends
 .trends {
     padding: 64px 10px;
+    background-color: $white;
     .fx-container {
         display: flex;
         justify-content: center;
         .trend-head {
             max-width: 540px;
-            color: #18191F;
+            color: $textColor;
         }
         .trend-desc {
             margin-bottom: 48px;
@@ -461,7 +438,7 @@ header {
 // manage
 .manage {
     padding: 0 10px;
-    background-color: #2EC5CE;
+    background-color: $manageBg;
     .container {
         display: flex;
         flex-wrap: wrap;
@@ -479,11 +456,11 @@ header {
                 margin-bottom: 40px;
             }
             .manage-btn-desc {
-                font-family: Inter, sans-serif;
+                font-family: $inter;
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 28px;
-                color: #18191F;
+                color: $textColor;
                 margin-bottom: 8px;
             }
             &:last-child {
@@ -501,7 +478,7 @@ header {
 // footer
 footer {
     padding: 56px 10px;
-    background-color: #0B0D17;
+    background-color: $footerBg;
     .container {
         display: flex;
         flex-wrap: wrap;
@@ -510,10 +487,10 @@ footer {
             margin-top: 24px;
             a {
                 display: inline-block;
-                font-family: Inter, sans-serif;
+                font-family: $inter;
                 font-size: 16px;
                 line-height: 26px;
-                color: #FFFFFF;
+                color: $white;
                 margin-bottom: 12px;
             }
         }
@@ -522,28 +499,31 @@ footer {
             li {
                 padding: 20px;
                 display: inline-block;
+                &:first-child{
+                    padding-left: 0;
+                }
                 a {
-                    font-family: Inter, sans-serif;
+                    font-family: $inter;
                     font-size: 16px;
                     line-height: 26px;
-                    color: #FFFFFF;
+                    color: $white;
                 }
             }
         }
         .copyright {
-            font-family: Inter, sans-serif;
+            font-family: $inter;
             font-size: 14px;
             line-height: 24px;
-            color: #D9DBE1;
+            color: $footerText;
             margin-top: 24px;
         }
         .btn-container {
             .btn-desc {
-                font-family: Inter, sans-serif;
+                font-family: $inter;
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 28px;
-                color: #D9DBE1;
+                color: $footerText;
                 margin-bottom: 16px;
             }
             a {
@@ -665,7 +645,7 @@ footer {
     .responsive-btn {
         display: block;
         position: absolute;
-        top: 10px;
+        top: 20px;
         right: 50px;
         z-index: 99;
     }
