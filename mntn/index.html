@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,18 +12,18 @@
         <div class="main-wraper">           
                 <div class="menu-wrap">
                     <div class="logo"><a href="#">MNTN</a></div>
-                    <nav>
+                    <nav class="hide" id="menu">
                         <ul class="menu">
                             <li><a href="#">Equipment</a></li>
                             <li><a href="#">About us</a></li>
                             <li><a href="#">Blog</a></li>
-                        </ul>
+                        </ul>  <div class="acount">
+                            <a href="#"><img src="img/svg/account.svg" alt="account icon"> Account</a>
+                        </div> 
                     </nav>
-                    <div class="acount">
-                        <a href="#"><img src="img/svg/account.svg" alt="account icon"> Account</a>
-                    </div>
+                  
                     
-                </div><div class="responsive-btn hide"></div>
+                </div><div class="responsive-btn hide" id="btn"></div>
                 <div class="container">
                 
                     <div class="social-wraper">
@@ -117,6 +116,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/responsive-menu.js"></script>
     <script src="js/paralax.js"></script>
     <script src="js/scroll.js"></script>
 </body>
