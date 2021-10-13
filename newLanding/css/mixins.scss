@@ -1,0 +1,29 @@
+// animations
+
+@mixin head {
+  font-family: $playfairDispay;
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $gold;
+}
+@mixin head-desc {
+  font-family: $Ubuntu;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: right;
+  color: $gray;
+}
+@mixin gradient-text {
+  font-family: $Ubuntu;
+  font-size: 55px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin link-text {
+  font-family: $Ubuntu;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $linkColor;
+  text-align: center;
+}
