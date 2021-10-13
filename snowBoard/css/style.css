@@ -230,6 +230,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 640px;
+  overflow: hidden;
 }
 
 #next {
@@ -495,7 +496,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 13vh;
+    top: 100px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     -webkit-transform: translateY(-200%);
