@@ -147,7 +147,7 @@ body {
   top: 1px;
 }
 /*slider*/
-.carousel-window{
+.carousel-window {
   transition: 0.4s;
 }
 .slider-bg {
@@ -174,6 +174,7 @@ body {
 .slider-wraper ul {
   display: flex;
   height: 640px;
+  overflow: hidden;
 }
 #next {
   position: absolute;
@@ -200,13 +201,13 @@ body {
   display: inline-flex;
   justify-content: center;
   flex-direction: column;
-  min-width:20vw;
+  min-width: 20vw;
   list-style: none;
   opacity: 0.5;
   transition: 0.4s;
   cursor: pointer;
-  &:hover{
-	  opacity: 1;
+  &:hover {
+    opacity: 1;
   }
 }
 .slider-item .slide-desc {
@@ -374,7 +375,7 @@ body {
   .mwrap {
     flex-direction: column;
     position: absolute;
-    top: 13vh;
+    top: 100px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     transform: translateY(-200%);
@@ -423,7 +424,7 @@ body {
     justify-content: center;
     width: 100%;
     margin-top: 30px;
-    padding: 10px;    
+    padding: 10px;
   }
   .header-head {
     text-align: center;
