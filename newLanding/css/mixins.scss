@@ -76,3 +76,25 @@
   font-size: 16px;
   color: $gray;
 }
+@mixin feedback-description {
+  font-family: $Ubuntu; //Light
+  font-size: 30px;
+  color: $gray;
+}
+@mixin feedback-author {
+  font-family: $Ubuntu; // light
+  font-size: 30px;
+  color: $gold;
+}
+
+@mixin feedback-link {
+  font-family: $Ubuntu; //light
+  font-size: 15px;
+  color: $gray;
+}
+
+@mixin input-data-text {
+  font-family: $Ubuntu; //light
+  font-size: 30px;
+  color: $linkColor;
+}

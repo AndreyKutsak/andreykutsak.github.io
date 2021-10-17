@@ -261,3 +261,92 @@ header {
     }
   }
 }
+.contacts {
+  padding: 101px 0 30px;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .block {
+      width: 45%;
+      .block-head {
+        margin-bottom: 50px;
+      }
+      .feedback-container {
+        position: relative;
+        overflow: hidden;
+        .feedback-body {
+          display: inline-flex;
+          align-items: center;
+          padding-bottom: 30px;
+          border-bottom: 1px solid $gold;
+          margin-bottom: 15px;
+          img {
+            margin-right: 25px;
+          }
+
+          .feedback-desc {
+            @include feedback-description;
+            text-align: left;
+          }
+        }
+        .feedback-author {
+          @include feedback-author;
+          text-align: right;
+          text-transform: capitalize;
+          margin-bottom: 90px;
+        }
+        .more-feedback-link {
+          position: absolute;
+          left: -50%;
+          transform: translateX(50%);
+          text-align: center;
+          bottom: 0;
+          @include feedback-link;
+        }
+      }
+      .form {
+        position: relative;
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+
+        input,
+        textarea {
+          display: inline-block;
+          width: inherit;
+          border: 1px solid $gray;
+          margin-bottom: 25px;
+          background: $mainbg;
+          outline: none;
+          padding: 25px 25px;
+          @include input-data-text;
+          &::placeholder {
+            @include input-data-text;
+          }
+        }
+        textarea {
+          height: 300px;
+          resize: none;
+        }
+        input[type="submit"] {
+          width: 230px;
+          background-color: $gold;
+          color: $mainbg;
+          text-transform: uppercase;
+          text-align: center;
+          cursor: pointer;
+          border: none;
+          position: relative;
+        }
+        .form-img {
+          position: absolute;
+          bottom: -170px;
+          right: -190px;
+          mix-blend-mode: lighten;
+        }
+      }
+    }
+  }
+}

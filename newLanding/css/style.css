@@ -354,4 +354,156 @@ header .link-scroll-down {
 .portfolio .nav-container .current-page {
   color: #b69b67;
 }
+
+.contacts {
+  padding: 101px 0 30px;
+}
+
+.contacts .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts .container .block {
+  width: 45%;
+}
+
+.contacts .container .block .block-head {
+  margin-bottom: 50px;
+}
+
+.contacts .container .block .feedback-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.contacts .container .block .feedback-container .feedback-body {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #b69b67;
+  margin-bottom: 15px;
+}
+
+.contacts .container .block .feedback-container .feedback-body img {
+  margin-right: 25px;
+}
+
+.contacts .container .block .feedback-container .feedback-body .feedback-desc {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #b4b4b4;
+  text-align: left;
+}
+
+.contacts .container .block .feedback-container .feedback-author {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #b69b67;
+  text-align: right;
+  text-transform: capitalize;
+  margin-bottom: 90px;
+}
+
+.contacts .container .block .feedback-container .more-feedback-link {
+  position: absolute;
+  left: -50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  text-align: center;
+  bottom: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  color: #b4b4b4;
+}
+
+.contacts .container .block .form {
+  position: relative;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts .container .block .form input,
+.contacts .container .block .form textarea {
+  display: inline-block;
+  width: inherit;
+  border: 1px solid #b4b4b4;
+  margin-bottom: 25px;
+  background: #303030;
+  outline: none;
+  padding: 25px 25px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #454545;
+}
+
+.contacts .container .block .form input::-webkit-input-placeholder,
+.contacts .container .block .form textarea::-webkit-input-placeholder {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #454545;
+}
+
+.contacts .container .block .form input:-ms-input-placeholder,
+.contacts .container .block .form textarea:-ms-input-placeholder {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #454545;
+}
+
+.contacts .container .block .form input::-ms-input-placeholder,
+.contacts .container .block .form textarea::-ms-input-placeholder {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #454545;
+}
+
+.contacts .container .block .form input::placeholder,
+.contacts .container .block .form textarea::placeholder {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #454545;
+}
+
+.contacts .container .block .form textarea {
+  height: 300px;
+  resize: none;
+}
+
+.contacts .container .block .form input[type="submit"] {
+  width: 230px;
+  background-color: #b69b67;
+  color: #303030;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
+
+.contacts .container .block .form .form-img {
+  position: absolute;
+  bottom: -170px;
+  right: -190px;
+  mix-blend-mode: lighten;
+}
 /*# sourceMappingURL=style.css.map */
