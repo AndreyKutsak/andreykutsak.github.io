@@ -146,9 +146,9 @@ header .link-scroll-down {
   position: relative;
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
+  color: #b4b4b4;
   text-transform: uppercase;
   text-align: left;
-  color: #b4b4b4;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -193,5 +193,165 @@ header .link-scroll-down {
   color: #b4b4b4;
   max-width: 488px;
   text-align: left;
+}
+
+.portfolio {
+  padding: 95px 30px;
+}
+
+.portfolio .block-head {
+  margin-bottom: 45px;
+}
+
+.portfolio .drop-down-btn {
+  position: relative;
+  max-width: 250px;
+  margin: 0 auto;
+  border: 1px solid #454545;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.portfolio .drop-down-btn span {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #b4b4b4;
+}
+
+.portfolio .drop-down-btn .drop-down-items-wraper {
+  position: absolute;
+  left: -1px;
+  border-left: 1px solid #454545;
+  border-bottom: 1px solid #454545;
+  border-right: 1px solid #454545;
+  width: 101%;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-color: #b69b67;
+  border-bottom: transparent;
+}
+
+.portfolio .drop-down-btn .drop-down-items-wraper li {
+  padding: 16px 0;
+}
+
+.portfolio .drop-down-btn .drop-down-items-wraper li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #b4b4b4;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.portfolio .drop-down-btn .drop-down-items-wraper li a:hover {
+  color: #b69b67;
+}
+
+.portfolio .block-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portfolio .block-wraper .block {
+  min-width: 48%;
+  background-size: cover;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.portfolio .block-wraper .block:hover .text-container {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.portfolio .block-wraper .block .text-container {
+  height: 100%;
+  padding: 25px 0 30px;
+  background-color: #b69b67;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.portfolio .block-wraper .block .text-container .portfolio-head {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #303030;
+  text-align: left;
+  text-transform: uppercase;
+  max-width: 260px;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 70px;
+  padding-left: 30px;
+}
+
+.portfolio .block-wraper .block .text-container .portfolio-desc {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #303030;
+  text-align: left;
+  max-width: 270px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio .block-wraper .block .text-container .block-sign {
+  font-family: Uubuntu;
+  font-size: 16px;
+  color: #303030;
+  text-align: right;
+  padding-left: 23px;
+  max-width: 270px;
+}
+
+.portfolio .block-wraper .monochrome {
+  background-image: url(../img/item1.jpg);
+}
+
+.portfolio .block-wraper .design {
+  background-image: url(../img/item3bg-screen.jpg);
+}
+
+.portfolio .block-wraper .photoshoot {
+  background-image: url(../img/item2bg-screen.jpg);
+}
+
+.portfolio .block-wraper .editor {
+  background-image: url(../img/item4bg-screen.jpg);
+}
+
+.portfolio .nav-container {
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+.portfolio .nav-container span {
+  cursor: pointer;
+  padding: 0 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #b4b4b4;
+  text-transform: uppercase;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.portfolio .nav-container span:hover {
+  color: #b69b67;
+}
+
+.portfolio .nav-container .current-page {
+  color: #b69b67;
 }
 /*# sourceMappingURL=style.css.map */

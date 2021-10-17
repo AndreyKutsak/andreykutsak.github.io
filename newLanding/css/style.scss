@@ -105,6 +105,8 @@ header {
         a {
           position: relative;
           @include slider-item-link;
+          text-transform: uppercase;
+          text-align: left;
           transition: 0.4s;
         }
         .active {
@@ -139,6 +141,123 @@ header {
           text-align: left;
         }
       }
+    }
+  }
+}
+.portfolio {
+  padding: 95px 30px;
+  .block-head {
+    margin-bottom: 45px;
+  }
+  .drop-down-btn {
+    position: relative;
+    max-width: 250px;
+    margin: 0 auto;
+    border: 1px solid $linkColor;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 70px;
+    span {
+      @include slider-item-link;
+    }
+    .drop-down-items-wraper {
+      position: absolute;
+      left: -1px;
+      border-left: 1px solid $linkColor;
+      border-bottom: 1px solid $linkColor;
+      border-right: 1px solid $linkColor;
+      width: 101%;
+      opacity: 0;
+
+      transition: 0.4s;
+      border-color: $gold;
+      border-bottom: transparent;
+      li {
+        padding: 16px 0;
+        a {
+          @include item-link;
+          text-align: center;
+          text-transform: capitalize;
+          transition: 0.4s;
+          &:hover {
+            color: $gold;
+          }
+        }
+      }
+    }
+  }
+  .block-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .block {
+      min-width: 48%;
+      background-size: cover;
+      overflow: hidden;
+      margin-bottom: 30px;
+      &:hover {
+        .text-container {
+          transform: translateX(0%);
+        }
+      }
+      .text-container {
+        height: 100%;
+        padding: 25px 0 30px;
+        background-color: $gold;
+        transform: translateX(50%);
+        transition: 0.4s;
+        .portfolio-head {
+          @include portfolio-sub-head;
+          text-align: left;
+          text-transform: uppercase;
+          max-width: 260px;
+          border-bottom: 1px solid $mainbg;
+          margin-bottom: 70px;
+          padding-left: 30px;
+        }
+        .portfolio-desc {
+          @include portfolio-sub-desc;
+          text-align: left;
+          max-width: 270px;
+          padding-left: 30px;
+          margin-bottom: 30px;
+        }
+        .block-sign {
+          @include portfolio-author;
+          text-align: right;
+          padding-left: 23px;
+          max-width: 270px;
+        }
+      }
+    }
+    .monochrome {
+      background-image: url(../img/item1.jpg);
+    }
+    .design {
+      background-image: url(../img/item3bg-screen.jpg);
+    }
+    .photoshoot {
+      background-image: url(../img/item2bg-screen.jpg);
+    }
+    .editor {
+      background-image: url(../img/item4bg-screen.jpg);
+    }
+  }
+  .nav-container {
+    max-width: 200px;
+    margin: 20px auto;
+    span {
+      cursor: pointer;
+      padding: 0 10px;
+      @include nav-text;
+      text-transform: uppercase;
+      transition: 0.4s;
+      &:hover {
+        color: $gold;
+      }
+    }
+    .current-page {
+      color: $gold;
     }
   }
 }

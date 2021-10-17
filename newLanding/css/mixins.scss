@@ -38,8 +38,7 @@
 @mixin slider-item-link {
   font-family: $Ubuntu;
   font-size: 30px;
-  text-transform: uppercase;
-  text-align: left;
+
   color: $gray;
 }
 @mixin link-item-hovered {
@@ -50,5 +49,30 @@
   font-family: $miriadPro;
   font-size: 20px;
   line-height: 30px;
+  color: $gray;
+}
+@mixin item-link {
+  font-family: $Ubuntu;
+  font-size: 30px;
+  color: $gray;
+}
+@mixin portfolio-sub-head {
+  font-family: $Ubuntu;
+  font-size: 30px;
+  color: $mainbg;
+}
+@mixin portfolio-sub-desc {
+  font-family: $Ubuntu; //medium
+  font-size: 16px;
+  color: $mainbg;
+}
+@mixin portfolio-author {
+  font-family: Uubuntu; //medium italic
+  font-size: 16px;
+  color: $mainbg;
+}
+@mixin nav-text {
+  font-family: $Ubuntu; //medium
+  font-size: 16px;
   color: $gray;
 }
