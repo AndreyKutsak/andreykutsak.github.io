@@ -61,6 +61,11 @@
   font-size: 30px;
   color: $mainbg;
 }
+@mixin btn-text {
+  font-family: $Ubuntu;
+  font-size: 25px;
+  color: $mainbg;
+}
 @mixin portfolio-sub-desc {
   font-family: $Ubuntu; //medium
   font-size: 16px;

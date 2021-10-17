@@ -25,9 +25,11 @@ body {
 .block-head {
   @include block-head;
 }
+
 header {
+  position: relative;
   padding: 80px 0 95px;
-  height: 100vh;
+
   .header-text-wraper {
     max-width: 415px;
     margin: 0 auto;
@@ -62,19 +64,22 @@ header {
     -webkit-text-fill-color: transparent;
   }
   .link-scroll-down {
-    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     @include link-text;
     animation: 0.6s linear 0s infinite alternate up-down;
   }
 }
 @keyframes up-down {
   0% {
-    margin-top: -20px;
+    bottom: -20px;
   }
   100% {
-    margin-top: 0px;
+    bottom: 0px;
   }
 }
+
 .services {
   padding: 96px 0 150px;
   .block-head {
@@ -148,28 +153,35 @@ header {
     padding: 15px;
     text-align: center;
     margin-bottom: 70px;
+    transition: 0.4s;
+    &:hover {
+      border-color: $gold;
+      .drop-down-items-wraper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
     span {
       @include slider-item-link;
     }
     .drop-down-items-wraper {
       position: absolute;
       left: -1px;
-      border-left: 1px solid $linkColor;
-      border-bottom: 1px solid $linkColor;
-      border-right: 1px solid $linkColor;
+      border-left: 1px solid $gold;
+      border-bottom: 1px solid $gold;
+      border-right: 1px solid $gold;
       width: 101%;
+      z-index: 1;
+      background-color: $mainbg;
       opacity: 0;
-
-      transition: 0.4s;
-      border-color: $gold;
-      border-bottom: transparent;
+      visibility: hidden;
       li {
         padding: 16px 0;
         a {
           @include item-link;
           text-align: center;
           text-transform: capitalize;
-          transition: 0.4s;
+
           &:hover {
             color: $gold;
           }
@@ -182,13 +194,36 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     .block {
+      position: relative;
       min-width: 48%;
       background-size: cover;
       overflow: hidden;
       margin-bottom: 30px;
+      .btn-more {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        max-width: 315px;
+        padding: 25px 10px;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: 0.4s;
+        background-color: $gold;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.01) translate(-50%);
+        }
+        @include btn-text;
+      }
       &:hover {
+        .btn-more {
+          opacity: 1;
+        }
         .text-container {
-          transform: translateX(0%);
+          transform: translateX(100%);
+          opacity: 0;
         }
       }
       .text-container {

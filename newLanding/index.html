@@ -28,13 +28,15 @@
 
         <div class="slider-container">
           <ul class="slider-sidebar">
-            <li><a href="#">web design</a></li>
-            <li><a href="#">logo design</a></li>
-            <li><a href="#">brending</a></li>
-            <li><a href="#">ui</a></li>
-            <li><a href="#">photography</a></li>
+            <li class="slider-item">
+              <a href="#" class="active">web design</a>
+            </li>
+            <li class="slider-item"><a href="#">logo design</a></li>
+            <li class="slider-item"><a href="#">brending</a></li>
+            <li class="slider-item"><a href="#">ui</a></li>
+            <li class="slider-item"><a href="#">photography</a></li>
           </ul>
-          <div class="slide-window">
+          <div class="slide-window" id="sl-window">
             <div class="slide">
               <img
                 src="img/web-design-illustration.jpg"
@@ -84,9 +86,9 @@
     <div class="portfolio">
       <div class="container">
         <h2 class="block-head">portfolio</h2>
-        <div class="drop-down-btn">
+        <div class="drop-down-btn" id="btn-dropdown">
           <span>All categories</span>
-          <ul class="drop-down-items-wraper">
+          <ul class="drop-down-items-wraper" id="drop-menu">
             <li><a href="#">web design</a></li>
             <li><a href="#">logo design</a></li>
             <li><a href="#">brending</a></li>
@@ -96,6 +98,7 @@
         </div>
         <div class="block-wraper">
           <div class="block monochrome">
+            <div class="btn-more">see full project</div>
             <div class="text-container">
               <h3 class="portfolio-head">subsence monochrome</h3>
               <p class="portfolio-desc">
@@ -105,6 +108,7 @@
             </div>
           </div>
           <div class="block design">
+            <div class="btn-more">see full project</div>
             <div class="text-container">
               <h3 class="portfolio-head">design agency business card</h3>
               <p class="portfolio-desc">
@@ -114,6 +118,7 @@
             </div>
           </div>
           <div class="block photoshoot">
+            <div class="btn-more">see full project</div>
             <div class="text-container">
               <h3 class="portfolio-head">fixedgear shop photoshoot</h3>
               <p class="portfolio-desc">
@@ -124,6 +129,7 @@
             </div>
           </div>
           <div class="block editor">
+            <div class="btn-more">see full project</div>
             <div class="text-container">
               <h3 class="portfolio-head">editor’s personal page</h3>
               <p class="portfolio-desc">
