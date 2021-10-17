@@ -14,6 +14,8 @@ a {
 }
 body {
   background-color: $mainbg;
+  width: 100vw;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1540px;
@@ -51,20 +53,9 @@ header {
   .header-head-gradient {
     @include gradient-text;
     margin-bottom: 150px;
-    background: #f3f3f3;
-    background: -webkit-radial-gradient(
-      circle farthest-side at top center,
-      #f3f3f3 22%,
-      #313131 100%
-    );
-    background: -moz-radial-gradient(
-      circle farthest-side at top center,
-      #f3f3f3 22%,
-      #313131 100%
-    );
     background: radial-gradient(
       circle farthest-side at top center,
-      #f3f3f3 22%,
+      #ceb281 22%,
       #313131 100%
     );
     -webkit-background-clip: text;
@@ -348,5 +339,76 @@ header {
         }
       }
     }
+  }
+}
+
+.contact-data {
+  padding-top: 105px;
+  .block-head {
+    margin-bottom: 90px;
+  }
+  .gradient-text {
+    @include gradient-text;
+    background: radial-gradient(
+      circle farthest-side at top center,
+      #f3f3f3 22%,
+      #313131 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 100px;
+  }
+  .contact-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .contact-container {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      .contact-type {
+        position: relative;
+        margin-bottom: 45px;
+        max-width: 120px;
+        @include contact-type;
+        text-transform: uppercase;
+        &:before {
+          position: absolute;
+          content: "";
+          top: -10px;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: $gold;
+        }
+      }
+      .contact-desc {
+        @include content-desc;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+  img {
+    mix-blend-mode: lighten;
+  }
+}
+footer {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      a {
+        @include footer-link;
+        text-transform: uppercase;
+      }
+    }
+  }
+  img {
+    mix-blend-mode: lighten;
   }
 }

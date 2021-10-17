@@ -98,3 +98,19 @@
   font-size: 30px;
   color: $linkColor;
 }
+@mixin contact-type {
+  font-family: $Ubuntu; //light
+  font-size: 30px;
+  color: $gold;
+}
+@mixin content-desc {
+  font-family: $miriadPro;
+  font-size: 30px;
+  color: $gray;
+  line-height: 40px;
+}
+@mixin footer-link {
+  font-family: $Ubuntu;
+  font-size: 15px;
+  color: $gray;
+}
