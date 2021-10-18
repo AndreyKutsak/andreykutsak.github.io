@@ -119,3 +119,28 @@
   font-size: 15px;
   color: $gray;
 }
+@mixin snd-inp {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid $gray;
+  margin-bottom: 25px;
+  background: $mainbg;
+  outline: none;
+  padding: 25px 25px;
+  @include input-data-text;
+  &::placeholder {
+    @include input-data-text;
+  }
+}
+@mixin send-btn {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+  padding: 25px 10px;
+  background-color: $gold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  @include input-data-text;
+}

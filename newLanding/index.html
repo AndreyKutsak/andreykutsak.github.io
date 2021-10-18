@@ -11,10 +11,69 @@
   <body>
     <header>
       <div class="container">
+        <div class="responsive-btn" id="btn">
+          <div class="row"></div>
+          <div class="row"></div>
+          <div class="row"></div>
+        </div>
+        <div class="menu-bg hide" id="menu-wraper">
+          <div class="menu-container">
+            <h2 class="block-head">menu</h2>
+            <div class="container">
+              <ul>
+                <li><a href="index.html" class="head-link">main</a></li>
+                <li><a href="#services" class="head-link">services</a></li>
+                <li><a href="#portfolio" class="head-link">portfolio</a></li>
+                <li><a href="#" class="head-link">blog</a></li>
+                <li><a href="#" class="head-link">pricing</a></li>
+                <li><a href="#feedback" class="head-link">feedbacks</a></li>
+                <li><a href="#contacts" class="head-link">contacts</a></li>
+              </ul>
+              <div class="content-container">
+                <div class="account-action">
+                  <ul class="action-list">
+                    <li><a href="#">sing in</a></li>
+                    <li><a href="#">sign up</a></li>
+                    <li><a href="#">send message</a></li>
+                  </ul>
+                  <form action="" class="search-form">
+                    <input type="text" placeholder="search" class="srch-inp" />
+                    <input type="submit" id="srch-btn" value="" />
+                  </form>
+                </div>
+                <div class="singin-container">
+                  <h2 class="block-head">sing in</h2>
+                  <p class="singin-desc">sing in using</p>
+                  <div class="btn-wraper">
+                    <button class="fb btn">faceboob</button>
+                    <button class="google btn">google+</button>
+                    <button class="tw btn">twiter</button>
+                  </div>
+                  <p class="singin-desc">or your account</p>
+                  <form action="#" class="auth-form">
+                    <input
+                      type="text"
+                      placeholder="Name or Email"
+                      class="snd-inp"
+                    />
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      class="snd-inp"
+                    />
+                    <input type="submit" value="sing in" class="snd-btn" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="singin-form"></div>
+          <div class="signup-form"></div>
+        </div>
         <div class="header-text-wraper">
           <h1 class="header-head">undercover</h1>
         </div>
-        <div class="responsive-btn" id="btn"></div>
+
         <img src="img/lampp-photo.png" alt="lampp-photo" />
         <h2 class="header-head-gradient">
           our design’s so wanted that we have to hide
@@ -22,7 +81,7 @@
         <a href="#service" class="link-scroll-down">scroll down</a>
       </div>
     </header>
-    <div class="services">
+    <div class="services" id="services">
       <div class="container">
         <h2 class="block-head">services</h2>
 
@@ -83,7 +142,7 @@
         </div>
       </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="block-head">portfolio</h2>
         <div class="drop-down-btn" id="btn-dropdown">
@@ -145,7 +204,7 @@
         </nav>
       </div>
     </div>
-    <div class="contacts">
+    <div class="contacts" id="feedback">
       <div class="container">
         <div class="block">
           <h2 class="block-head">feedback</h2>
@@ -188,16 +247,16 @@
         <div class="block">
           <h2 class="block-head">contact us</h2>
           <form action="#" class="form">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <textarea placeholder="Your message"></textarea
-            ><input type="submit" value="send" />
+            <input type="text" placeholder="Name" class="snd-inp" />
+            <input type="text" placeholder="Email" class="snd-inp" />
+            <textarea placeholder="Your message" class="snd-inp"></textarea
+            ><input type="submit" value="send" class="snd-btn" />
             <img src="img/from.png" alt="form image" class="form-img" />
           </form>
         </div>
       </div>
     </div>
-    <div class="contact-data">
+    <div class="contact-data" id="contacts">
       <div class="container">
         <h2 class="block-head">contacts</h2>
         <div class="contact-wraper">

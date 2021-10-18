@@ -1,18 +1,23 @@
-let sliderItem = document.querySelectorAll(".slider-item>a"),
-  slideWindow = document.querySelector("#sl-window"),
-  slides = document.querySelectorAll(".slide"),
-  slideHeight = slides[0].innerHeight;
+let btn = document.querySelector("#btn"),
+  menu = document.querySelector("#menu-wraper"),
+  linkReg = new RegExp(/#[a-z0-9]/, "g");
+btn.addEventListener("click", function () {
+  menu.classList.toggle("hide");
+});
 
-count = 0;
+let link = document.querySelectorAll(".head-link");
 
-sliderItem.forEach(function (k) {
+link.forEach(function (k) {
   k.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log(e);
-    sliderItem.forEach(function (k, i) {
+    link.forEach(function (k) {
       k.classList.remove("active");
-      console.log(i);
     });
     e.target.classList.add("active");
+    let linkVal = e.target.getAttribute("href");
+    if (linkReg.test(linkVal)) {
+      let el = document.querySelector(linkVal);
+      el.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
   });
 });

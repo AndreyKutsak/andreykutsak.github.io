@@ -25,11 +25,198 @@ body {
 .block-head {
   @include block-head;
 }
-
+.snd-inp {
+  @include snd-inp;
+}
+.snd-btn {
+  @include send-btn;
+}
 header {
   position: relative;
   padding: 80px 0 95px;
-
+  .responsive-btn {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    height: 80px;
+    width: 80px;
+    border: 1px solid $linkColor;
+    padding: 14px;
+    cursor: pointer;
+    z-index: 9;
+    transition: 0.4s;
+    &:hover {
+      border-color: $gold;
+      .row {
+        background-color: $gold;
+      }
+    }
+    .row {
+      height: 2px;
+      background-color: $gray;
+      width: 100%;
+      margin: 12px 0;
+    }
+  }
+  .menu-bg {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100vw;
+    border-top: 1px solid $linkColor;
+    border-bottom: 1px solid $linkColor;
+    padding: 50px 10px 90px;
+    background-color: $mainbg;
+    transition: 0.4s;
+    z-index: 2;
+  }
+  .hide {
+    transform: translateX(-200%);
+  }
+  .menu-container {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        padding: 25px 10px;
+        a {
+          position: relative;
+          @include slider-item-link;
+          text-transform: uppercase;
+          text-align: left;
+          transition: 0.4s;
+          &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            transition: 0.4s;
+          }
+          &:hover {
+            @include link-item-hovered;
+            &:after {
+              position: absolute;
+              height: 2px;
+              width: 100%;
+              background-color: $gold;
+            }
+          }
+        }
+        .active {
+          @include link-item-hovered;
+        }
+      }
+      .content-container {
+        flex-grow: 1;
+        background-color: $mainbg;
+        background-image: url(../img/menu-bg.jpg);
+        background-position: top right;
+        background-size: cover;
+        background-blend-mode: lighten;
+      }
+      .account-action {
+        display: flex;
+        justify-content: space-between;
+        .action-list {
+          max-width: 300px;
+          margin-right: 40px;
+        }
+        .search-form {
+          position: relative;
+          .srch-inp {
+            background: transparent;
+            border: none;
+            height: 40px;
+            border-bottom: 1px solid $linkColor;
+            width: 100%;
+            outline: none;
+            @include input-data-text;
+            &::placeholder {
+              @include input-data-text;
+              text-transform: uppercase;
+            }
+          }
+          #srch-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 25px;
+            width: 25px;
+            background-image: url(../img/search-ico.png);
+            background-size: cover;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.2s;
+            &:active {
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+      // sing in
+      .singin-container {
+        border: 1px solid $gray;
+        padding: 50px 15px;
+        background-color: $mainbg;
+        .block-head {
+          margin-bottom: 45px;
+        }
+        .singin-desc {
+          @include head-desc;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        .btn-wraper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 45px;
+          .btn {
+            width: 230px;
+            padding: 20px 10px;
+            text-align: center;
+            appearance: none;
+            cursor: pointer;
+            margin: 0 15px;
+            background: none;
+            font-family: $Ubuntu; //light
+            font-size: 30px;
+            font-weight: 200;
+            border-width: 1px;
+          }
+          .fb {
+            color: $blue;
+            border-color: $blue;
+          }
+          .google {
+            color: $red;
+            border-color: $red;
+          }
+          .tw {
+            color: $sky;
+            border-color: $sky;
+          }
+        }
+        .auth-form {
+          max-width: 745px;
+          margin: 0 auto;
+          .inp {
+            width: 100%;
+            border: 1px solid $gray;
+            background: none;
+            margin-bottom: 25px;
+            padding: 20px 25px;
+            outline: none;
+            @include input-data-text;
+          }
+        }
+      }
+    }
+  }
   .header-text-wraper {
     max-width: 415px;
     margin: 0 auto;
@@ -337,33 +524,11 @@ header {
         display: inline-flex;
         flex-direction: column;
         align-items: center;
-
-        input,
-        textarea {
-          display: inline-block;
-          width: inherit;
-          border: 1px solid $gray;
-          margin-bottom: 25px;
-          background: $mainbg;
-          outline: none;
-          padding: 25px 25px;
-          @include input-data-text;
-          &::placeholder {
-            @include input-data-text;
-          }
-        }
         textarea {
           height: 300px;
           resize: none;
         }
-        input[type="submit"] {
-          width: 230px;
-          background-color: $gold;
-          color: $mainbg;
-          text-transform: uppercase;
-          text-align: center;
-          cursor: pointer;
-          border: none;
+        .snd-btn {
           position: relative;
         }
         .form-img {
