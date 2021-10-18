@@ -1,0 +1,4 @@
+@function setWidth($width) {
+  $curWidth: $width * 100% / 1200;
+  @return $curWidth;
+}

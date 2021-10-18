@@ -1,0 +1,146 @@
+// animations
+
+@mixin head {
+  font-family: $playfairDisplay;
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $gold;
+}
+
+@mixin head-desc {
+  font-family: $Ubuntu;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: right;
+  color: $gray;
+}
+@mixin gradient-text {
+  font-family: $Ubuntu;
+  font-size: 55px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin link-text {
+  font-family: $Ubuntu;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $linkColor;
+  text-align: center;
+}
+@mixin block-head {
+  font-family: $playfairDisplay;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: $gray;
+  text-align: center;
+}
+@mixin slider-item-link {
+  font-family: $Ubuntu;
+  font-size: 30px;
+
+  color: $gray;
+}
+@mixin link-item-hovered {
+  transform: scale(2);
+  color: $gold;
+}
+@mixin slider-description {
+  font-family: $miriadPro;
+  font-size: 20px;
+  line-height: 30px;
+  color: $gray;
+}
+@mixin item-link {
+  font-family: $Ubuntu;
+  font-size: 30px;
+  color: $gray;
+}
+@mixin portfolio-sub-head {
+  font-family: $Ubuntu;
+  font-size: 30px;
+  color: $mainbg;
+}
+@mixin btn-text {
+  font-family: $Ubuntu;
+  font-size: 25px;
+  color: $mainbg;
+}
+@mixin portfolio-sub-desc {
+  font-family: $Ubuntu; //medium
+  font-size: 16px;
+  color: $mainbg;
+}
+@mixin portfolio-author {
+  font-family: Uubuntu; //medium italic
+  font-size: 16px;
+  color: $mainbg;
+}
+@mixin nav-text {
+  font-family: $Ubuntu; //medium
+  font-size: 16px;
+  color: $gray;
+}
+@mixin feedback-description {
+  font-family: $Ubuntu; //Light
+  font-size: 30px;
+  color: $gray;
+}
+@mixin feedback-author {
+  font-family: $Ubuntu; // light
+  font-size: 30px;
+  color: $gold;
+}
+
+@mixin feedback-link {
+  font-family: $Ubuntu; //light
+  font-size: 15px;
+  color: $gray;
+}
+
+@mixin input-data-text {
+  font-family: $Ubuntu; //light
+  font-size: 30px;
+  color: $linkColor;
+}
+@mixin contact-type {
+  font-family: $Ubuntu; //light
+  font-size: 30px;
+  color: $gold;
+}
+@mixin content-desc {
+  font-family: $miriadPro;
+  font-size: 30px;
+  color: $gray;
+  line-height: 40px;
+}
+@mixin footer-link {
+  font-family: $Ubuntu;
+  font-size: 15px;
+  color: $gray;
+}
+@mixin snd-inp {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid $gray;
+  margin-bottom: 25px;
+  background: $mainbg;
+  outline: none;
+  padding: 25px 25px;
+  @include input-data-text;
+  &::placeholder {
+    @include input-data-text;
+  }
+}
+@mixin send-btn {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+  padding: 25px 10px;
+  background-color: $gold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  @include input-data-text;
+}
