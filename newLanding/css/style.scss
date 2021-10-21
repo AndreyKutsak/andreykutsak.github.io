@@ -22,6 +22,9 @@ body {
   padding: 0 10px;
   margin: 0 auto;
 }
+.hide {
+  transform: translateX(-2000%);
+}
 .block-head {
   @include block-head;
 }
@@ -56,6 +59,27 @@ header {
       background-color: $gray;
       width: 100%;
       margin: 12px 0;
+      transition: 0.4s;
+    }
+  }
+  .clicked {
+    .row {
+      position: absolute;
+      &:nth-child(1) {
+        top: 25px;
+        left: 0px;
+        transform: rotate(-45deg);
+        transform-origin: center;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        top: 25px;
+        left: 0px;
+        transform: rotate(45deg);
+        transform-origin: center;
+      }
     }
   }
   .menu-bg {
@@ -70,9 +94,7 @@ header {
     transition: 0.4s;
     z-index: 2;
   }
-  .hide {
-    transform: translateX(-200%);
-  }
+
   .menu-container {
     .container {
       display: flex;
@@ -109,7 +131,7 @@ header {
         }
       }
       .content-container {
-        flex-grow: 1;
+        width: 33.33%;
         background-color: $mainbg;
         background-image: url(../img/menu-bg.jpg);
         background-position: top right;
@@ -251,11 +273,17 @@ header {
     -webkit-text-fill-color: transparent;
   }
   .link-scroll-down {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     @include link-text;
     animation: 0.6s linear 0s infinite alternate up-down;
+    svg {
+      position: absolute;
+      right: 50%;
+      bottom: -100%;
+      transform: translate(50%);
+    }
   }
 }
 @keyframes up-down {
@@ -437,6 +465,7 @@ header {
         }
         .block-sign {
           @include portfolio-author;
+          font-style: italic;
           text-align: right;
           padding-left: 23px;
           max-width: 270px;

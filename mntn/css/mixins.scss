@@ -1,91 +1,92 @@
 @mixin header-head {
-    font-family: $Chronic;
-    font-weight: 600;
-    font-size: getSize(88);
-    line-height: getHeight(100);
-    text-transform: capitalize;
-    color: $white;
-    margin-bottom: 32px;
+  font-family: $Chronic;
+  font-weight: 600;
+  font-size: getSize(88);
+  line-height: getHeight(100);
+  text-transform: capitalize;
+  color: $white;
+  margin-bottom: 32px;
 }
-@mixin logo{
-    font-family: $Chronic;
-    font-size: getSize(32);
-    line-height: getHeight(32);
-    letter-spacing: 0.01em;
-    color: $white;
-    text-transform: uppercase;
+@mixin logo {
+  font-family: $Chronic;
+  font-size: getSize(32);
+  line-height: getHeight(32);
+  letter-spacing: 0.01em;
+  color: $white;
+  text-transform: uppercase;
 }
-@mixin sidebar-item{
-    font-family: $Gilroy;
-    font-size: getSize(18);
-    line-height: getHeight(22);
-    text-align: right;
-    color: $white;
+@mixin sidebar-item {
+  font-family: $Gilroy;
+  font-size: getSize(18);
+  line-height: getHeight(22);
+  text-align: right;
+  color: $white;
 }
-@mixin menu-items{
-    font-family: $Gilroy;   
-    font-weight: bold;
-    font-size: getSize(18);
-    line-height: getHeight(22);
-    color: $white;
+@mixin menu-items {
+  font-family: $Gilroy;
+  font-weight: bold;
+  font-size: getSize(18);
+  line-height: getHeight(22);
+  color: $white;
 }
 @mixin line-text {
-    position: relative;
-    font-family: Gilroy;
-    font-weight: 800;
-    font-size: getSize(18);
-    line-height: getHeight(22);
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    color: $yellow;
-    margin-left: getSize(100);
-    margin-bottom: getHeight(32);
-    &:before {
-        position: absolute;
-        content: "";
-        top: 50%;
-        left: -100px;
-        height: 2px;
-        width: 72px;
-        background-color: $yellow;
-        transform: translateY(-50%);
-    } 
+  position: relative;
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: getSize(18);
+  line-height: getHeight(22);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: $yellow;
+  margin-left: getSize(100);
+  margin-right: getSize(100);
+  margin-bottom: getHeight(32);
+  &:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -100px;
+    height: 2px;
+    width: 72px;
+    background-color: $yellow;
+    transform: translateY(-50%);
+  }
 }
 @mixin block-head {
-    font-family:$Chronic;
-    font-weight: 600;
-    font-size: getSize(64);
-    line-height: getHeight(77);
-    max-width: getSize(555);
-    text-align: left;
-    color: $white;
-    margin-bottom: getHeight(32);
+  font-family: $Chronic;
+  font-weight: 600;
+  font-size: getSize(64);
+  line-height: getHeight(77);
+  max-width: getSize(555);
+  text-align: left;
+  color: $white;
+  margin-bottom: getHeight(32);
 }
-@mixin block-desc{
-    font-family: $Gilroy;
-font-weight: 400;
-font-size: getSize(18);
-line-height: getHeight(32);
+@mixin block-desc {
+  font-family: $Gilroy;
+  font-weight: 400;
+  font-size: getSize(18);
+  line-height: getHeight(32);
 
-text-align: left;
-color: $white;
-margin-bottom: 27px;
+  text-align: left;
+  color: $white;
+  margin-bottom: 27px;
 }
-@mixin blog-head{
-    font-family: $Gilroy;
-    font-weight: bold;
-    font-size: getSize(23);
-    line-height: getHeight(32);
-    color: $yellow;
+@mixin blog-head {
+  font-family: $Gilroy;
+  font-weight: bold;
+  font-size: getSize(23);
+  line-height: getHeight(32);
+  color: $yellow;
 }
 @mixin block-link {
-    position: relative;        
-        font-family: $Gilroy;
-font-weight: bold;
-font-size: getSize(18);
-line-height: getHeight(22);
-color: $yellow;
-&:after{
+  position: relative;
+  font-family: $Gilroy;
+  font-weight: bold;
+  font-size: getSize(18);
+  line-height: getHeight(22);
+  color: $yellow;
+  &:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -94,8 +95,8 @@ color: $yellow;
     height: 3px;
     width: 16px;
     background-color: $yellow;
-}
-&:before{
+  }
+  &:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -105,13 +106,13 @@ color: $yellow;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+  }
 }
-}
-@mixin footer-link{
-    font-family: $Gilroy;
-  
-    font-weight: 500;
-    font-size: getSize(18);
-    line-height: getHeight(22);
-    color: $white;
+@mixin footer-link {
+  font-family: $Gilroy;
+
+  font-weight: 500;
+  font-size: getSize(18);
+  line-height: getHeight(22);
+  color: $white;
 }
