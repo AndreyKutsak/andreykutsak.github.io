@@ -1,0 +1,26 @@
+// common
+$container-max-width: 1260px;
+$grid-columns: 12;
+$grid-gap: 30px;
+$grid-gap-side: $grid-gap/2;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+// colors
+$main-bg: #e5e5e5;
+$content-bg: #fff;
+$blockBorderColor: #d1d1d1;
+
+$gray: #f9f9f9;
+$green: #6a983c;
+$black: #151515;
+$search: #a9a9a9;
+$button-bg: #f5f5f5;
+// fonts
+$open-sans: "Open Sans", sans-serif;
+$popins: "popins", sans-serif;

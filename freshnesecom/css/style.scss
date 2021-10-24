@@ -1,0 +1,254 @@
+@import "varibles.scss";
+@import "mixins.scss";
+img {
+  max-width: 100%;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.main {
+  background-color: $main-bg;
+}
+.container {
+  @include container;
+}
+
+header {
+  .container {
+    background-color: $content-bg;
+    .contacts {
+      padding: 15px 8px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $gray;
+      .contacts__text__wraper {
+        display: inline-flex;
+        justify-content: space-between;
+        .contacts__text {
+          @include contact-text;
+        }
+        .contacts__data {
+          @include contact-data-text;
+
+          padding: 0 17px;
+        }
+      }
+      .contacts__menu {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .contacts__item {
+          padding: 0px 18px;
+          a {
+            @include contacts-item;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    padding: 40px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo__search {
+      position: relative;
+      border: 1px solid $blockBorderColor;
+      border-radius: 12px;
+      padding: 10px 15px;
+      background-color: $gray;
+      flex-basis: 500px;
+      .logo__search__list {
+        @include category-text;
+        outline: none;
+
+        max-width: 120px;
+        appearance: none;
+        border: none;
+        background-color: $gray;
+
+        .logo__search__item {
+          &:first-child {
+            display: none;
+          }
+          @include category-text;
+          text-align: center;
+          appearance: none;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 10px 15px;
+          width: 100%;
+        }
+      }
+      .logo__search__input {
+        @include search-text;
+        padding: 5px 10px;
+        width: 75%;
+        border: none;
+        background: transparent;
+        outline: none;
+        border-left: 2px solid $blockBorderColor;
+      }
+      .logo__search__btn {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        height: 30px;
+        width: 30px;
+        background-color: transparent;
+        background-image: url(../img/svg/search-icon.svg);
+        background-size: cover;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.4s;
+        &:active {
+          transform: scale(0.9) translateY(-50%);
+        }
+      }
+    }
+    .logo__account {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo__account__icon {
+        padding: 0 17px;
+      }
+    }
+  }
+  .head__menu {
+    padding: 16px 5px;
+    position: relative;
+    background-color: $gray;
+    .menu__button__dropdown {
+      position: relative;
+      padding: 0 26px;
+      appearance: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      @include dropdown-text;
+      &:after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0;
+        transform-origin: left;
+        transform: translateY(-50%) rotate(45deg);
+        height: 2px;
+        width: 10px;
+        background-color: $green;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -3px;
+        transform-origin: right;
+        transform: translateY(-50%) rotate(-45deg);
+        height: 2px;
+        width: 10px;
+        background-color: $green;
+      }
+      .menu__dropdown__list {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        filter: blur(2px);
+        opacity: 0;
+        border-radius: 3px;
+        border: 1px solid $blockBorderColor;
+        background-color: $main-bg;
+        overflow: hidden;
+        transition: 0.4s;
+        .menu__dropdown__item {
+          padding: 10px 10px;
+          transition: 0.4s;
+
+          &:hover {
+            background-color: $blockBorderColor;
+          }
+          a {
+            @include dropdown-text;
+          }
+        }
+      }
+      &:hover {
+        .menu__dropdown__list {
+          height: auto;
+          opacity: 1;
+          filter: blur(0);
+        }
+      }
+    }
+  }
+}
+.content__container {
+  .container {
+    background-color: $content-bg;
+    padding: 65px 45px;
+    .sidebar {
+      max-width: 270px;
+      .sidebar__head {
+        @include sidebar-head;
+        margin-bottom: 16px;
+      }
+      .sidebar__list {
+        margin-bottom: 50px;
+        .sidebar__list__item {
+          padding: 6px 0;
+          a {
+            @include sidebar-item;
+          }
+        }
+      }
+      .sidebar__button {
+        position: relative;
+        max-width: 167px;
+        margin-bottom: 190px;
+        padding: 12.5px 16px;
+        background-color: $button-bg;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.4s;
+        @include btn-text;
+        &:after {
+          position: absolute;
+          content: "";
+          top: 57%;
+          right: 10px;
+          height: 10px;
+          width: 2px;
+          background-color: $black;
+          transform-origin: left;
+          transform: translateY(-50%) rotate(45deg);
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          top: 48%;
+          right: 10px;
+          height: 10px;
+          width: 2px;
+          background-color: $black;
+          transform-origin: left;
+          transform: translateY(-50%) rotate(-45deg);
+        }
+        &:hover {
+          transform: scale(1.01);
+        }
+      }
+    }
+  }
+}

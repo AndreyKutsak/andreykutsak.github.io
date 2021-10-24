@@ -1,0 +1,62 @@
+@import "varibles.scss";
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+@mixin contact-text {
+  font-family: $open-sans;
+  font-size: 12px;
+  color: $green;
+}
+@mixin contact-data-text {
+  font-family: $open-sans;
+  font-size: 12px;
+  color: $black;
+}
+@mixin contacts-item {
+  font-family: $open-sans;
+  font-size: 12px;
+  color: $green;
+}
+@mixin category-text {
+  font-family: $popins;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: bold;
+  color: $black;
+}
+@mixin search-text {
+  font-family: $open-sans;
+  font-size: 14px;
+  line-height: 19px;
+  color: $search;
+}
+@mixin dropdown-text {
+  font-family: $popins;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  color: $black;
+}
+// sidabar
+@mixin sidebar-head {
+  font-family: $popins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: $black;
+}
+@mixin sidebar-item {
+  font-family: $open-sans;
+  font-size: 14px;
+  line-height: 20px;
+  color: $green;
+  text-decoration: underline;
+}
+@mixin btn-text {
+  font-family: $popins;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $black;
+}
