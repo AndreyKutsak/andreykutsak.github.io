@@ -30,18 +30,18 @@
                 <li><a href="#contacts" class="head-link">contacts</a></li>
               </ul>
               <div class="content-container">
-                <div class="account-action">
+                <div class="account-action hide">
                   <ul class="action-list">
-                    <li><a href="#">sing in</a></li>
-                    <li><a href="#">sign up</a></li>
-                    <li><a href="#">send message</a></li>
+                    <li class="auth-link"><a href="#">sing in</a></li>
+                    <li class="auth-link"><a href="#">sign up</a></li>
+                    <li class="auth-link"><a href="#">send message</a></li>
                   </ul>
-                  <form action="" class="search-form">
+                  <form action="#" class="search-form">
                     <input type="text" placeholder="search" class="srch-inp" />
                     <input type="submit" id="srch-btn" value="" />
                   </form>
                 </div>
-                <div class="singin-container">
+                <div class="singin-container hide">
                   <h2 class="block-head">sing in</h2>
                   <p class="singin-desc">sing in using</p>
                   <div class="btn-wraper">
@@ -78,7 +78,21 @@
         <h2 class="header-head-gradient">
           our design’s so wanted that we have to hide
         </h2>
-        <a href="#service" class="link-scroll-down">scroll down</a>
+        <a href="#service" class="link-scroll-down"
+          >scroll down
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-chevron-down"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+            /></svg
+        ></a>
       </div>
     </header>
     <div class="services" id="services">
@@ -135,7 +149,7 @@
                 and develop our own photography department to create unique
                 products for you. See more or portfolio
               </p>
-              <img src="img/ui-illustration1.jpg" alt="" />
+              <img src="img/ui-illustration1.jpg" alt="ilustration2" />
               <p class="slider-desc"></p>
             </div>
           </div>
