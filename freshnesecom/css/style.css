@@ -1,3 +1,7 @@
+html {
+  font-size: 32px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -803,7 +807,6 @@ header .head__menu .menu__button__dropdown:hover .menu__dropdown__list {
   font-size: 12px;
   font-weight: 400;
   line-height: 17px;
-  color: #575757;
   margin-bottom: 23px;
 }
 
@@ -847,11 +850,156 @@ header .head__menu .menu__button__dropdown:hover .menu__dropdown__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 16px;
+}
+
+.blog .container .blog__content__wraper .cat__label {
+  max-width: 82px;
+  padding: 0 8px;
+  background-color: #f4f8ec;
+  border-radius: 12px;
+  font-family: "popins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #6a983c;
+}
+
+.blog .container .blog__content__wraper .blog__dinner__tips {
+  padding: 24px;
+  max-width: 469px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 12px;
+  padding-top: 60px;
+}
+
+.blog .container .blog__content__wraper .blog__dinner__tips .cat__label {
+  margin-bottom: 228px;
+}
+
+.blog .container .blog__content__wraper .blog__dinner__tips .blog__diner__head {
+  font-family: "popins", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.blog .container .blog__content__wraper .blog__dinner__tips .blog__info__wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 200px;
+}
+
+.blog .container .blog__content__wraper .blog__dinner__tips .blog__info__wraper .avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+}
+
+.blog .container .blog__content__wraper .blog__dinner__tips .blog__info__wraper .author__name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #e5e5e5;
+}
+
+.blog .container .blog__content__wraper .blog__dinner__tips .blog__info__wraper .publication__date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #e5e5e5;
+}
+
+.blog .blog__vegetables {
+  max-width: 270px;
+  margin: 0 16px;
+}
+
+.blog .blog__vegetables img {
+  margin-bottom: 24px;
+}
+
+.blog .blog__vegetables .cat__label {
+  margin-bottom: 8px;
+}
+
+.blog .blog__vegetables .blog__cat__head {
+  font-family: "popins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #151515;
+}
+
+.blog .blog__vegetables .blog__info__wraper .author__name,
+.blog .blog__vegetables .blog__info__wraper .publication__date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #151515;
+}
+
+.blog__recepies {
+  max-width: 300px;
+  margin: 0 16px;
+}
+
+.blog__recepies .blog__recepies__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.blog__recepies .blog__recepies__container .blog__text__container {
+  width: 225px;
+}
+
+.blog__recepies .blog__recepies__container .blog__text__container .recepies__head {
+  font-family: "popins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #151515;
+  margin-bottom: 18px;
+}
+
+.blog__recepies .blog__recepies__container .blog__text__container .recepies__autor,
+.blog__recepies .blog__recepies__container .blog__text__container .publication__date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  padding: 0 5px;
+  color: #151515;
+}
+
+.blog__recepies .blog__recepies__container img {
+  max-width: 96px;
 }
 
 footer .container {
@@ -875,9 +1023,6 @@ footer .container .footer__block__wraper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 50px;

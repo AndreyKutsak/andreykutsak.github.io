@@ -1,5 +1,9 @@
 @import "varibles.scss";
 @import "mixins.scss";
+@import "function.scss";
+html {
+  font-size: 32px;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -368,6 +372,7 @@ header {
           }
           .product__desc {
             @include product-desc;
+            color: $product-desc;
             margin-bottom: 16px;
           }
           .product__price__wraper {
@@ -550,11 +555,101 @@ header {
     padding: 64px 45px;
     .blog__content__wraper {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
+      margin: 0 16px;
+      .cat__label {
+        max-width: 82px;
+        padding: 0 8px;
+        background-color: $tips-bg;
+        border-radius: 12px;
+
+        @include tips-text;
+      }
+      .blog__dinner__tips {
+        padding: 24px;
+        max-width: 469px;
+        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        border-radius: 12px;
+        padding-top: 60px;
+        .cat__label {
+          margin-bottom: 228px;
+        }
+        .blog__diner__head {
+          @include blog-head;
+          margin-bottom: 8px;
+        }
+        .blog__info__wraper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 200px;
+          .avatar {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background-color: $gray;
+          }
+          .author__name {
+            @include product-desc;
+            color: $main-bg;
+          }
+          .publication__date {
+            @include product-desc;
+            color: $main-bg;
+          }
+        }
+      }
+    }
+  }
+  .blog__vegetables {
+    max-width: 270px;
+    margin: 0 16px;
+    img {
+      margin-bottom: 24px;
+    }
+    .cat__label {
+      margin-bottom: 8px;
+    }
+    .blog__cat__head {
+      @include sidebar-head;
+    }
+    .blog__info__wraper {
+      .author__name,
+      .publication__date {
+        @include product-desc;
+        color: $black;
+      }
     }
   }
 }
+.blog__recepies {
+  max-width: 300px;
+  margin: 0 16px;
+  .blog__recepies__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    .blog__text__container {
+      width: 225px;
+      .recepies__head {
+        @include dropdown-text;
+        margin-bottom: 18px;
+      }
+      .recepies__autor,
+      .publication__date {
+        @include product-desc;
+        padding: 0 5px;
+        color: $black;
+      }
+    }
+    img {
+      max-width: 96px;
+    }
+  }
+}
+
 footer {
   .container {
     padding: 64px 45px;
@@ -566,7 +661,7 @@ footer {
     .footer__block__wraper {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+
       flex-wrap: wrap;
       padding-bottom: 50px;
       .footer__block {
