@@ -1,5 +1,9 @@
+@import "functions.scss";
 @import "varibles.scss";
 @import "mixins.scss";
+html {
+  font-size: 16px;
+}
 * {
   box-sizing: border-box;
 }
@@ -61,7 +65,7 @@ header {
           a {
             @include menu-links;
           }
-          .hide {
+          .hide-dropdown {
             height: 0px;
             opacity: 0;
           }
@@ -118,35 +122,36 @@ header {
       }
     }
   }
-  .shadow-header {
-    font-size: 72px;
-    line-height: 98px;
-    max-width: 730px;
-    margin-top: 40px;
-    margin-bottom: 32px;
+}
+.shadow-header {
+  font-size: rem(72);
+  line-height: rem(98);
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+.get-btn {
+  font-family: $inter;
+  font-size: rem(16);
+  line-height: rem(24);
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  color: $white;
+  display: block;
+  padding: 12px 32px;
+  width: 154px;
+  background: $getBtnBg;
+  border-radius: 6px;
+  transition: 0.4s;
+  &:hover {
+    background-color: $getBtnHov;
   }
-  .get-btn {
-    font-family: $inter;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: $white;
-    display: block;
-    padding: 12px 32px;
-    width: 154px;
-    background: $getBtnBg;
-    border-radius: 6px;
-    transition: 0.4s;
-    &:hover {
-      background-color: $getBtnHov;
-    }
-  }
-  .head-content-wraper {
-    display: flex;
-    .text-container {
-      margin-top: 140px;
-    }
+}
+.head-content-wraper {
+  display: flex;
+  .text-container {
+    margin-top: 140px;
   }
 }
 
@@ -194,8 +199,8 @@ header {
   .feature-head {
     font-family: $inter;
     font-weight: 800;
-    font-size: 48px;
-    line-height: 64px;
+    font-size: rem(48);
+    line-height: rem(64);
     margin-bottom: 8px;
     text-align: center;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.28);
@@ -219,15 +224,15 @@ header {
       .block-head {
         font-family: $inter;
         font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: rem(24);
+        line-height: rem(32);
         color: $textColor;
         text-align: center;
       }
       .block-desc {
         font-family: $inter;
-        font-size: 16px;
-        line-height: 26px;
+        font-size: rem(16);
+        line-height: rem(26);
         text-align: center;
         color: $textColor;
         margin-bottom: 30px;
@@ -279,8 +284,8 @@ header {
       .story-desc {
         position: relative;
         font-family: $inter;
-        font-size: 18px;
-        line-height: 32px;
+        font-size: rem(18);
+        line-height: rem(32);
         color: $textColor;
         margin-bottom: 24px;
         &:before {
@@ -293,21 +298,21 @@ header {
           font-family: serif;
           font-weight: bold;
           color: #2ec5ce;
-          font-size: 30px;
+          font-size: rem(30);
         }
       }
       .story-author {
         font-family: $inter;
         font-weight: bold;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: rem(18);
+        line-height: rem(28);
         color: $textColor;
       }
       .story-sub {
         font-family: $inter;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: rem(14);
+        line-height: rem(24);
         color: #969bab;
       }
     }
@@ -317,7 +322,6 @@ header {
   }
 }
 
-//
 .achievements {
   padding: 82px 10px;
   background-color: $white;
@@ -351,14 +355,14 @@ header {
     .info-head {
       font-family: $inter;
       font-weight: bold;
-      font-size: 28px;
-      line-height: 40px;
+      font-size: rem(28);
+      line-height: rem(40);
       color: $textColor;
     }
     .info-desc {
       font-family: $inter;
-      font-size: 16px;
-      line-height: 26px;
+      font-size: rem(16);
+      line-height: rem(26);
       color: $textColor;
     }
   }
@@ -386,8 +390,8 @@ header {
         position: relative;
         font-family: $inter;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: rem(16);
+        line-height: rem(24);
         color: $getBtnBg;
         &:after {
           content: "";
@@ -459,8 +463,8 @@ header {
       .manage-btn-desc {
         font-family: $inter;
         font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: rem(18);
+        line-height: rem(28);
         color: $textColor;
         margin-bottom: 8px;
       }
@@ -489,8 +493,8 @@ footer {
       a {
         display: inline-block;
         font-family: $inter;
-        font-size: 16px;
-        line-height: 26px;
+        font-size: rem(16);
+        line-height: rem(26);
         color: $white;
         margin-bottom: 12px;
       }
@@ -505,16 +509,16 @@ footer {
         }
         a {
           font-family: $inter;
-          font-size: 16px;
-          line-height: 26px;
+          font-size: rem(16);
+          line-height: rem(26);
           color: $white;
         }
       }
     }
     .copyright {
       font-family: $inter;
-      font-size: 14px;
-      line-height: 24px;
+      font-size: rem(14);
+      line-height: rem(24);
       color: $footerText;
       margin-top: 24px;
     }
@@ -522,8 +526,8 @@ footer {
       .btn-desc {
         font-family: $inter;
         font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: rem(18);
+        line-height: rem(28);
         color: $footerText;
         margin-bottom: 16px;
       }
@@ -537,9 +541,8 @@ footer {
 
 // media queris
 @media screen and (max-width: 1040px) {
-  header .head-content-wraper .shadow-header {
-    font-size: 55px;
-    line-height: 60px;
+  html {
+    font-size: 10px;
   }
   header {
     .head-content-wraper {
@@ -551,14 +554,6 @@ footer {
       }
       .get-btn {
         margin: 20px auto;
-      }
-    }
-  }
-  .achievements {
-    .container {
-      .achive-head {
-        font-size: 35px;
-        line-height: 47px;
       }
     }
   }
@@ -608,10 +603,6 @@ footer {
 }
 
 @media screen and(max-width: 925px) {
-  .shadow-header {
-    font-size: 38px;
-    line-height: 45px;
-  }
   .stories {
     .story-block {
       .story-wraper {
@@ -621,11 +612,9 @@ footer {
     }
   }
 }
-
 @media screen and (max-width: 915px) {
-  .shadow-header {
-    font-size: 35px;
-    line-height: 35px;
+  html {
+    font-size: 12px;
   }
   .manage .container .block {
     max-width: 100%;
@@ -641,8 +630,10 @@ footer {
     }
   }
 }
-
 @media screen and (max-width: 860px) {
+  html {
+    font-size: 13px;
+  }
   .responsive-btn {
     display: block;
     position: absolute;
@@ -682,7 +673,6 @@ footer {
               background-color: rgb(254, 254, 255);
               border-radius: 5px;
               left: 5px;
-
               li {
                 width: inherit;
                 padding: 10px 20px;
@@ -697,11 +687,18 @@ footer {
           }
         }
       }
+      .hide {
+        transform: translateX(-200%);
+        opacity: 0;
+      }
     }
   }
 }
 
 @media screen and (max-width: 690px) {
+  html {
+    font-size: 10px;
+  }
   .stories {
     .container {
       .story-head {
@@ -715,18 +712,10 @@ footer {
       }
     }
   }
-  .heads {
-    font-size: 30px;
-    line-height: 35px;
-  }
   .achievements {
     .block {
       .info {
-        flex-direction: column;
-        align-items: center;
       }
     }
   }
 }
-
-// fonts  responsability
