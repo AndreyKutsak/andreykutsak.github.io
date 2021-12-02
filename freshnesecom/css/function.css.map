@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "function.scss",
+        "varibles.scss"
+    ],
+    "names": [],
+    "file": "function.css"
+}
