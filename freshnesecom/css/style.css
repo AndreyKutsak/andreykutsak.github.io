@@ -246,12 +246,21 @@ header .head__menu {
   background-color: #f9f9f9;
 }
 
+header .head__menu .menu__wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header .head__menu .menu__button__dropdown {
   position: relative;
   padding: 0 26px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
