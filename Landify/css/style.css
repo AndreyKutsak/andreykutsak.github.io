@@ -47,6 +47,7 @@ img {
 
 header {
   background-image: url("../img/bg.jpg");
+  background-position: center;
   background-size: cover;
 }
 
@@ -166,7 +167,7 @@ header .menu-wraper .wraper .menu .up:before {
 .shadow-header {
   font-size: 4.5rem;
   line-height: 6.125rem;
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
   margin-bottom: 32px;
 }
@@ -417,7 +418,7 @@ header .menu-wraper .wraper .menu .up:before {
 }
 
 .achievements .container .block {
-  max-width: 540px;
+  width: 50%;
 }
 
 .achievements .container .achive-head {
@@ -430,8 +431,7 @@ header .menu-wraper .wraper .menu .up:before {
 }
 
 .achievements .container .desc-block {
-  max-width: 300px;
-  min-width: 299px;
+  width: 45%;
   margin-right: 20px;
   margin-bottom: 40px;
 }
@@ -700,12 +700,19 @@ footer .container .btn-container a {
   header .head-content-wraper .get-btn {
     margin: 20px auto;
   }
-  .headline .headline-head {
+  .headline .container .headline-text-wraper .headline-head {
     margin-top: 30px;
     text-align: center;
   }
-  .headline .headline-desc {
+  .headline .container .headline-text-wraper .headline-desc {
     text-align: center;
+  }
+  .headline .container .headline-text-wraper .headline-link:after {
+    right: -79%;
+  }
+  .headline .container .headline-text-wraper .headline-link:before {
+    right: -74%;
+    top: 16%;
   }
   .trends .fx-container {
     -ms-flex-wrap: wrap;
@@ -857,6 +864,15 @@ footer .container .btn-container a {
     content: "";
     height: 73px;
     width: 88px;
+  }
+  .achievements .block .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

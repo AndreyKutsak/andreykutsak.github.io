@@ -39,6 +39,7 @@ img {
 // header
 header {
   background-image: url("../img/bg.jpg");
+  background-position: center;
   background-size: cover;
   .menu-wraper {
     padding: 20px 0;
@@ -126,7 +127,7 @@ header {
 .shadow-header {
   font-size: rem(72);
   line-height: rem(98);
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
   margin-bottom: 32px;
 }
@@ -329,7 +330,7 @@ header {
     display: flex;
     justify-content: space-between;
     .block {
-      max-width: 540px;
+      width: 50%;
     }
     .achive-head {
       max-width: 540px;
@@ -339,8 +340,7 @@ header {
       margin-bottom: 30px;
     }
     .desc-block {
-      max-width: 300px;
-      min-width: 299px;
+      width: 45%;
       margin-right: 20px;
       margin-bottom: 40px;
     }
@@ -557,13 +557,24 @@ footer {
       }
     }
   }
-  .headline {
-    .headline-head {
-      margin-top: 30px;
-      text-align: center;
-    }
-    .headline-desc {
-      text-align: center;
+  .headline .container {
+    .headline-text-wraper {
+      .headline-head {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .headline-desc {
+        text-align: center;
+      }
+      .headline-link {
+        &:after {
+          right: -79%;
+        }
+        &:before {
+          right: -74%;
+          top: 16%;
+        }
+      }
     }
   }
   .trends {
@@ -715,6 +726,8 @@ footer {
   .achievements {
     .block {
       .info {
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
