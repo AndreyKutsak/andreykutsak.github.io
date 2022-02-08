@@ -1,0 +1,272 @@
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.main-title {
+  font-family: "popins", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #2b2b2b;
+}
+.main-desc {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn-wraper {
+  max-width: 320px;
+}
+.btn-wraper .btn {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  width: 150px;
+  padding: 20px 10px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  margin: 0 15px;
+  transition: 0.4s;
+}
+.btn-wraper .btn:active {
+  transform: scale(0.9);
+}
+.btn-wraper .order {
+  background: #00aa4a;
+}
+.btn-wraper .order:hover {
+  background-color: #077436;
+}
+.btn-wraper .show {
+  background-color: #aa7e04;
+}
+.btn-wraper .show:hover {
+  background-color: #ac8a2d;
+}
+.head {
+  background-image: url(../img/header-img.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.head .blur {
+  background-color: rgba(0, 0, 0, 0.57);
+  padding: 20px 0 120px;
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+.head header {
+  width: 100%;
+  margin-bottom: 120px;
+}
+.head header .toggle-btn {
+  display: none;
+}
+.head header .header-menu {
+  max-width: 600px;
+}
+.head header .header-menu .menu-item {
+  padding: 20px 10px;
+}
+.head header .header-menu .menu-item a {
+  position: relative;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 0.4s;
+}
+.head header .header-menu .menu-item a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: 0.4s;
+}
+.head header .header-menu .menu-item a:hover {
+  color: #ffbd00;
+}
+.head header .header-menu .menu-item a:hover:after {
+  width: 100%;
+  background-color: #ffbd00;
+}
+.head .head-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 43px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.head .head-desc {
+  font-family: "open-sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+.program {
+  padding: 30px 0 60px;
+  background-color: #fff0ee;
+}
+.program .main-desc {
+  margin-bottom: 30px;
+}
+.program .content-wraper {
+  position: relative;
+  padding: 120px 15px 30px;
+  border-radius: 5px;
+  transition: 0.4s;
+  margin-bottom: 40px;
+  background-size: 100% 100%;
+  background-position: center;
+  overflow: hidden;
+  z-index: 0;
+  height: 90%;
+}
+.program .content-wraper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.474);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+.program .content-wraper:hover {
+  transform: scale(1.01);
+  background-size: 110% 110%;
+}
+.program .content-wraper .content-title {
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.program .content-wraper .content-desc {
+  font-family: "popins", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: aliceblue;
+}
+.program .campaign {
+  background-image: url(../img/pohid.jpg);
+}
+.program .teambuilding {
+  background-image: url(../img/team.jpg);
+}
+.program .holly-party {
+  background-image: url(../img/party.jpg);
+}
+.program .creative {
+  background-image: url(../img/think.jpg);
+}
+.program .partys {
+  background-image: url(../img/tematic-party.jpg);
+}
+.program .bamperball {
+  background-image: url(../img/bamperbol.jpg);
+}
+.program .quest {
+  background-image: url(../img/quest.jpg);
+}
+.program .cinema {
+  background-image: url(../img/cinema.jpg);
+}
+.program .evening {
+  background-image: url(../img/fire.jpg);
+}
+.area {
+  padding: 30px 0 80px;
+  background-color: #f8fdfa;
+}
+.area .main-title {
+  text-align: left;
+}
+.area .main-desc {
+  text-align: left;
+}
+.dishes {
+  padding: 30px 0 50px;
+  background-color: #fff8e5;
+}
+.team {
+  padding: 30px 0;
+  background-color: #faf8fc;
+}
+.team .main-title {
+  text-align: center;
+}
+.team .main-desc {
+  text-align: center;
+  max-width: 550px;
+  margin-bottom: 30px;
+}
+.team .owl-theme {
+  padding: 20px 0px;
+}
+.team .owl-theme .item {
+  padding: 30px 15px;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.624);
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.team .owl-theme .item .user-avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+.team .owl-theme .item .name {
+  font-family: "robot", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #242424;
+  margin-bottom: 30px;
+}
+.team .owl-theme .item .age,
+.team .owl-theme .item .job {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: bold;
+  color: #242424;
+}
+.team .owl-theme .item .age-num,
+.team .owl-theme .item .job-desc {
+  font-weight: normal;
+}
+.gallery {
+  flex-wrap: wrap;
+}
+.gallery a {
+  display: block;
+  width: 25%;
+}
+.gallery a img {
+  width: 100%;
+  object-fit: cover;
+}

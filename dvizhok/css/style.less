@@ -1,0 +1,275 @@
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+li {
+  list-style: none;
+}
+// common style
+.main-title {
+  font-family: "popins", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(43, 43, 43);
+}
+.main-desc {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn-wraper {
+  max-width: 320px;
+  .btn {
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    width: 150px;
+    padding: 20px 10px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    margin: 0 15px;
+    transition: 0.4s;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  .order {
+    background: #00aa4a;
+    &:hover {
+      background-color: #077436;
+    }
+  }
+  .show {
+    background-color: #aa7e04;
+    &:hover {
+      background-color: #ac8a2d;
+    }
+  }
+}
+.head {
+  background-image: url(../img/header-img.jpg);
+  background-size: cover;
+  background-position: center center;
+  .blur {
+    background-color: rgba(0, 0, 0, 0.57);
+    padding: 20px 0 120px;
+    backdrop-filter: blur(2px);
+    z-index: 1;
+  }
+  header {
+    width: 100%;
+    margin-bottom: 120px;
+    .toggle-btn {
+      display: none;
+    }
+    .header-menu {
+      max-width: 600px;
+      .menu-item {
+        padding: 20px 10px;
+        a {
+          position: relative;
+          font-family: "roboto", sans-serif;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #fff;
+          transition: 0.4s;
+          &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -10px;
+            width: 0;
+            height: 2px;
+            background-color: transparent;
+            transition: 0.4s;
+          }
+          &:hover {
+            color: #ffbd00;
+            &:after {
+              width: 100%;
+              background-color: #ffbd00;
+            }
+          }
+        }
+      }
+    }
+  }
+  .head-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 43px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .head-desc {
+    font-family: "open-sans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+  }
+}
+.program {
+  padding: 30px 0 60px;
+  background-color: #fff0ee;
+  .main-desc {
+    margin-bottom: 30px;
+  }
+  .content-wraper {
+    position: relative;
+    padding: 120px 15px 30px;
+    border-radius: 5px;
+    transition: 0.4s;
+    margin-bottom: 40px;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow: hidden;
+    z-index: 0;
+    height: 90%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.474);
+      backdrop-filter: blur(2px);
+      z-index: -1;
+    }
+    &:hover {
+      transform: scale(1.01);
+      background-size: 110% 110%;
+    }
+    .content-title {
+      font-family: "roboto", sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .content-desc {
+      font-family: "popins", sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      color: aliceblue;
+    }
+  }
+  .campaign {
+    background-image: url(../img/pohid.jpg);
+  }
+  .teambuilding {
+    background-image: url(../img/team.jpg);
+  }
+  .holly-party {
+    background-image: url(../img/party.jpg);
+  }
+  .creative {
+    background-image: url(../img/think.jpg);
+  }
+  .partys {
+    background-image: url(../img/tematic-party.jpg);
+  }
+  .bamperball {
+    background-image: url(../img/bamperbol.jpg);
+  }
+  .quest {
+    background-image: url(../img/quest.jpg);
+  }
+  .cinema {
+    background-image: url(../img/cinema.jpg);
+  }
+  .evening {
+    background-image: url(../img/fire.jpg);
+  }
+}
+.area {
+  padding: 30px 0 80px;
+  background-color: #f8fdfa;
+  .main-title {
+    text-align: left;
+  }
+  .main-desc {
+    text-align: left;
+  }
+}
+.dishes {
+  padding: 30px 0 50px;
+  background-color: #fff8e5;
+}
+.team {
+  padding: 30px 0;
+  background-color: #faf8fc;
+  .main-title {
+    text-align: center;
+  }
+  .main-desc {
+    text-align: center;
+    max-width: 550px;
+    margin-bottom: 30px;
+  }
+  .owl-theme {
+    padding: 20px 0px;
+    .item {
+      padding: 30px 15px;
+      border: 1px solid rgb(214, 214, 214);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.624);
+      -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      .user-avatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 30px auto;
+      }
+      .name {
+        font-family: "robot", sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: rgb(36, 36, 36);
+        margin-bottom: 30px;
+      }
+      .age,
+      .job {
+        font-family: "roboto";
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(36, 36, 36);
+      }
+      .age-num,
+      .job-desc {
+        font-weight: normal;
+      }
+    }
+  }
+}
+.gallery {
+  flex-wrap: wrap;
+  a {
+    display: block;
+    width: 25%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
