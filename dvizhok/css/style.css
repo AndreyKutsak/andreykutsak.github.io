@@ -10,6 +10,110 @@ a:hover {
 li {
   list-style: none;
 }
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.604);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  opacity: 1;
+  overflow-y: scroll;
+  transition-delay: background 0.2s;
+  transition: height 0s, width 0s, background 0.2s;
+}
+.modal-bg .modal-content-wraper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px 30px;
+  background-color: #fff;
+}
+.modal-bg .modal-content-wraper .questionnaire-title {
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+}
+.modal-bg .modal-content-wraper .questionnari-desc {
+  font-family: "popins", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2b2b2b;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.modal-bg .modal-content-wraper .input-wraper {
+  padding: 15px 0;
+}
+.modal-bg .modal-content-wraper .input-wraper input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #b7adf5;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom: 30px;
+}
+.modal-bg .modal-content-wraper .input-wraper input[type="text"]:focus {
+  border: 1px solid #2f74db;
+  background-color: #e4e8ff;
+}
+.modal-bg .modal-content-wraper input[type="radio"] {
+  margin: 0 20px;
+}
+.modal-bg .modal-content-wraper .form-desc,
+.modal-bg .modal-content-wraper label {
+  font-family: "roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #413e3e;
+}
+.modal-bg .modal-content-wraper .select,
+.modal-bg .modal-content-wraper .dependence {
+  display: block;
+  border: none;
+  margin-bottom: 30px;
+}
+.modal-bg .modal-content-wraper .select .select-label,
+.modal-bg .modal-content-wraper .dependence .select-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #413e3e;
+}
+.modal-bg .modal-content-wraper .order-btn {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  width: 150px;
+  padding: 20px 10px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  margin: 0 15px;
+  transition: 0.4s;
+  background: #00aa4a;
+  display: block;
+  margin: 0 auto;
+}
+.modal-bg .modal-content-wraper .order-btn:active {
+  transform: scale(0.9);
+}
+.hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  opacity: 0;
+}
 .main-title {
   font-family: "popins", sans-serif;
   font-size: 28px;
@@ -64,6 +168,7 @@ li {
 .head .blur {
   background-color: rgba(0, 0, 0, 0.57);
   padding: 20px 0 120px;
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   z-index: 1;
 }
@@ -149,6 +254,7 @@ li {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.474);
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   z-index: -1;
 }
@@ -229,14 +335,13 @@ li {
   border: 1px solid #d6d6d6;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.624);
-  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 .team .owl-theme .item .user-avatar {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  -o-object-fit: cover;
   object-fit: cover;
   display: block;
   margin: 0 auto 30px auto;
@@ -268,5 +373,94 @@ li {
 }
 .gallery a img {
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+}
+.races {
+  padding: 30px 0;
+  background-color: #dfecff;
+}
+.races .races-list {
+  flex-wrap: wrap;
+}
+.races .races-item {
+  position: relative;
+  border-radius: 5px;
+  padding: 20px 15px;
+  background-image: url(../img/header-img.jpg);
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.4s;
+  margin: 30px 20px;
+  z-index: 0;
+  overflow: hidden;
+}
+.races .races-item:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.604);
+  -webkit-backdrop-filter: blur(2px);
+  -moz-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+.races .races-item:hover {
+  transform: scale(1.1);
+}
+.races .races-title {
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.races .races-desc {
+  font-family: "popins", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  max-width: 400px;
+}
+.races .races-duration,
+.races .races-time-desc {
+  font-family: "roboto", sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+.races .races-duration .race-start,
+.races .races-time-desc .race-start,
+.races .races-duration .races-end,
+.races .races-time-desc .races-end {
+  font-weight: 900;
+}
+footer {
+  padding: 20px 0;
+  background-color: #47484f;
+}
+footer .footer-title {
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+}
+footer ul {
+  padding: 0;
+}
+footer ul a {
+  font-family: "popins", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.4s;
+}
+footer ul a img {
+  margin: 0 12px;
+  height: 24px;
+  width: 24px;
+}
+footer ul a:hover {
+  color: #7cffff;
 }

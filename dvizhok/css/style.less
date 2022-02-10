@@ -1,275 +1,472 @@
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
 }
 li {
-  list-style: none;
+	list-style: none;
+}
+// modal window
+.modal-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.604);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	z-index: 999;
+	opacity: 1;
+	overflow-y: scroll;
+	transition-delay: background 0.2s;
+	transition: height 0s, width 0s, background 0.2s;
+	.modal-content-wraper {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		padding: 20px 30px;
+		background-color: #fff;
+		.questionnaire {
+		}
+		.questionnaire-title {
+			font-family: "roboto", sans-serif;
+			font-size: 18px;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			color: rgb(43, 43, 43);
+		}
+		.questionnari-desc {
+			font-family: "popins", sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+			color: rgb(43, 43, 43);
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.input-wraper {
+			padding: 15px 0;
+			input[type="text"] {
+				padding: 10px 15px;
+				border: 1px solid rgb(183, 173, 245);
+				border-radius: 5px;
+				width: 100%;
+				outline: none;
+				transition: 0.4s;
+				margin-bottom: 30px;
+				&:focus {
+					border: 1px solid rgb(47, 116, 219);
+					background-color: rgb(228, 232, 255);
+				}
+			}
+		}
+
+		input[type="radio"] {
+			margin: 0 20px;
+		}
+		.form-desc,
+		label {
+			font-family: "roboto", sans-serif;
+			font-size: 15px;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: rgb(65, 62, 62);
+		}
+		.select,
+		.dependence {
+			display: block;
+			border: none;
+			margin-bottom: 30px;
+			.select-label {
+				font-family: "Roboto", sans-serif;
+				font-size: 15px;
+				text-transform: uppercase;
+				color: rgb(65, 62, 62);
+			}
+		}
+		.order-btn {
+			font-family: "roboto", sans-serif;
+			font-size: 16px;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff;
+			width: 150px;
+			padding: 20px 10px;
+			text-align: center;
+			border: none;
+			border-radius: 3px;
+			margin: 0 15px;
+			transition: 0.4s;
+			background: #00aa4a;
+			display: block;
+			margin: 0 auto;
+			&:active {
+				transform: scale(0.9);
+			}
+		}
+	}
+}
+.hide {
+	height: 0;
+	width: 0;
+	background-color: transparent;
+	opacity: 0;
 }
 // common style
 .main-title {
-  font-family: "popins", sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  color: rgb(43, 43, 43);
+	font-family: "popins", sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgb(43, 43, 43);
 }
 .main-desc {
-  font-family: "roboto", sans-serif;
-  font-size: 16px;
-  max-width: 750px;
-  margin: 0 auto;
-  text-align: center;
+	font-family: "roboto", sans-serif;
+	font-size: 16px;
+	max-width: 750px;
+	margin: 0 auto;
+	text-align: center;
 }
 .btn-wraper {
-  max-width: 320px;
-  .btn {
-    font-family: "roboto", sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    width: 150px;
-    padding: 20px 10px;
-    text-align: center;
-    border: none;
-    border-radius: 3px;
-    margin: 0 15px;
-    transition: 0.4s;
-    &:active {
-      transform: scale(0.9);
-    }
-  }
-  .order {
-    background: #00aa4a;
-    &:hover {
-      background-color: #077436;
-    }
-  }
-  .show {
-    background-color: #aa7e04;
-    &:hover {
-      background-color: #ac8a2d;
-    }
-  }
+	max-width: 320px;
+	.btn {
+		font-family: "roboto", sans-serif;
+		font-size: 16px;
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		width: 150px;
+		padding: 20px 10px;
+		text-align: center;
+		border: none;
+		border-radius: 3px;
+		margin: 0 15px;
+		transition: 0.4s;
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+	.order {
+		background: #00aa4a;
+		&:hover {
+			background-color: #077436;
+		}
+	}
+	.show {
+		background-color: #aa7e04;
+		&:hover {
+			background-color: #ac8a2d;
+		}
+	}
 }
 .head {
-  background-image: url(../img/header-img.jpg);
-  background-size: cover;
-  background-position: center center;
-  .blur {
-    background-color: rgba(0, 0, 0, 0.57);
-    padding: 20px 0 120px;
-    backdrop-filter: blur(2px);
-    z-index: 1;
-  }
-  header {
-    width: 100%;
-    margin-bottom: 120px;
-    .toggle-btn {
-      display: none;
-    }
-    .header-menu {
-      max-width: 600px;
-      .menu-item {
-        padding: 20px 10px;
-        a {
-          position: relative;
-          font-family: "roboto", sans-serif;
-          font-size: 16px;
-          text-transform: uppercase;
-          color: #fff;
-          transition: 0.4s;
-          &:after {
-            position: absolute;
-            content: "";
-            left: 0;
-            bottom: -10px;
-            width: 0;
-            height: 2px;
-            background-color: transparent;
-            transition: 0.4s;
-          }
-          &:hover {
-            color: #ffbd00;
-            &:after {
-              width: 100%;
-              background-color: #ffbd00;
-            }
-          }
-        }
-      }
-    }
-  }
-  .head-title {
-    font-family: "Roboto", sans-serif;
-    font-size: 43px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 30px;
-  }
-  .head-desc {
-    font-family: "open-sans", sans-serif;
-    font-size: 16px;
-    text-align: center;
-    color: #fff;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-  }
+	background-image: url(../img/header-img.jpg);
+	background-size: cover;
+	background-position: center center;
+	.blur {
+		background-color: rgba(0, 0, 0, 0.57);
+		padding: 20px 0 120px;
+		-webkit-backdrop-filter: blur(2px);
+		backdrop-filter: blur(2px);
+		z-index: 1;
+	}
+	header {
+		width: 100%;
+		margin-bottom: 120px;
+		.toggle-btn {
+			display: none;
+		}
+		.header-menu {
+			max-width: 600px;
+			.menu-item {
+				padding: 20px 10px;
+				a {
+					position: relative;
+					font-family: "roboto", sans-serif;
+					font-size: 16px;
+					text-transform: uppercase;
+					color: #fff;
+					transition: 0.4s;
+					&:after {
+						position: absolute;
+						content: "";
+						left: 0;
+						bottom: -10px;
+						width: 0;
+						height: 2px;
+						background-color: transparent;
+						transition: 0.4s;
+					}
+					&:hover {
+						color: #ffbd00;
+						&:after {
+							width: 100%;
+							background-color: #ffbd00;
+						}
+					}
+				}
+			}
+		}
+	}
+	.head-title {
+		font-family: "Roboto", sans-serif;
+		font-size: 43px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 30px;
+	}
+	.head-desc {
+		font-family: "open-sans", sans-serif;
+		font-size: 16px;
+		text-align: center;
+		color: #fff;
+		max-width: 800px;
+		margin: 0 auto 40px auto;
+	}
 }
 .program {
-  padding: 30px 0 60px;
-  background-color: #fff0ee;
-  .main-desc {
-    margin-bottom: 30px;
-  }
-  .content-wraper {
-    position: relative;
-    padding: 120px 15px 30px;
-    border-radius: 5px;
-    transition: 0.4s;
-    margin-bottom: 40px;
-    background-size: 100% 100%;
-    background-position: center;
-    overflow: hidden;
-    z-index: 0;
-    height: 90%;
+	padding: 30px 0 60px;
+	background-color: #fff0ee;
+	.main-desc {
+		margin-bottom: 30px;
+	}
+	.content-wraper {
+		position: relative;
+		padding: 120px 15px 30px;
+		border-radius: 5px;
+		transition: 0.4s;
+		margin-bottom: 40px;
+		background-size: 100% 100%;
+		background-position: center;
+		overflow: hidden;
+		z-index: 0;
+		height: 90%;
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.474);
-      backdrop-filter: blur(2px);
-      z-index: -1;
-    }
-    &:hover {
-      transform: scale(1.01);
-      background-size: 110% 110%;
-    }
-    .content-title {
-      font-family: "roboto", sans-serif;
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #fff;
-    }
-    .content-desc {
-      font-family: "popins", sans-serif;
-      font-size: 14px;
-      line-height: 18px;
-      color: aliceblue;
-    }
-  }
-  .campaign {
-    background-image: url(../img/pohid.jpg);
-  }
-  .teambuilding {
-    background-image: url(../img/team.jpg);
-  }
-  .holly-party {
-    background-image: url(../img/party.jpg);
-  }
-  .creative {
-    background-image: url(../img/think.jpg);
-  }
-  .partys {
-    background-image: url(../img/tematic-party.jpg);
-  }
-  .bamperball {
-    background-image: url(../img/bamperbol.jpg);
-  }
-  .quest {
-    background-image: url(../img/quest.jpg);
-  }
-  .cinema {
-    background-image: url(../img/cinema.jpg);
-  }
-  .evening {
-    background-image: url(../img/fire.jpg);
-  }
+		&::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.474);
+			-webkit-backdrop-filter: blur(2px);
+			backdrop-filter: blur(2px);
+			z-index: -1;
+		}
+		&:hover {
+			transform: scale(1.01);
+			background-size: 110% 110%;
+		}
+		.content-title {
+			font-family: "roboto", sans-serif;
+			font-size: 18px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		.content-desc {
+			font-family: "popins", sans-serif;
+			font-size: 14px;
+			line-height: 18px;
+			color: aliceblue;
+		}
+	}
+	.campaign {
+		background-image: url(../img/pohid.jpg);
+	}
+	.teambuilding {
+		background-image: url(../img/team.jpg);
+	}
+	.holly-party {
+		background-image: url(../img/party.jpg);
+	}
+	.creative {
+		background-image: url(../img/think.jpg);
+	}
+	.partys {
+		background-image: url(../img/tematic-party.jpg);
+	}
+	.bamperball {
+		background-image: url(../img/bamperbol.jpg);
+	}
+	.quest {
+		background-image: url(../img/quest.jpg);
+	}
+	.cinema {
+		background-image: url(../img/cinema.jpg);
+	}
+	.evening {
+		background-image: url(../img/fire.jpg);
+	}
 }
 .area {
-  padding: 30px 0 80px;
-  background-color: #f8fdfa;
-  .main-title {
-    text-align: left;
-  }
-  .main-desc {
-    text-align: left;
-  }
+	padding: 30px 0 80px;
+	background-color: #f8fdfa;
+	.main-title {
+		text-align: left;
+	}
+	.main-desc {
+		text-align: left;
+	}
 }
 .dishes {
-  padding: 30px 0 50px;
-  background-color: #fff8e5;
+	padding: 30px 0 50px;
+	background-color: #fff8e5;
 }
 .team {
-  padding: 30px 0;
-  background-color: #faf8fc;
-  .main-title {
-    text-align: center;
-  }
-  .main-desc {
-    text-align: center;
-    max-width: 550px;
-    margin-bottom: 30px;
-  }
-  .owl-theme {
-    padding: 20px 0px;
-    .item {
-      padding: 30px 15px;
-      border: 1px solid rgb(214, 214, 214);
-      border-radius: 8px;
-      background-color: rgba(255, 255, 255, 0.624);
-      -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-      -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-      .user-avatar {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto 30px auto;
-      }
-      .name {
-        font-family: "robot", sans-serif;
-        font-size: 16px;
-        text-transform: uppercase;
-        color: rgb(36, 36, 36);
-        margin-bottom: 30px;
-      }
-      .age,
-      .job {
-        font-family: "roboto";
-        font-size: 16px;
-        font-weight: bold;
-        color: rgb(36, 36, 36);
-      }
-      .age-num,
-      .job-desc {
-        font-weight: normal;
-      }
-    }
-  }
+	padding: 30px 0;
+	background-color: #faf8fc;
+	.main-title {
+		text-align: center;
+	}
+	.main-desc {
+		text-align: center;
+		max-width: 550px;
+		margin-bottom: 30px;
+	}
+	.owl-theme {
+		padding: 20px 0px;
+		.item {
+			padding: 30px 15px;
+			border: 1px solid rgb(214, 214, 214);
+			border-radius: 8px;
+			background-color: rgba(255, 255, 255, 0.624);
+			box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+			.user-avatar {
+				height: 100px;
+				width: 100px;
+				border-radius: 50%;
+				-o-object-fit: cover;
+				object-fit: cover;
+				display: block;
+				margin: 0 auto 30px auto;
+			}
+			.name {
+				font-family: "robot", sans-serif;
+				font-size: 16px;
+				text-transform: uppercase;
+				color: rgb(36, 36, 36);
+				margin-bottom: 30px;
+			}
+			.age,
+			.job {
+				font-family: "roboto";
+				font-size: 16px;
+				font-weight: bold;
+				color: rgb(36, 36, 36);
+			}
+			.age-num,
+			.job-desc {
+				font-weight: normal;
+			}
+		}
+	}
 }
 .gallery {
-  flex-wrap: wrap;
-  a {
-    display: block;
-    width: 25%;
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+	flex-wrap: wrap;
+	a {
+		display: block;
+		width: 25%;
+		img {
+			width: 100%;
+			-o-object-fit: cover;
+			object-fit: cover;
+		}
+	}
+}
+.races {
+	padding: 30px 0;
+	background-color: #dfecff;
+	.races-list {
+		flex-wrap: wrap;
+	}
+	.races-item {
+		position: relative;
+		border-radius: 5px;
+		padding: 20px 15px;
+		background-image: url(../img/header-img.jpg);
+		background-size: cover;
+		cursor: pointer;
+		transition: 0.4s;
+		margin: 30px 20px;
+		z-index: 0;
+		overflow: hidden;
+
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.604);
+			-webkit-backdrop-filter: blur(2px);
+			-moz-backdrop-filter: blur(2px);
+			backdrop-filter: blur(2px);
+			z-index: -1;
+		}
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	.races-title {
+		font-family: "roboto", sans-serif;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+	.races-desc {
+		font-family: "popins", sans-serif;
+		font-size: 18px;
+		color: #fff;
+		max-width: 400px;
+	}
+	.races-duration,
+	.races-time-desc {
+		font-family: "roboto", sans-serif;
+		font-size: 25px;
+		color: #fff;
+		.race-start,
+		.races-end {
+			font-weight: 900;
+		}
+	}
+}
+footer {
+	padding: 20px 0;
+	background-color: rgb(71, 72, 79);
+	.footer-title {
+		font-family: "roboto", sans-serif;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	ul {
+		padding: 0;
+		a {
+			font-family: "popins", sans-serif;
+			font-size: 16px;
+			color: #fff;
+			transition: 0.4s;
+			img {
+				margin: 0 12px;
+				height: 24px;
+				width: 24px;
+			}
+			&:hover {
+				color: #7cffff;
+			}
+		}
+	}
 }
