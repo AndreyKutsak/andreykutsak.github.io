@@ -10,6 +10,66 @@ a:hover {
 li {
   list-style: none;
 }
+.promo {
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  padding: 15px 20px;
+  width: 100%;
+  background-color: rgba(243, 122, 122, 0.844);
+  transition: 0.4s;
+}
+.promo .promo-title {
+  font-family: "roboto", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.promo .promo-desc {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+.promo .close-btn {
+  position: absolute;
+  padding: 10px;
+  top: -20px;
+  right: 10%;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgba(237, 57, 57, 0.844);
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+}
+.promo .close-btn:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 15px;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.promo .close-btn::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 15px;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.active {
+  bottom: 0%;
+}
 .modal-bg {
   position: fixed;
   top: 0;
