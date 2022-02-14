@@ -16,116 +16,135 @@
 	</head>
 	<body>
 		<div class="modal-bg hide">
-			<div class="modal-content-wraper ">
+			<div class="modal-content-wraper">
 				<div class="questionnaire">
 					<h2 class="questionnaire-title">Анкета для батьків</h2>
-					<p class="questionnari-desc">Шановні батьки ! 
-						Аби покращити відпочинок діток , ми просимо Вас детально заповнити анкету .
-						Відштовхуючись від наданих Вами даних ,команда DvizhOk зробить усе, щоб наші нові друзі максимально комфортно та впевнено себе почували під час літнього двіжу.</p>
+					<p class="questionnari-desc">
+						Шановні батьки ! Аби покращити відпочинок діток , ми просимо Вас детально заповнити анкету . Відштовхуючись від наданих Вами даних ,команда DvizhOk зробить усе, щоб наші нові друзі максимально
+						комфортно та впевнено себе почували під час літнього двіжу.
+					</p>
 					<form action="#" class="input-wraper">
+						<div class="inp-wraper"><label for="contactPhone">1. вкажіть ваш контактний номер телефону</label><input type="text" placeholder="Введіть ваш телефон" id="contactPhone" /></div>
 						<div class="inp-wraper">
-							<label for="child-name">1. П.І.П. дитини</label><input type="text" placeholder="Ваша відповідь" id="child-name" /></div>
-						<div class="inp-wraper"><label for="child-born-date">2. Дата народження дитини</label><input type="date" id="child-born-date" /></div>
-						<div class="inp-wraper"><label for="parent-Name">3. П.І.П. батьків або законних представників:</label><input type="text" placeholder="Ваша відповідь" id="parent-name" /></div>
-						<div class="inp-wraper"><label for="child-visit">3. ХТО МОЖЕ ВІДВІДУВАТИ ДИТИНУ :У ТАБОРІ?</label><input type="text" placeholder="Ваша відповідь" id="child-visit" /></div>
+							<label for="orderDate">2.Оберіть ваш</label>
+							<select name="order-date" id="orderDate">
+								<option value="null">оберіть ваш заїзд</option>
+								<option value="1">Заїзд 1 1 січня</option>
+								<option value="2">Заїзд 2 2 січня</option>
+								<option value="3">Заїзд 3 3 січня</option>
+								<option value="4">Заїзд 4 4 січня</option>
+								<option value="5">Заїзд 5 5 січня</option>
+								<option value="6">Заїзд 6 6 січня</option>
+							</select>
+						</div>
+						<div class="inp-wraper"><label for="child-name">3. П.І.П. дитини</label><input type="text" placeholder="Ваша відповідь" id="child-name" /></div>
+						<div class="inp-wraper"><label for="child-born-date">4. Дата народження дитини</label><input type="date" id="child-born-date" /></div>
+						<div class="inp-wraper"><label for="parent-name">5. П.І.П. батьків або законних представників:</label><input type="text" placeholder="Ваша відповідь" id="parent-name" /></div>
+						<div class="inp-wraper"><label for="child-visit">6. ХТО МОЖЕ ВІДВІДУВАТИ ДИТИНУ :У ТАБОРІ?</label><input type="text" placeholder="Ваша відповідь" id="child-visit" /></div>
 						<div class="inp-wraper">
-							<label for="parent-phones">4. Усі можливі телефони на час перебування дитини у таборі (мама, тато, бабуся, дідусь)</label><input type="text" placeholder="Ваша відповідь" id="parent-phones" />
+							<label for="parent-phones">7. Усі можливі телефони на час перебування дитини у таборі (мама, тато, бабуся, дідусь)</label><input type="text" placeholder="Ваша відповідь" id="parent-phones" />
 						</div>
 						<div class="inp-wraper">
-							<label for="child-transfer">5. Інформація про те, кому можна передати дитину після відпочинку у таборі, окрім батьків та законних представників:</label
+							<label for="child-transfer">8 Інформація про те, кому можна передати дитину після відпочинку у таборі, окрім батьків та законних представників:</label
 							><input type="text" placeholder="Ваша відповідь" id="child-transfer" />
 						</div>
 						<div class="inp-wraper">
-							<label for="camp-visit">6. Чи від’їздила Ваша дитина раніше до таборів раніше (в т.ч. – зарубіжні), скільки разів, починаючи з якого віку</label><input
-								type="text"
-								placeholder="Ваша відповідь"
-								id="camp-visit"
-							/>
-						</div><div class="inp-wraper"><label for="section">7. Які клуби, спортивні секції відвідує</label><input type="text" placeholder="Ваша відповідь" id="section" /></div>
-						<div class="inp-wraper"><label for="hobby">8. Захоплення</label><input type="text" placeholder="Ваша відповідь" id="hobby" /></div>
+							<label for="camp-visit">9. Чи від’їздила Ваша дитина раніше до таборів раніше (в т.ч. – зарубіжні), скільки разів, починаючи з якого віку</label
+							><input type="text" placeholder="Ваша відповідь" id="camp-visit" />
+						</div>
+						<div class="inp-wraper"><label for="section">10. Які клуби, спортивні секції відвідує</label><input type="text" placeholder="Ваша відповідь" id="section" /></div>
+						<div class="inp-wraper"><label for="hobby">11. Захоплення</label><input type="text" placeholder="Ваша відповідь" id="hobby" /></div>
 						<div class="inp-wraper">
-							<p class="form-desc">9.Чи легко йде на контакт (так, ні</p>
-							<label for="yes">Так</label></label><input type="radio" name="contact" id="yes"><label for="no">Ні</label><input type="radio" id="no" name="contact">
-						<div class="inp-wraper"><label for="character">10. Риси характеру:</label><input type="text" placeholder="Ваша відповідь" id="character"/></div>
-						<div class="inp-wraper"><label for="influence">11. Лідер чи підпадає під авторитет інших?</label><input type="text" placeholder="Ваша відповідь"/ id="influence"></div>
-						<div class="inp-wraper"><label for="critic">12. Як реагує на критику?</label><input type="text" placeholder="Ваша відповідь" id="critic"/></div>
-						<div class="inp-wraper"><label for="select">13. Здатність до самообслуговування (по 12-бальній шкалі)</label><select id="select" class="select">
-							<option value="none" class="select-label">Виберіть оцінку</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-						</select></div>
-						<div class="inp-wraper"><label for="dependence">14. Самостійність (по 12-бальній шкалі) </label><select name="" id="dependence" class="dependence">
-							<option value="none" class="select-label">Виберіть оцінку</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-						</select></div>
-						<div class="inp-wraper"><label for="health">15. Чи є у дитини хронічні захворювання? </label><input type="text" placeholder="Ваша відповідь" id="health"	/></div>
-						<div class="inp-wraper"><label for="alergy">16. Чи є у дитини алергія </label><input type="text" placeholder="Ваша відповідь" id="alergy"/></div>
-						<div class="inp-wraper"><label for="sunny">17.Як переносить перебування на сонці? </label><input type="text" placeholder="Ваша відповідь" id="sunny"/></div>
-						<div class="inp-wraper"><label for="transport">18. Як переносить дорогу у транспорті?</label><input type="text" placeholder="Ваша відповідь" id="transport"/></div>
-						<div class="inp-wraper"><label for="depresion">19.Чи страждає на: лунатизм, енурез, депресію </label><input type="text" placeholder="Ваша відповідь" id="depresion"/></div>
-						<div class="inp-wraper"><label for="swim">20.Чи вміє плавати?</label><input type="text" placeholder="Ваша відповідь" id="swim"/></div>
-						<div class="inp-wraper"><label for="scare">21. Чи боїться висоти, темноти і т.п.?</label><input type="text" placeholder="Ваша відповідь" id="scare"/></div>
-						<div class="inp-wraper"><label for="fatigue">22.Як швидко втомлюється?</label><input type="text" placeholder="Ваша відповідь" id="fatigue"/></div>
-						<div class="inp-wraper"><label for="specifics">23. Індивідуальні особливості</label><input type="text" placeholder="Ваша відповідь" id="specifics"/></div>
-						<div class="inp-wraper"><label for="attention">24. Побажання батьків (на що слід звернути особливу увагу)</label><input type="text" placeholder="Ваша відповідь" id="attention"/></div>
-						<div class="inp-wraper"><label for="food">25. Чи є особливі побажання щодо харчування?</label><input type="text" placeholder="Ваша відповідь" id="food"/></div>
-						<div class="inp-wraper"><label for="where">26. Яким чином ви дізналися про табір?</label><input type="text" placeholder="Ваша відповідь" id="where"/></div>
-					
-						<input type="submit" value="Подати заявку" id="order-btn" class="order-btn"/>
+							<p class="form-desc">12.Чи легко йде на контакт (так, ні</p>
+							<label for="yes">Так</label><input type="radio" name="contact" id="yes" /><label for="no">Ні</label><input type="radio" id="no" name="contact" />
+						</div>
+						<div class="inp-wraper"><label for="character">13. Риси характеру:</label><input type="text" placeholder="Ваша відповідь" id="character" /></div>
+						<div class="inp-wraper"><label for="influence">14. Лідер чи підпадає під авторитет інших?</label><input type="text" placeholder="Ваша відповідь" id="influence" /></div>
+						<div class="inp-wraper"><label for="critic">15. Як реагує на критику?</label><input type="text" placeholder="Ваша відповідь" id="critic" /></div>
+						<div class="inp-wraper">
+							<label for="select">16. Здатність до самообслуговування (по 12-бальній шкалі)</label
+							><select id="select" class="select">
+								<option value="none" class="select-label">Виберіть оцінку</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+						</div>
+						<div class="inp-wraper">
+							<label for="dependence">17. Самостійність (по 12-бальній шкалі) </label
+							><select name="dependence" id="dependence" class="dependence">
+								<option value="none" class="select-label">Виберіть оцінку</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+						</div>
+						<div class="inp-wraper"><label for="health">18. Чи є у дитини хронічні захворювання? </label><input type="text" placeholder="Ваша відповідь" id="health" /></div>
+						<div class="inp-wraper"><label for="alergy">19. Чи є у дитини алергія </label><input type="text" placeholder="Ваша відповідь" id="alergy" /></div>
+						<div class="inp-wraper"><label for="sunny">20.Як переносить перебування на сонці? </label><input type="text" placeholder="Ваша відповідь" id="sunny" /></div>
+						<div class="inp-wraper"><label for="transport">21. Як переносить дорогу у транспорті?</label><input type="text" placeholder="Ваша відповідь" id="transport" /></div>
+						<div class="inp-wraper"><label for="depresion">22.Чи страждає на: лунатизм, енурез, депресію </label><input type="text" placeholder="Ваша відповідь" id="depresion" /></div>
+						<div class="inp-wraper"><label for="swim">23.Чи вміє плавати?</label><input type="text" placeholder="Ваша відповідь" id="swim" /></div>
+						<div class="inp-wraper"><label for="scare">24. Чи боїться висоти, темноти і т.п.?</label><input type="text" placeholder="Ваша відповідь" id="scare" /></div>
+						<div class="inp-wraper"><label for="fatigue">25.Як швидко втомлюється?</label><input type="text" placeholder="Ваша відповідь" id="fatigue" /></div>
+						<div class="inp-wraper"><label for="specifics">26. Індивідуальні особливості</label><input type="text" placeholder="Ваша відповідь" id="specifics" /></div>
+						<div class="inp-wraper"><label for="attention">27. Побажання батьків (на що слід звернути особливу увагу)</label><input type="text" placeholder="Ваша відповідь" id="attention" /></div>
+						<div class="inp-wraper"><label for="food">28. Чи є особливі побажання щодо харчування?</label><input type="text" placeholder="Ваша відповідь" id="food" /></div>
+						<div class="inp-wraper"><label for="where">29. Яким чином ви дізналися про табір?</label><input type="text" placeholder="Ваша відповідь" id="where" /></div>
+
+						<input type="submit" value="Подати заявку" id="order-btn" class="order-btn" />
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>
-		<section class="head">		
-				<div class="container">
-					<div class="row">
-						<header class="d-flex justify-content-between align-items-center  flex-row">
-							<a href="index.html" class="logo"><img src="img/logo.png" alt="logo" /></a><button id="toggleBtn" class="toggle-btn"><span class="btn-row"></span><span class="btn-row"></span><span class="btn-row"></span></button>
-							<nav>
-								<ul class="header-menu hide-menu d-flex flex-column flex-md-row" id="headerMenu">
-									<li class="menu-item"><a href="#program">Програма</a></li>
-									<li class="menu-item"><a href="#area">Територія</a></li>
-									<li class="menu-item"><a href="#dishes">Харчування</a></li>
-									<li class="menu-item"><a href="#team">Команда</a></li>
-									<li class="menu-item"><a href="#races">Заїзди</a></li>
-									<li class="menu-item"><a href="#images">Галерея</a></li>
-								</ul>
-							</nav>
-						</header>
+
+		<section class="head">
+			<div class="container">
+				<div class="row">
+					<header class="d-flex justify-content-between align-items-center flex-row">
+						<a href="index.html" class="logo"><img src="img/logo.png" alt="logo" /></a
+						><button id="toggleBtn" class="toggle-btn"><span class="btn-row"></span><span class="btn-row"></span><span class="btn-row"></span></button>
+						<nav>
+							<ul class="header-menu hide-menu d-flex flex-column flex-md-row" id="headerMenu">
+								<li class="menu-item"><a href="#program">Програма</a></li>
+								<li class="menu-item"><a href="#area">Територія</a></li>
+								<li class="menu-item"><a href="#dishes">Харчування</a></li>
+								<li class="menu-item"><a href="#team">Команда</a></li>
+								<li class="menu-item"><a href="#races">Заїзди</a></li>
+								<li class="menu-item"><a href="#images">Галерея</a></li>
+							</ul>
+						</nav>
+					</header>
+				</div>
+				<div class="d-flex flex-column align-items-center">
+					<h1 class="head-title">Літній двіж це найяскравіший відпочинок вашої дитини</h1>
+					<p class="head-desc">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur commodi, vitae tempora eveniet cum hic labore id aperiam, at molestiae magnam perspiciatis, corporis nesciunt omnis ut
+						odit quis non!
+					</p>
+					<div class="btn-wraper d-flex justify-content-between">
+						<button class="btn order" id="orderBtn">замовити</button>
 					</div>
-					<div class="d-flex flex-column align-items-center">
-						<h1 class="head-title">Літній двіж це найяскравіший відпочинок вашої дитини</h1>
-						<p class="head-desc">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aspernatur commodi, vitae tempora eveniet cum hic labore id aperiam, at molestiae magnam perspiciatis, corporis nesciunt omnis ut
-							odit quis non!
-						</p>
-						<div class="btn-wraper d-flex justify-content-between">
-							<button class="btn order" id="orderBtn">замовити</button>
-						</div>
-					</div>
-				</div>	
+				</div>
+			</div>
 		</section>
 		<section class="program" id="program">
 			<div class="container">
@@ -136,55 +155,55 @@
 					дозвілля, колективної творчості і арт-педагогіки.
 				</p>
 				<div class="row d-flex align-content-center">
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper campaign">
 							<h3 class="content-title">Походи</h3>
 							<p class="content-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore ex provident tenetur et delectus dicta.</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper teambuilding">
 							<h3 class="content-title">Тімбілдінг</h3>
 							<p class="content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nisi, neque quia in laboriosam reiciendis?</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper holly-party">
 							<h3 class="content-title">Холлі Party</h3>
 							<p class="content-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur optio ipsa aliquid maxime illum nostrum.</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper creative">
 							<h3 class="content-title">Творчі майстеркласи</h3>
 							<p class="content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur pariatur amet tempora cum temporibus?</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper partys">
 							<h3 class="content-title">Тематичні вечірки</h3>
 							<p class="content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cum blanditiis aliquam odit dolor libero.</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper bamperball">
 							<h3 class="content-title">Бампербол-футбол</h3>
 							<p class="content-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam molestiae similique quaerat! Tempora, nulla voluptatibus.</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper quest">
 							<h3 class="content-title">Квести</h3>
 							<p class="content-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, vel blanditiis. Ipsum accusantium culpa delectus!</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper cinema">
 							<h3 class="content-title">Кінотеатр під відкритим небом</h3>
 							<p class="content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores ratione soluta quae pariatur commodi?</p>
 						</div>
 					</div>
-					<div class="col-12  col-md-6 col-lg-4  mx-auto">
+					<div class="col-12 col-md-6 col-lg-4 mx-auto">
 						<div class="content-wraper evening">
 							<h3 class="content-title">Вечірні посиденьки перед багаттям та багато іншого</h3>
 							<p class="content-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint omnis alias tempora consectetur earum aliquid?</p>
@@ -306,37 +325,37 @@
 				<p class="main-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio, nobis nesciunt repellendus laudantium cupiditate inventore sequi nam culpa perspiciatis?</p>
 				<div class="row">
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
-						<div class="races-item">
+						<div class="races-item" data-race="1">
 							<h3 class="races-title">заїзд 1</h3>
 							<p class="races-desc">заїзд 12 січня - виїзд 25 січня</p>
 						</div>
 					</div>
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
-						<div class="races-item">
+						<div class="races-item" data-race="2">
 							<h3 class="races-title">заїзд 1</h3>
 							<p class="races-desc">заїзд 12 січня - виїзд 25 січня</p>
 						</div>
 					</div>
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
-						<div class="races-item">
+						<div class="races-item" data-race="3">
 							<h3 class="races-title">заїзд 1</h3>
 							<p class="races-desc">заїзд 12 січня - виїзд 25 січня</p>
 						</div>
 					</div>
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
-						<div class="races-item">
+						<div class="races-item" data-race="4">
 							<h3 class="races-title">заїзд 1</h3>
 							<p class="races-desc">заїзд 12 січня - виїзд 25 січня</p>
 						</div>
 					</div>
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
-						<div class="races-item">
+						<div class="races-item" data-race="5">
 							<h3 class="races-title">заїзд 1</h3>
 							<p class="races-desc">заїзд 12 січня - виїзд 25 січня</p>
 						</div>
 					</div>
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
-						<div class="races-item">
+						<div class="races-item" data-race="6">
 							<h3 class="races-title">заїзд 1</h3>
 							<p class="races-desc">заїзд 12 січня - виїзд 25 січня</p>
 						</div>
@@ -348,33 +367,44 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-2">
-						<a href="index.html">
-							<img src="img/logo.png" alt="logo icon"></a>
-						</div>
-				
+						<a href="index.html"> <img src="img/logo.png" alt="logo icon" /></a>
+					</div>
+
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
 						<h2 class="footer-title">наші контакти</h2>
 						<ul>
-							<li><a href="tel:+380961580806"><img src="img/phone.svg" alt="phone icon">+380961580806</a></li>
-							<li><a href="tel:+380961580806"><img src="img/phone.svg" alt="phone icon">+380961580806</a></li>
+							<li>
+								<a href="tel:+380961580806"><img src="img/phone.svg" alt="phone icon" />+380961580806</a>
+							</li>
+							<li>
+								<a href="tel:+380961580806"><img src="img/phone.svg" alt="phone icon" />+380961580806</a>
+							</li>
 						</ul>
 					</div>
 					<div class="col-10 col-md-4 mx-auto mx-md-0">
 						<h2 class="footer-title">наші соц мережі</h2>
-						<ul class="d-flex ">
-							<li><a href="https://facebook.com"><img src="img/facebook.png" alt="facebook"></a></li>
-							<li><a href="https://instagram.com"><img src="img/instagram.png" alt="instagram"></a></li>
+						<ul class="d-flex">
+							<li>
+								<a href="https://facebook.com"><img src="img/facebook.png" alt="facebook" /></a>
+							</li>
+							<li>
+								<a href="https://instagram.com"><img src="img/instagram.png" alt="instagram" /></a>
+							</li>
 						</ul>
 					</div>
+				</div>
 			</div>
 		</footer>
-<div class="promo">
-	<div class="container">
-		<h2 class="promo-title">для всіх хто забронює до 30 січня знижка <span class="promo-num">-10%</span></h2>
-		<p class="promo-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum magni voluptatem repudiandae repellat error nemo molestiae atque sit quae nesciunt at odit facilis quos laudantium veniam sequi, modi ea. Totam delectus fugiat corporis laboriosam, provident itaque.</p>
-		<div class="close-btn"></div>
-	</div>
-</div>
+		<div class="promo">
+			<div class="container">
+				<h2 class="promo-title">для всіх хто забронює до 30 січня знижка <span class="promo-num">-10%</span></h2>
+				<p class="promo-desc">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum magni voluptatem repudiandae repellat error nemo molestiae atque sit quae nesciunt at odit facilis quos laudantium veniam sequi,
+					modi ea. Totam delectus fugiat corporis laboriosam, provident itaque.
+				</p>
+				<div class="close-btn"></div>
+			</div>
+		</div>
 		<script src="libs/jQueryv3.6.0/jQueryv3.6.0.js"></script>
 		<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 		<script src="libs/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>

@@ -25,6 +25,10 @@ $(document).ready(function () {
 		$(".modal-bg").toggleClass("hide");
 	});
 	$(".races-item").on("click", function () {
+		let dataVal = $(this).data();
+
+		$("#orderDate").val(dataVal.race);
+		console.log($("#orderDate").val());
 		$(".modal-bg").toggleClass("hide");
 	});
 	$(".questionnaire").on("click", function (e) {
@@ -42,6 +46,9 @@ $(document).ready(function () {
 	// toggle menu
 	$("#toggleBtn").on("click", function () {
 		$(this).toggleClass("clicked");
+		$("#headerMenu").toggleClass("hide-menu");
+	});
+	$(".menu-item").on("click", function () {
 		$("#headerMenu").toggleClass("hide-menu");
 	});
 });
