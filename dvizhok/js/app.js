@@ -9,11 +9,15 @@ $(document).ready(function () {
 			0: {
 				items: 1,
 			},
-			600: {
+			320: {
+				items: 2,
+			},
+			800: {
 				items: 3,
 			},
+
 			1000: {
-				items: 3,
+				items: 4,
 			},
 		},
 	});
@@ -34,5 +38,10 @@ $(document).ready(function () {
 	}, 2000);
 	$(".close-btn").on("click", function () {
 		$(".promo").toggleClass("active");
+	});
+	// toggle menu
+	$("#toggleBtn").on("click", function () {
+		$(this).toggleClass("clicked");
+		$("#headerMenu").toggleClass("hide-menu");
 	});
 });
