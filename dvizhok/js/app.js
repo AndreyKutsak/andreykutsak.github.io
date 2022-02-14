@@ -52,4 +52,15 @@ $(document).ready(function () {
 		$("#headerMenu").toggleClass("hide-menu");
 		$("#toggleBtn").toggleClass("clicked");
 	});
+	// call btn
+	setTimeout(function () {
+		$(".call-btn").toggleClass("hide-btn");
+	}, 4000);
+	$(".call-btn").on("click", function () {
+		$(".call-btn-form").removeClass("hide-form");
+	});
+	$("#closeBtnForm").on("click", function (e) {
+		e.stopPropagation();
+		$("#callBtnForm").addClass("hide-form");
+	});
 });
