@@ -50,5 +50,6 @@ $(document).ready(function () {
 	});
 	$(".menu-item").on("click", function () {
 		$("#headerMenu").toggleClass("hide-menu");
+		$("#toggleBtn").toggleClass("clicked");
 	});
 });

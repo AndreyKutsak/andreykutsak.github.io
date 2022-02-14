@@ -616,6 +616,10 @@ footer ul a:hover {
     text-align: center;
     transition: 0.4s;
   }
+  .head header .header-menu .menu-item a {
+    display: block;
+    min-width: 100%;
+  }
   .head header .header-menu .menu-item:hover {
     background-color: rgba(255, 255, 255, 0.371);
   }
