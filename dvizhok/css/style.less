@@ -254,7 +254,37 @@ img {
 		padding: 20px 30px;
 		background-color: #fff;
 		max-width: 960px;
+		.close-modal {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			height: 15px;
+			width: 15px;
+			cursor: pointer;
 
+			&:after {
+				position: absolute;
+				left: -50%;
+				top: -50%;
+				content: "";
+				height: 15px;
+				width: 3px;
+				background-color: rgb(209, 45, 45);
+				transform-origin: center center;
+				transform: translate(50%, 50%) rotate(45deg);
+			}
+			&:before {
+				position: absolute;
+				left: -50%;
+				top: -50%;
+				content: "";
+				height: 15px;
+				width: 3px;
+				background-color: rgb(209, 45, 45);
+				transform-origin: center center;
+				transform: translate(50%, 50%) rotate(-45deg);
+			}
+		}
 		.questionnaire-title {
 			font-family: "roboto", sans-serif;
 			font-size: 18px;
@@ -273,63 +303,92 @@ img {
 		}
 		.input-wraper {
 			padding: 15px 0;
-			input[type="text"] {
-				padding: 10px 15px;
-				border: 1px solid rgb(183, 173, 245);
-				border-radius: 5px;
-				width: 100%;
-				outline: none;
-				transition: 0.4s;
-				margin-bottom: 30px;
-				&:focus {
-					border: 1px solid rgb(47, 116, 219);
-					background-color: rgb(228, 232, 255);
+			.inp-wraper {
+				position: relative;
+
+				input[type="text"] {
+					padding: 10px 15px;
+					border: 1px solid rgb(183, 173, 245);
+					border-radius: 5px;
+					width: 100%;
+					outline: none;
+					transition: 0.4s;
+					margin-bottom: 30px;
+					&:focus {
+						border: 1px solid rgb(47, 116, 219);
+						background-color: rgb(228, 232, 255);
+					}
 				}
 			}
-		}
 
-		input[type="radio"] {
-			margin: 0 20px;
-		}
-		.form-desc,
-		label {
-			font-family: "roboto", sans-serif;
-			font-size: 15px;
-			font-weight: 500;
-			text-transform: uppercase;
-			color: rgb(65, 62, 62);
-		}
-		.select,
-		.dependence {
-			display: block;
-			border: none;
-			margin-bottom: 30px;
-			.select-label {
-				font-family: "Roboto", sans-serif;
+			input[type="radio"] {
+				margin: 0 20px;
+			}
+			.form-desc,
+			label {
+				font-family: "roboto", sans-serif;
 				font-size: 15px;
+				font-weight: 500;
 				text-transform: uppercase;
 				color: rgb(65, 62, 62);
 			}
-		}
-		.order-btn {
-			font-family: "roboto", sans-serif;
-			font-size: 16px;
-			text-transform: uppercase;
-			text-align: center;
-			color: #fff;
-			width: 150px;
-			padding: 20px 10px;
-			text-align: center;
-			border: none;
-			border-radius: 3px;
-			margin: 0 15px;
-			transition: 0.4s;
-			background: #00aa4a;
-			display: block;
-			margin: 0 auto;
-			&:active {
-				transform: scale(0.9);
+			.select,
+			.dependence {
+				display: block;
+				padding: 10px 15px;
+				width: 100%;
+				border: 1px solid #36aeae;
+				border-radius: 3px;
+				margin-bottom: 40px;
 			}
+		}
+	}
+	.checked {
+		border: 1px solid #00aa4a;
+		background-color: rgb(228, 255, 236);
+	}
+	.order-btn {
+		font-family: "roboto", sans-serif;
+		font-size: 16px;
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		width: 150px;
+		padding: 20px 10px;
+		text-align: center;
+		border: none;
+		border-radius: 3px;
+		margin: 0 15px;
+		transition: 0.4s;
+		background: #00aa4a;
+		display: block;
+		margin: 0 auto;
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+	.selected-label {
+		position: absolute;
+		bottom: -54px;
+		right: 0;
+		max-width: 100%;
+		padding: 10px 15px;
+		border-radius: 5px;
+		background-color: #c6ffc8;
+		font-family: "roboto", sans-serif;
+		font-size: 16px;
+		box-shadow: 4px 6px 8px -5px rgb(34 60 80 / 20%);
+		transition: 0.4s;
+		&:after {
+			position: absolute;
+			top: -10px;
+			left: 10px;
+			content: "";
+			width: 0;
+			height: 0;
+			border-width: 0 6.5px 11px 6.5px;
+			border-color: transparent transparent #c6ffc8 transparent;
+			border-style: solid;
 		}
 	}
 }

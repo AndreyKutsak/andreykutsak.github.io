@@ -17,6 +17,7 @@
 	<body>
 		<div class="modal-bg hide">
 			<div class="modal-content-wraper">
+				<span class="close-modal" id="closeModalBtn"></span>
 				<div class="questionnaire">
 					<h2 class="questionnaire-title">Анкета для батьків</h2>
 					<p class="questionnari-desc">
@@ -25,9 +26,13 @@
 					</p>
 					<form action="#" class="input-wraper">
 						<div class="inp-wraper"><label for="contactPhone">1. вкажіть ваш контактний номер телефону</label><input type="text" placeholder="Введіть ваш телефон" id="contactPhone" /></div>
+						<div class="inp-wraper"><label for="parent-name">2. П.І.П. батьків або законних представників:</label><input type="text" placeholder="Ваша відповідь" id="parent-name" /></div>
+
+						<div class="inp-wraper"><label for="child-name">3. П.І.П. дитини</label><input type="text" placeholder="Ваша відповідь" id="child-name" /></div>
+						<div class="inp-wraper"><label for="child-born-date">4. Дата народження дитини</label><input type="date" id="child-born-date" /></div>
 						<div class="inp-wraper">
-							<label for="orderDate">2.Оберіть ваш</label>
-							<select name="order-date" id="orderDate">
+							<label for="orderDate">5.Оберіть ваш Заїзд</label>
+							<select name="order-date" id="orderDate" class="select">
 								<option value="null">оберіть ваш заїзд</option>
 								<option value="1">Заїзд 1 1 січня</option>
 								<option value="2">Заїзд 2 2 січня</option>
@@ -36,10 +41,9 @@
 								<option value="5">Заїзд 5 5 січня</option>
 								<option value="6">Заїзд 6 6 січня</option>
 							</select>
+							<div class="" id="selectedLabel"></div>
 						</div>
-						<div class="inp-wraper"><label for="child-name">3. П.І.П. дитини</label><input type="text" placeholder="Ваша відповідь" id="child-name" /></div>
-						<div class="inp-wraper"><label for="child-born-date">4. Дата народження дитини</label><input type="date" id="child-born-date" /></div>
-						<div class="inp-wraper"><label for="parent-name">5. П.І.П. батьків або законних представників:</label><input type="text" placeholder="Ваша відповідь" id="parent-name" /></div>
+
 						<div class="inp-wraper"><label for="child-visit">6. ХТО МОЖЕ ВІДВІДУВАТИ ДИТИНУ :У ТАБОРІ?</label><input type="text" placeholder="Ваша відповідь" id="child-visit" /></div>
 						<div class="inp-wraper">
 							<label for="parent-phones">7. Усі можливі телефони на час перебування дитини у таборі (мама, тато, бабуся, дідусь)</label><input type="text" placeholder="Ваша відповідь" id="parent-phones" />

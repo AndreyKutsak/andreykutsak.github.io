@@ -26,9 +26,10 @@ $(document).ready(function () {
 	});
 	$(".races-item").on("click", function () {
 		let dataVal = $(this).data();
-
 		$("#orderDate").val(dataVal.race);
-		console.log($("#orderDate").val());
+		$("#orderDate").addClass("checked");
+		$("#selectedLabel").addClass("selected-label");
+		$("#selectedLabel").text("Ви вже обрали дату заїзду");
 		$(".modal-bg").toggleClass("hide");
 	});
 	$(".questionnaire").on("click", function (e) {
