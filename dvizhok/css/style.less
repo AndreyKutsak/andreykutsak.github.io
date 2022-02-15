@@ -194,7 +194,7 @@ img {
 		position: absolute;
 		padding: 10px;
 		top: -20px;
-		right: 10%;
+		left: 10%;
 		height: 30px;
 		width: 30px;
 		border-radius: 50%;
@@ -549,6 +549,7 @@ img {
 	}
 	.main-desc {
 		text-align: left;
+		margin-bottom: 30px;
 	}
 }
 .dishes {
@@ -673,6 +674,71 @@ img {
 		.race-start,
 		.races-end {
 			font-weight: 900;
+		}
+	}
+}
+.contact {
+	padding: 30px 0;
+	background-color: rgb(241, 244, 255);
+	.main-title {
+		text-align: left;
+	}
+	.main-desc {
+		text-align: left;
+		max-width: 400px;
+		margin: 0 0 40px;
+	}
+	.item-wraper {
+		margin-bottom: 30px;
+		a {
+			font-family: "robot", sans-serif;
+			font-size: 16px;
+			line-height: 30px;
+			color: rgb(87, 87, 87);
+
+			img {
+				height: 25px;
+				width: 25px;
+				margin: 0 15px;
+			}
+		}
+	}
+	.form-wraper {
+		max-width: 350px;
+		padding: 30px 20px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+		.contact-title {
+			font-family: "roboto", sans-serif;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: rgb(63, 63, 63);
+			margin-bottom: 30px;
+		}
+		input[type="text"] {
+			width: 100%;
+			padding: 10px 20px;
+			font-family: "roboto", sans-serif;
+			font-size: 16px;
+			border: 1px solid #1dacd8;
+			border-radius: 4px;
+			color: rgba(60, 60, 60, 0.974);
+			margin-bottom: 20px;
+			outline: none;
+		}
+		input[type="submit"] {
+			font-family: "popins", sans-serif;
+			font-size: 14px;
+			text-transform: uppercase;
+			color: #fff;
+			display: block;
+			max-width: 150px;
+			padding: 15px 20px;
+			text-align: center;
+			border: none;
+			border-radius: 5px;
+			background-color: #1dacd8;
 		}
 	}
 }
@@ -811,6 +877,12 @@ footer {
 		}
 	}
 	.area {
+		.main-title,
+		.main-desc {
+			text-align: center;
+		}
+	}
+	.contact {
 		.main-title,
 		.main-desc {
 			text-align: center;
