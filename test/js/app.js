@@ -1,13 +1,9 @@
-const options = { frequency: 60, referenceFrame: "device" };
-const sensor = new AbsoluteOrientationSensor(options);
+let gyroscope = new Gyroscope({ frequency: 60 });
 
-sensor.addEventListener("reading", () => {
-	// model is a Three.js object instantiated elsewhere.
-	model.quaternion.fromArray(sensor.quaternion).inverse();
+gyroscope.addEventListener("reading", (e) => {
+	console.log("Angular velocity along the X-axis " + gyroscope.x);
+	console.log("Angular velocity along the Y-axis " + gyroscope.y);
+	console.log("Angular velocity along the Z-axis " + gyroscope.z);
+	alert();
 });
-sensor.addEventListener("error", (error) => {
-	if (event.error.name == "NotReadableError") {
-		console.log("Sensor is not available.");
-	}
-});
-sensor.start();
+gyroscope.start();
