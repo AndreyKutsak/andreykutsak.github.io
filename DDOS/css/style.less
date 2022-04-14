@@ -1,0 +1,162 @@
+img {
+	height: auto;
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(181, 181, 181);
+}
+/* common-style */
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.hide {
+	display: none;
+}
+.err {
+	background-color: rgb(251, 163, 163);
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+.suc {
+	background-color: rgb(164, 255, 157);
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+.main-title {
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+}
+.main-sub-title {
+	font-family: sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+}
+/* light mode checkbox */
+.light-mode-checkbox {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	width: 50px;
+	height: 20px;
+	border: 1px solid rgb(53, 250, 185);
+	background-color: rgb(64, 206, 178);
+	border-radius: 12px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+}
+.light-mode-checkbox::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 18px;
+	width: 18px;
+	background-color: rgb(61, 142, 80);
+	border-radius: 50%;
+	transition: 0.4s;
+}
+.light-mode-checkbox:checked::after {
+	left: 60%;
+
+	background-color: #fff;
+}
+/* connection style */
+.block {
+	max-width: 330px;
+	padding: 20px 10px;
+	border: 1px solid rgb(136, 136, 136);
+	margin-bottom: 50px;
+}
+.btn-connect {
+	max-width: 250px;
+	display: block;
+	margin: 0 auto;
+	padding: 15px 20px;
+	background-color: rgb(125, 233, 135);
+	border-radius: 5px;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.btn-connect:hover {
+	background-color: rgb(76, 203, 74);
+}
+.start-btn {
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	display: block;
+	max-width: 250px;
+	margin: 20px auto;
+	padding: 20px 15px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background-color: rgb(125, 233, 135);
+	border: none;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.start-btn:hover {
+	background-color: rgb(76, 203, 74);
+}
+/* atack style */
+.target-item {
+	display: flex;
+	width: 100%;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.target-item div {
+	padding: 15px;
+	border: 1px solid #000;
+}
+.data-link {
+	width: 30%;
+
+	text-overflow: ellipsis;
+}
+.data-sum {
+	width: 30%;
+}
+.data-suc {
+	width: 20%;
+	border-radius: 0;
+}
+.data-err {
+	width: 20%;
+	border-radius: 0;
+}
