@@ -9,7 +9,13 @@ a {
   box-sizing: border-box;
 }
 body {
-  background-color: #b5b5b5;
+  transition: 0.4s;
+}
+.light {
+  background-color: #ffffec;
+}
+.dark {
+  background-color: #3d3e4e;
 }
 /* common-style */
 .container {
@@ -25,13 +31,9 @@ body {
 .hide {
   display: none;
 }
-.err {
-  background-color: #fba3a3;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
+.wait,
+.err,
 .suc {
-  background-color: #a4ff9d;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -51,6 +53,43 @@ body {
   text-align: center;
   margin-bottom: 30px;
 }
+.main-desc,
+.data-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+.btn-connect {
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.start-btn {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  max-width: 250px;
+  margin: 20px auto;
+  padding: 20px 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
 /* light mode checkbox */
 .light-mode-checkbox {
   position: fixed;
@@ -58,8 +97,8 @@ body {
   left: 10px;
   width: 50px;
   height: 20px;
-  border: 1px solid #35fab9;
-  background-color: #40ceb2;
+  border: 1px solid #0cb2ff;
+  background-color: rgba(95, 139, 252, 0.486);
   border-radius: 12px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -74,59 +113,26 @@ body {
   transform: translateY(-50%);
   height: 18px;
   width: 18px;
-  background-color: #3d8e50;
+  background-color: rgba(245, 255, 104, 0.509);
   border-radius: 50%;
   transition: 0.4s;
 }
 .light-mode-checkbox:checked::after {
   left: 60%;
-  background-color: #fff;
+  background-color: rgba(194, 255, 26, 0.36);
 }
 /* connection style */
 .block {
   max-width: 330px;
   padding: 20px 10px;
+  border-radius: 5px;
   border: 1px solid #888888;
   margin-bottom: 50px;
-}
-.btn-connect {
-  max-width: 250px;
-  display: block;
-  margin: 0 auto;
-  padding: 15px 20px;
-  background-color: #7de987;
-  border-radius: 5px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
-  transition: 0.4s;
-  cursor: pointer;
-}
-.btn-connect:hover {
-  background-color: #4ccb4a;
-}
-.start-btn {
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  display: block;
-  max-width: 250px;
-  margin: 20px auto;
-  padding: 20px 15px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  background-color: #7de987;
-  border: none;
-  cursor: pointer;
+  box-shadow: 5px 4px 39px 5px rgba(0, 0, 0, 0.43);
   transition: 0.4s;
 }
-.start-btn:hover {
-  background-color: #4ccb4a;
+.block:hover {
+  transform: scale(1.01);
 }
 /* atack style */
 .target-item {
@@ -140,7 +146,12 @@ body {
 }
 .target-item div {
   padding: 15px;
-  border: 1px solid #000;
+}
+.target-item div:first-child {
+  border-top-left-radius: 5px;
+}
+.target-item div:last-child {
+  border-top-right-radius: 5px;
 }
 .data-link {
   width: 30%;
@@ -156,4 +167,66 @@ body {
 .data-err {
   width: 20%;
   border-radius: 0;
+}
+.unit {
+  fill: none;
+  stroke-width: 3%;
+  transition: 0.4s;
+}
+.static-block {
+  width: 50%;
+}
+.light .err {
+  background-color: #fe7171;
+}
+.light .wait {
+  background-color: #bfbfbf;
+}
+.light .suc {
+  background-color: #a1ffac;
+}
+.light .main-title,
+.light .main-sub-title,
+.light .main-desc,
+.light .data-text,
+.light .target-item div {
+  color: #3d3e4e;
+}
+.light .target-item div {
+  border: 1px solid #696a77;
+}
+.light .start-btn,
+.light .btn-connect {
+  background-color: #38be29;
+  color: #e5e5e5;
+}
+.light .start-btn:hover,
+.light .btn-connect:hover {
+  background-color: #40de27;
+}
+.dark .main-title,
+.dark .main-sub-title,
+.dark .main-desc,
+.dark .data-text {
+  color: #57c277;
+}
+.dark .browser-msg .main-desc,
+.dark .target-item div {
+  color: #0d0d0e;
+  border: 1px solid #696a77;
+}
+.dark .start-btn,
+.dark .btn-connect {
+  background-color: #38be29;
+  color: #e5e5e5;
+}
+.dark .start-btn:hover,
+.dark .btn-connect:hover {
+  background-color: #40de27;
+}
+@media screen and (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

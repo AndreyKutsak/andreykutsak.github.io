@@ -18,18 +18,19 @@ btns.forEach(function (el) {
 function getList(list, type) {
 	fetch(list, {
 		method: "GET",
+		mode: "cors",
+		headers: { Accept: "application/json" },
 	})
 		.then(function (responce) {
 			return responce.json();
 		})
 		.then(function (data) {
 			if (type === "vpn") {
-				checkVpnList(data);
 			} else if (type === "proxy") {
-				checkProxyList(data);
+				chrome.runtime.sendMessage({ link: data, type: type }, function (response) {
+					console.log(response);
+				});
 			}
 		});
 }
-function checkProxyList(list) {
-	chrome;
-}
+function checkProxyList(list) {}

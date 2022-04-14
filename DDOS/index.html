@@ -7,12 +7,13 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<title>DDOS Russian web site</title>
 	</head>
-	<body>
+	<body class="light">
 		<input type="checkbox" class="light-mode-checkbox" id="lightModeCheckBox" />
+
 		<section class="info-section">
 			<div class="container">
 				<div class="browser-msg hide">
-					<p class="msg-text" id="msgText"></p>
+					<p class="main-desc" id="msgText"></p>
 				</div>
 			</div>
 		</section>
@@ -25,7 +26,7 @@
 				</div>
 				<div class="block">
 					<h3 class="main-sub-title">Підключитися до Proxy</h3>
-					<buton class="btn-connect" id="btnProxy" data-conection-type="proxy" data-conection-list="js/proxy.json">Підключитися</buton>
+					<buton class="btn-connect" id="btnProxy" data-conection-type="proxy" data-conection-list="/proxy.json">Підключитися</buton>
 				</div>
 				<div class="block">
 					<h3 class="main-sub-title">Інформація про ваше підключення</h3>
@@ -47,6 +48,34 @@
 						<button id="startAtackBtn" class="start-btn">Розпочати атаку</button>
 					</div>
 				</ul>
+			</div>
+		</section>
+		<section class="static">
+			<div class="container">
+				<h2 class="main-title">ефективність вашої атаки</h2>
+				<div class="flex-container">
+					<div class="static-block">
+						<div class="static-wraper">
+							<p class="main-desc">Відсоток успішних запитів <span id="dataSuc">0</span>%</p>
+							<div class="static-row suc" id="sucBar"></div>
+						</div>
+						<div class="static-wraper">
+							<p class="main-desc">Відсоток запитів що очікують відповіді від жертви <span id="dataWait">0</span>%</p>
+							<div class="static-row wait" id="waitBar"></div>
+						</div>
+						<div class="static-wraper">
+							<p class="main-desc">Відсоток неуспішних запитів <span id="dataErr">0</span>%</p>
+							<div class="static-row err" id="errBar"></div>
+						</div>
+					</div>
+					<div class="static-block">
+						<svg width="100%" height="100%" viewBox="0 0 100 100">
+							<circle class="unit" id="waitCir" r="15.9" cx="50%" cy="50%"></circle>
+							<circle class="unit" id="errCir" r="15.9" cx="50%" cy="50%"></circle>
+							<circle class="unit" id="sucCir" r="15.9" cx="50%" cy="50%"></circle>
+						</svg>
+					</div>
+				</div>
 			</div>
 		</section>
 		<script src="js/query.js"></script>

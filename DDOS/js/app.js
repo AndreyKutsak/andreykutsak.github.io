@@ -36,7 +36,7 @@ function checkBrowser() {
 		}
 	})(window.navigator.userAgent.toLowerCase());
 	if (browserName !== "Chrome") {
-		container.classList.add("err");
+		container.classList.add("err main-desc");
 		container.parentNode.classList.remove("hide");
 		container.innerText = "покищо наш сайт коректно працює лише з браузером Google Chrome. Будь ласка встановіть браузер Google Chrome, також будьте уважні і скачуйте з офіційного сайту Google";
 	} else {
@@ -59,3 +59,4 @@ function checkExtantion() {
 		container.appendChild(link);
 	}
 }
+let;
