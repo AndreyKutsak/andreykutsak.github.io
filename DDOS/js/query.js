@@ -67,7 +67,7 @@ function getLocatioInfo() {
 				console.log(err);
 				alert("Неможливо отримати інформацію про ваше підключення");
 			});
-	}, 5000);
+	}, 25000);
 }
 counterRange.addEventListener("input", (e) => {
 	count = e.target.value;
