@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<title>DDOS Russian web site</title>
 	</head>
-	<body class="light">
+	<body class="light" data-list="js/proxy.json">
 		<input type="checkbox" class="light-mode-checkbox" id="lightModeCheckBox" />
 
 		<section class="info-section">
@@ -21,16 +21,29 @@
 			<h2 class="main-title">Налаштування підключення</h2>
 			<div class="container flex-container">
 				<div class="block">
-					<h3 class="main-sub-title">Підключитися до VPN</h3>
-					<buton class="btn-connect" id="btnVpn" data-conection-type="Vpn" data-conection-list="js/vpn.json">Підключитися</buton>
+					<h3 class="main-sub-title">Що потрібно під час використання сайту?</h3>
+					<p class="main-desc">
+						Під час аткаи через веб сайти, найбільша проблема це зміна IP адресу.Якщо під час викоритсання різних скриптів ті віикористовують проксі і самі змінюють вашу IP адресу, то в нашому випадку для
+						покращення ефективності атаки використовуйте ВПН і змінюйте вашу країну кожні 10-15 хвилин
+					</p>
 				</div>
-				<div class="block">
-					<h3 class="main-sub-title">Підключитися до Proxy</h3>
-					<buton class="btn-connect" id="btnProxy" data-conection-type="proxy" data-conection-list="/proxy.json">Підключитися</buton>
-				</div>
+
 				<div class="block">
 					<h3 class="main-sub-title">Інформація про ваше підключення</h3>
-					<div class="conection-data" id="DataContainer"></div>
+					<div class="conection-data" id="conectionInfo"></div>
+				</div>
+				<div class="block">
+					<h3 class="main-sub-title">Розпочни ДДОС атаку на русню</h3>
+					<div class="seting-wraper">
+						<p class="main-desc">Обери кількість цілей</p>
+						<input type="range" id="targetCounter" class="set-range" min="1" value="5" />
+						<span id="counterText" class="set-info"></span>
+						<p class="main-desc">Встанови інтервал між запитами, чим менший інтервал тим краще</p>
+						<input type="range" id="interval" min="10" max="1000" value="300" class="set-range" />
+						<span id="intervalText" class="set-info"></span>
+					</div>
+					<button id="startAtackBtn" class="start-btn">Розпочати атаку</button>
+					<button id="stopBtn" class="stop-btn">Зупинити ддос атаку</button>
 				</div>
 			</div>
 		</section>
@@ -44,9 +57,7 @@
 						<div class="data-suc suc">кількість успішних запитів</div>
 						<div class="data-err err">кількість помилкових запитів</div>
 					</li>
-					<div id="dataWraper">
-						<button id="startAtackBtn" class="start-btn">Розпочати атаку</button>
-					</div>
+					<div id="dataWraper"></div>
 				</ul>
 			</div>
 		</section>
@@ -60,7 +71,7 @@
 							<div class="static-row suc" id="sucBar"></div>
 						</div>
 						<div class="static-wraper">
-							<p class="main-desc">Відсоток запитів що очікують відповіді від жертви <span id="dataWait">0</span>%</p>
+							<p class="main-desc">Відсоток запитів що очікують відповідь <span id="dataWait">0</span>%</p>
 							<div class="static-row wait" id="waitBar"></div>
 						</div>
 						<div class="static-wraper">
@@ -69,15 +80,47 @@
 						</div>
 					</div>
 					<div class="static-block">
-						<svg width="100%" height="100%" viewBox="0 0 100 100">
-							<circle class="unit" id="waitCir" r="15.9" cx="50%" cy="50%"></circle>
-							<circle class="unit" id="errCir" r="15.9" cx="50%" cy="50%"></circle>
-							<circle class="unit" id="sucCir" r="15.9" cx="50%" cy="50%"></circle>
+						<svg width="100%" height="500px" id="diagram">
+							<circle id="sucCir" class="unit" cx="50%" cy="50%" r="40%"></circle>
+
+							<circle id="waitCir" class="unit" cx="50%" cy="50%" r="40%"></circle>
+							<circle id="errCir" class="unit" cx="50%" cy="50%" r="40%"></circle>
 						</svg>
 					</div>
 				</div>
 			</div>
 		</section>
+		<section class="pertners">
+			<h2 class="main-title">Доєднуйся до українського кіберфронту</h2>
+			<div class="container">
+				<div class="flex-container">
+					<div class="block">
+						<h3 class="main-sub-title">Тлеграм канали</h3>
+						<ul class="partner-list">
+							<li class="partner-item"><a href="https://t.me/ddos_separ"> Кібер Козаки</a></li>
+							<li class="partner-item"><a href="https://t.me/stoprussiachannel">StopRussiaChannel | MRIYA</a></li>
+							<li class="partner-item"><a href="https://t.me/incourse911">INCOURSE#911</a></li>
+							<li class="partner-item"><a href="https://t.me/disBalancer_Official">disBalancer Ukraine</a></li>
+							<li class="partner-item"><a href="https://t.me/+NdmAn-xnANNlYjJi">KiberBULL</a></li>
+							<li class="partner-item"><a href="https://t.me/CyberpolUA">CyberpoliceUA</a></li>
+							<li class="partner-item"><a href="https://t.me/itarmyofukraine2022">IT ARMY of Ukraine</a></li>
+							<li class="partner-item"><a href="https://t.me/ukrainian_reaper_ddos">Украинский жнец (DDoS)</a></li>
+						</ul>
+					</div>
+					<div class="block">
+						<h3 class="main-sub-title">Веб Сайти</h3>
+						<ul class="partner-list">
+							<li class="partner-item"><a href="http://2222933.ubandera.web.hosting-test.net/">Ban-DERA DDOS</a></li>
+							<li class="partner-item"></li>
+							<li class="partner-item"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p class="version">V 0.0.2</p>
+		</footer>
 		<script src="js/query.js"></script>
 	</body>
 </html>

