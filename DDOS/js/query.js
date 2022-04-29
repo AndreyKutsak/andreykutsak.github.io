@@ -64,7 +64,7 @@ function getLocatioInfo() {
 			locationContainer.innerHTML = `<p class="main-desc"> Ваша країна ${data.country}</p>
 			<p class="main-desc">Ваше місто ${data.city}</p>
 			<p class="main-desc">Ваш провайдер ${data.org}</p>
-			<p class="main-desc"> Ваша IP адреса ${data.query}</p>`;
+			<p class="main-desc"> Ваша IP адреса ${data.ip}</p>`;
 		})
 		.catch((err) => {
 			console.log(err);
