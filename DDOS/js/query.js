@@ -53,7 +53,12 @@ getTargets(getLocatioInfo);
 function getLocatioInfo() {
 	let locationContainer = document.getElementById("conectionInfo");
 	setInterval(getLocatioInfo, 60000);
-	fetch(ipApi)
+	fetch(ipApi, {
+		method: "GET",
+
+		cache: "no-cache",
+		headers: { "Referrer-Policy": "no-referrer" },
+	})
 		.then((responce) => {
 			return responce.json();
 		})
