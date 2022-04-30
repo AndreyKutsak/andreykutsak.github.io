@@ -4,7 +4,7 @@ let ipApi = "https://ipapi.co/json/",
 	attacketTargets = [],
 	contry = "",
 	count = 5,
-	interval = 1000,
+	interval = 500,
 	sucPercent = 0,
 	errPercent = 0,
 	waitPercent = 0,
@@ -26,6 +26,7 @@ let ipApi = "https://ipapi.co/json/",
 	sucCir = document.getElementById("sucCir"),
 	sucBar = document.getElementById("sucBar"),
 	sucText = document.getElementById("dataSuc");
+
 getTargets = function (a) {
 	fetch(targetLink)
 		.then((responce) => {
@@ -68,9 +69,10 @@ function getLocatioInfo() {
 		})
 		.catch((err) => {
 			console.log(err);
-			alert("Неможливо отримати інформацію про ваше підключення");
+			//alert("Неможливо отримати інформацію про ваше підключення");
 		});
 }
+intervalRange.setAttribute("value", interval);
 selectInterval(count);
 selectTargets(count);
 counterRange.addEventListener("change", (e) => {
@@ -82,14 +84,14 @@ intervalRange.addEventListener("change", (e) => {
 	selectInterval(interval, true);
 });
 function selectInterval(a = interval, b = false) {
-	intervalText.textContent = interval;
+	intervalText.textContent = `Інтервал між запитами ${interval}`;
 	selectTargets(count);
 	if (b) {
 		makeDdos();
 	}
 }
 function selectTargets(a = count, b = false) {
-	counterText.textContent = a;
+	counterText.textContent = `Ви обрали ${a} сайтів`;
 	attacketTargets = [];
 	for (let i = 0; i < a; i++) {
 		attacketTargets.push(targets[i]);
@@ -107,6 +109,12 @@ startBtn.addEventListener("click", (e) => {
 	makeDdos();
 	e.target.classList.add("clicked");
 });
+
+if (window.screen.width < 450) {
+	waitCir.setAttribute("r", "30%");
+	sucCir.setAttribute("r", "30%");
+	errCir.setAttribute("r", "30%");
+}
 function makeDdos() {
 	setInterval(() => {
 		// console.log(attacketTargets);

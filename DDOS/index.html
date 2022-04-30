@@ -4,11 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<link rel="stylesheet" href="css/style.css" />
 		<title>DDOS Russian web site</title>
 	</head>
-	<body class="light" data-list="js/proxy.json">
+	<body class="light">
 		<input type="checkbox" class="light-mode-checkbox" id="lightModeCheckBox" />
 
 		<section class="info-section">
@@ -38,13 +37,15 @@
 					<div class="seting-wraper">
 						<p class="main-desc">Обери кількість цілей</p>
 						<input type="range" id="targetCounter" class="set-range" min="1" value="5" />
-						<span id="counterText" class="set-info"></span>
+						<span id="counterText" class="set-info main-desc"></span>
 						<p class="main-desc">Встанови інтервал між запитами, чим менший інтервал тим краще</p>
 						<input type="range" id="interval" min="10" max="1000" value="300" class="set-range" />
-						<span id="intervalText" class="set-info"></span>
+						<span id="intervalText" class="set-info main-desc"></span>
 					</div>
-					<button id="startAtackBtn" class="start-btn">Розпочати атаку</button>
-					<button id="stopBtn" class="stop-btn">Зупинити ддос атаку</button>
+					<div class="flex-container">
+						<button id="startAtackBtn" class="start-btn">Розпочати атаку</button>
+						<!-- <button id="stopBtn" class="stop-btn">Зупинити ддос атаку</button> -->
+					</div>
 				</div>
 			</div>
 		</section>
@@ -120,7 +121,9 @@
 			</div>
 		</section>
 		<footer>
-			<p class="version">V 0.0.2</p>
+			<div class="container">
+				<p class="version">V 0.0.2</p>
+			</div>
 		</footer>
 		<script src="js/query.js"></script>
 	</body>

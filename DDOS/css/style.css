@@ -8,7 +8,10 @@ a {
 * {
   box-sizing: border-box;
 }
-body {
+body,
+ul {
+  margin: 0;
+  padding: 0;
   transition: 0.4s;
 }
 .light {
@@ -144,8 +147,11 @@ body {
   transform: scale(1.01);
 }
 /* atack style */
+.data-wraper {
+  max-width: 100%;
+  overflow: hidden;
+}
 .targets-list {
-  min-width: 450px;
   overflow-x: scroll;
   margin-bottom: 50px;
 }
@@ -174,16 +180,20 @@ body {
 }
 .data-link {
   width: 30%;
+  text-align: left;
   text-overflow: ellipsis;
 }
 .data-sum {
+  text-align: center;
   width: 30%;
 }
 .data-suc {
+  text-align: center;
   width: 20%;
   border-radius: 0;
 }
 .data-err {
+  text-align: center;
   width: 20%;
   border-radius: 0;
 }
@@ -209,7 +219,6 @@ body {
 .light .main-desc,
 .light .data-text,
 .light .target-item div {
-  min-width: 100px;
   color: #3d3e4e;
 }
 .light .target-item div {
@@ -259,7 +268,17 @@ body {
   text-align: center;
 }
 @media screen and (max-width: 800px) {
+  .data-link,
+  .data-sum,
+  .data-suc,
+  .data-err {
+    font-size: 13px;
+  }
+  .container {
+    width: 100%;
+  }
   .flex-container {
+    width: 100%;
     flex-direction: column;
     align-items: center;
   }
