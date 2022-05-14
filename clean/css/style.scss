@@ -1603,6 +1603,8 @@ header {
 }
 .sertificats {
 	padding: 50px 0 30px;
+	width: 100%;
+	overflow: hidden;
 	.main-title {
 		text-align: center;
 		margin-bottom: 10px;
@@ -1808,7 +1810,7 @@ footer {
 			}
 		}
 		.responce-wraper {
-			padding: 30px;
+			padding: 80px 10px;
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -1859,6 +1861,44 @@ footer {
 			.services-block-desc {
 				text-align: center;
 			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.calculation .cat-list {
+		border-radius: 0;
+		.cat-item {
+			border-radius: 0;
+			a {
+				display: block;
+				border-radius: 0;
+				min-width: 100%;
+			}
+		}
+	}
+	.examples .example-list {
+		border-radius: 0;
+		.example-item {
+			border-radius: 0;
+			min-width: 100%;
+			text-align: center;
+		}
+	}
+}
+@media screen and (max-width: 560px) {
+	.cleaning {
+		.btn {
+			padding: 15px;
+		}
+	}
+	.calculation .calc-container {
+		border-radius: 30px;
+	}
+	.type .pricelist-baner {
+		padding: 20px 15px;
+		.form-title,
+		.form-desc {
+			text-align: center;
 		}
 	}
 }
