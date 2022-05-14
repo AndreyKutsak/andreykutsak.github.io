@@ -1,0 +1,2103 @@
+@font-face {
+  font-family: "Mont";
+  src: local("Mont Bold"), local("Mont-Bold"), url("../fonts/Mont-Bold.woff2") format("woff2"), url("../fonts/Mont-Bold.woff") format("woff"), url("../fonts/Mont-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: local("Mont Regular"), local("Mont-Regular"), url("../fonts/Mont-Regular.woff2") format("woff2"), url("../fonts/Mont-Regular.woff") format("woff"), url("../fonts/Mont-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: local("Mont Semi Bold"), local("Mont-Semi-Bold"), url("../fonts/Mont-SemiBold.woff2") format("woff2"), url("../fonts/Mont-SemiBold.woff") format("woff"), url("../fonts/Mont-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main-title {
+  font-family: "Mont";
+  font-size: 30px;
+  color: #4b5258;
+}
+
+.main-title .main-sm-title {
+  font-weight: 600;
+}
+
+.main-title .main-xs-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.mark {
+  color: #43aaff;
+}
+
+.main-desc {
+  font-family: "Mont";
+  font-size: 18px;
+  color: #4b5258;
+}
+
+.polici-wraper .polici {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin-right: 10px;
+  border-radius: 4px;
+  height: 13px !important;
+  width: 13px !important;
+}
+
+.polici-wraper .polici:checked:after {
+  position: absolute;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background-color: #ffc24d;
+  mix-blend-mode: lighten;
+}
+
+.polici-wraper .polici-text {
+  font-family: "Mont";
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  max-width: 256px;
+  text-align: left;
+}
+
+.polici-wraper .polici-text a {
+  text-decoration: underline;
+}
+
+.profesional-btn {
+  display: block;
+  max-width: 650px;
+  border-radius: 100px;
+  background-color: #ffc24d;
+  padding: 15px;
+  font-family: "Mont";
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 65px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.profesional-btn:hover {
+  color: #fff;
+  background-color: #e5af4a;
+}
+
+header {
+  margin: 18px 0 83px;
+}
+
+header .contact-phones {
+  font-family: "Mont";
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #4b5258;
+  margin-bottom: 4px;
+}
+
+header .work-deays {
+  position: relative;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #959a9d;
+  text-align: right;
+}
+
+header .work-deays:after {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #20ff87;
+  border-radius: 50%;
+}
+
+header .messanger .contact-text {
+  font-family: "Mont";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #4b5258;
+  max-width: 140px;
+  margin-right: 10px;
+}
+
+header .messanger .ico-wrap a {
+  margin: 0 5px;
+}
+
+header .order-consult {
+  width: 200px;
+  border: 1px solid #43aaff;
+  padding: 21px 5px;
+  text-align: center;
+  border-radius: 100px;
+  background: transparent;
+  font-family: "Mont";
+  font-size: 12px;
+  font-weight: 400;
+  color: #4b5258;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header .order-consult:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+header .responce-btn {
+  display: none;
+}
+
+header .responce-wraper {
+  width: 70%;
+}
+
+.custom-form {
+  position: relative;
+  padding: 0px 0px 0px 63px;
+  background-image: url(../img/calculator.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 120%;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.custom-form .form-title {
+  margin-top: 70px;
+  font-family: "Mont";
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.custom-form .form-desc {
+  font-family: "Mont";
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.custom-form .btn-wraper {
+  max-width: 390px;
+  margin-bottom: 15px;
+}
+
+.custom-form .btn-wraper a {
+  position: relative;
+  display: inline-block;
+  width: 184px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 5px;
+}
+
+.custom-form .btn-wraper a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.custom-form .custom-form {
+  max-width: 390px;
+}
+
+.custom-form .custom-form input[type="text"] {
+  padding: 28px 0 28px 47px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  background-color: #fff;
+  width: 100%;
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+  margin-bottom: 10px;
+}
+
+.custom-form .custom-form input[type="text"]::-webkit-input-placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.custom-form .custom-form input[type="text"]:-ms-input-placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.custom-form .custom-form input[type="text"]::-ms-input-placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.custom-form .custom-form input[type="text"]::placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.custom-form .custom-form input[type="submit"] {
+  font-family: "Mont";
+  font-size: 13px;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  border-radius: 100px;
+  background-color: #ffc24d;
+  border: none;
+  outline: none;
+  padding: 25px 30px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.custom-form .custom-form .chk-wraper {
+  margin-left: 20px;
+  margin-bottom: 119px;
+}
+
+.custom-form .custom-form .chk {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin-right: 10px;
+  border-radius: 4px;
+  height: 13px;
+  width: 13px;
+}
+
+.custom-form .custom-form .chk:checked:after {
+  position: absolute;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background-color: #ffc24d;
+  mix-blend-mode: lighten;
+}
+
+.custom-form .custom-form .checkBox-text {
+  font-family: "Mont";
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  max-width: 256px;
+  text-align: left;
+}
+
+.custom-form .custom-form .checkBox-text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.up-bg {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+}
+
+.bt-bg {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+}
+
+.custom-btn-wraper {
+  max-width: 270px;
+}
+
+.custom-btn-wraper a.btn {
+  display: block;
+  position: relative;
+  width: 125px;
+  height: 70px;
+  border-radius: 20px;
+  margin: 0 5px 10px;
+}
+
+.custom-btn-wraper a.btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.owl-carousel {
+  position: relative;
+  max-width: 898px;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  left: -70px;
+  height: 63px;
+  width: 63px;
+  border-radius: 50%;
+  background-color: #43aaff;
+  background-image: url(../img/arrowDown.svg);
+  background-size: 40%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  right: -70px;
+  height: 63px;
+  width: 63px;
+  border-radius: 50%;
+  background-color: #43aaff;
+  background-image: url(../img/arrowDown.svg);
+  background-size: 40%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.cleaning {
+  padding-bottom: 127px;
+  background-image: url(../img/bottom-header-bg.png), url(../img/header-bg.jpg);
+  background-size: 100%, contain;
+  background-position: center bottom, center right;
+  background-repeat: no-repeat;
+}
+
+.cleaning .main-title {
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+.cleaning .main-title .main-sm-title {
+  font-weight: 600;
+}
+
+.cleaning .main-title .main-xs-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cleaning .main-title .line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: #43aaff;
+  margin: 5px 18px;
+}
+
+.cleaning .main-desc {
+  max-width: 453px;
+  margin-bottom: 50px;
+}
+
+.cleaning .main-desc .discont-text {
+  font-weight: 600;
+}
+
+.cleaning .btn {
+  font-family: "Mont";
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 100px;
+  padding: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.cleaning .btn:nth-child(2) {
+  margin-left: 17px;
+}
+
+.cleaning .calc {
+  max-width: 297px;
+  background-color: #43aaff;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.cleaning .calc:hover {
+  background-color: #438cc8;
+}
+
+.cleaning .order {
+  max-width: 265px;
+  background-color: #ffc24d;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.cleaning .order:hover {
+  background-color: #dc940e;
+}
+
+.calculation {
+  padding: 72px 0 160px;
+  background-image: url(../img/green-bg-up.svg);
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.calculation .rd {
+  background-color: #ffeecc;
+}
+
+.calculation .bl {
+  background: #43aaff;
+}
+
+.calculation .block {
+  padding: 40px 25px;
+  margin-bottom: 24px;
+  border-radius: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  height: 90%;
+}
+
+.calculation .block .block-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #fff;
+  max-width: 180px;
+}
+
+.calculation .dev {
+  background-image: url(../img/devices.png);
+}
+
+.calculation .cl {
+  background-color: #ffc24d;
+  background-image: url(../img/cleaning.png);
+}
+
+.calculation .hand {
+  background-image: url(../img/hands.png);
+}
+
+.calculation .pay {
+  background-color: #ffc24d;
+  background-image: url(../img/result.png);
+}
+
+.calculation .cat-list {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(29, 31, 33, 0.12);
+          box-shadow: 0px 0px 20px rgba(29, 31, 33, 0.12);
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+
+.calculation .cat-list .cat-item a {
+  display: block;
+  padding: 28px 30px;
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 100px;
+  color: #4b5258;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  max-width: 300px;
+}
+
+.calculation .cat-list .cat-item a:hover {
+  background-color: #43aaff;
+  color: #fff;
+}
+
+.calculation .main-title {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.calculation .main-desc {
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.calculation .calc-container {
+  position: relative;
+  padding: 0px 0px 0px 63px;
+  background-image: url(../img/calculator.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.calculation .calc-container .form-title {
+  margin-top: 70px;
+  font-family: "Mont";
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.calculation .calc-container .form-desc {
+  font-family: "Mont";
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.calculation .calc-container .btn-wraper {
+  max-width: 390px;
+  margin-bottom: 15px;
+}
+
+.calculation .calc-container .btn-wraper a {
+  position: relative;
+  display: inline-block;
+  width: 184px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 5px;
+}
+
+.calculation .calc-container .btn-wraper a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.calculation .calc-container .reword-form {
+  max-width: 390px;
+}
+
+.calculation .calc-container .reword-form input[type="text"] {
+  padding: 28px 0 28px 47px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  background-color: #fff;
+  width: 100%;
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+  margin-bottom: 10px;
+}
+
+.calculation .calc-container .reword-form input[type="text"]::-webkit-input-placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.calculation .calc-container .reword-form input[type="text"]:-ms-input-placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.calculation .calc-container .reword-form input[type="text"]::-ms-input-placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.calculation .calc-container .reword-form input[type="text"]::placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.calculation .calc-container .reword-form input[type="submit"] {
+  font-family: "Mont";
+  font-size: 13px;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  border-radius: 100px;
+  background-color: #ffc24d;
+  border: none;
+  outline: none;
+  padding: 25px 30px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.calculation .calc-container .reword-form .polici-wraper {
+  max-width: 275px;
+  margin-bottom: 120px;
+}
+
+.calculation .calc-container .reword-form .polici-text {
+  color: #fff;
+}
+
+.calculation .calc-container .reword-form .polici-text a {
+  color: #fff;
+}
+
+.calculation .calc-container .img-wraper {
+  position: relative;
+}
+
+.calculation .calc-container .img-wraper:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/phone.png);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.services {
+  position: relative;
+  top: -2px;
+  padding: 136px 0 131px;
+  background-color: #f2f9ff;
+}
+
+.services .btn-know {
+  width: 230px;
+  border-radius: 30px;
+  padding: 11px 25px;
+  text-align: center;
+  font-family: "Mont";
+  font-size: 22px;
+  line-height: 32px;
+  color: #fff;
+  display: block;
+  background-color: #ffc24d;
+  margin-bottom: 20px;
+}
+
+.services .main-title {
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 45px;
+}
+
+.services .main-desc {
+  text-align: center;
+  max-width: 700px;
+  line-height: 33px;
+  margin-bottom: 37px;
+}
+
+.services .block {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.services .block img {
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.services .block .services-block-title {
+  font-family: "Mont";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+  margin-bottom: 14px;
+  padding: 0 35px;
+}
+
+.services .block .services-block-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 0 35px 35px;
+}
+
+.services .personal-block {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.services .personal-block img {
+  margin-right: 45px;
+}
+
+.services .personal-block .text-wraper {
+  padding: 44px 20px 56px 40px;
+}
+
+.services .personal-block .text-wraper .block-title {
+  font-family: "Mont";
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-bottom: 13px;
+  color: #4b5258;
+}
+
+.services .personal-block .text-wraper .block-desc {
+  font-family: "Mont";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #4b5258;
+}
+
+.services .attentive-block {
+  background: #43aaff;
+  border-radius: 30px;
+  padding: 35px;
+  margin-top: 20px;
+  margin-bottom: 105px;
+}
+
+.services .attentive-block .attentive-title {
+  font-family: "Mont";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.services .attentive-block .attentive-desc {
+  font-family: "Mont";
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.services .attentive-block .attentive-link {
+  font-family: "Mont";
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.services .our-work .main-title {
+  line-height: 45px;
+  font-weight: 700;
+  max-width: 552px;
+  margin-bottom: 16px;
+}
+
+.services .our-work .block {
+  position: relative;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin-bottom: 30px;
+  overflow-y: hidden;
+}
+
+.services .our-work .block img {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.services .our-work .block .waranty-img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.services .our-work .block .main-block-title {
+  font-family: "Mont";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+  margin-bottom: 14px;
+  padding: 0 25px;
+}
+
+.services .our-work .block .main-block-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 0 25px 35px;
+}
+
+.services .our-work .consalting-container {
+  padding: 42px 49px 59px;
+  border-radius: 30px;
+  background-image: url(../img/consalting.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.services .our-work .consalting-container .consalting-title {
+  font-family: "Mont";
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  max-width: 357px;
+  margin-bottom: 32px;
+}
+
+.services .our-work .consalting-container .consalting-form input[type="text"] {
+  width: 275px;
+  border-radius: 30px;
+  border: none;
+  background: #ffffff;
+  padding: 28px 10px 28px 39px;
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #959a9d;
+  margin-bottom: 25px;
+}
+
+.services .our-work .consalting-container .consalting-form input[type="text"]:placeholder {
+  font-family: "Mont";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #959a9d;
+}
+
+.services .our-work .consalting-container .consalting-form input[type="submit"] {
+  display: block;
+  font-family: "Mont";
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #ffc24d;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+  padding: 28px 10px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  border-radius: 100px;
+  width: 275px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+.services .our-work .consalting-container .consalting-form .polici-wraper {
+  max-width: 100%;
+}
+
+.services .our-work .consalting-container .consalting-form .polici-wraper .polici-text,
+.services .our-work .consalting-container .consalting-form .polici-wraper a {
+  max-width: 100%;
+  color: #ffffff;
+}
+
+.type {
+  position: relative;
+  top: -2px;
+  padding: 140px 0 120px;
+  background-image: url(../img/green-bg-bt.svg), url(../img/green-bg-up.svg);
+  background-position: center top, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 100%;
+}
+
+.type .main-sm-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.type .main-desc {
+  text-align: center;
+  max-width: 594px;
+  margin-bottom: 40px;
+}
+
+.type .block {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 35px 40px 29px;
+  margin-bottom: 20px;
+}
+
+.type .block img {
+  display: block;
+  height: 95px;
+  width: 95px;
+  margin-bottom: 27px;
+  border-radius: 50%;
+  border: 2px solid #43aaff;
+}
+
+.type .block .block-title {
+  font-family: "Mont";
+  font-size: 16px;
+  left: 22px;
+  font-weight: 600;
+  color: #4b5258;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.type .block .block-desc {
+  font-family: "Mont";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 16px;
+  color: #4b5258;
+  text-align: center;
+}
+
+.type .block .time {
+  font-family: "Mont";
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: #43aaff;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.type .block .time .duration-desc {
+  font-weight: 400;
+  color: #959a9d;
+}
+
+.type .block .btn {
+  display: block;
+  width: 206px;
+  border: 1px solid #43aaff;
+  border-radius: 100px;
+  margin: 0 auto;
+  padding: 16px 30px;
+  font-family: "Mont";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #43aaff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.type .block .btn-active {
+  display: block;
+  width: 206px;
+  background: #43aaff;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+  padding: 16px 30px;
+  font-family: "Mont";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.type .block .more-link {
+  display: block;
+  font-family: "Mont";
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: #43aaff;
+}
+
+.type .profesional-btn {
+  margin-top: 100px;
+}
+
+.type .main-title {
+  text-align: center;
+}
+
+.type .additional {
+  padding-top: 100px;
+}
+
+.type .additional .block {
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.type .additional .block img {
+  margin-right: 25px;
+  margin-bottom: 0;
+}
+
+.type .additional .block .additional-serv-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #4b5258;
+  margin-bottom: 5px;
+}
+
+.type .additional .block .additionsl-serv-price {
+  position: relative;
+  font-family: "Mont";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #43aaff;
+  margin-left: 20px;
+}
+
+.type .additional .block .additionsl-serv-price:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 19px;
+  height: 2px;
+  background: #43aaff;
+}
+
+.type .additional-baner {
+  margin-top: 10px;
+  background-image: url(../img/additional-bg.jpg);
+  background-size: 50%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 51px 60px 60px;
+}
+
+.type .additional-baner .additional-baner-desc {
+  font-family: "Mont";
+  font-size: 20px;
+  line-height: 28px;
+  color: #4b5258;
+  font-weight: 600;
+  margin-bottom: 30px;
+  max-width: 379px;
+}
+
+.type .additional-baner .additional-baner-desc .mark {
+  font-weight: 700;
+}
+
+.type .additional-btn {
+  display: block;
+  width: 275px;
+  font-family: "Mont";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #43aaff;
+  padding: 25px 60px;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+}
+
+.type .pricelist-baner {
+  padding: 39px 58px 58px;
+  background-image: url(../img/price-list.jpg);
+  background-size: cover;
+  border-radius: 30px;
+  margin: 120px 0;
+}
+
+.type .pricelist-baner .form-title {
+  font-family: "Mont";
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 600;
+  color: #fff;
+  max-width: 436px;
+  margin-bottom: 45px;
+}
+
+.type .pricelist-baner .form-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 19px;
+  max-width: 436px;
+  text-align: left;
+}
+
+.type .pricelist-baner .custom-btn-wraper a.btn {
+  background-color: #fff;
+}
+
+.type .pricelist-baner .price-form {
+  max-width: 275px;
+}
+
+.type .pricelist-baner .price-form input {
+  width: 100%;
+  border: none;
+  border-radius: 100px;
+  margin-bottom: 13px;
+}
+
+.type .pricelist-baner .price-form input[type="text"] {
+  padding: 25px 39px;
+  background-color: #fff;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #959a9d;
+}
+
+.type .pricelist-baner .price-form input[type="text"]::-webkit-input-placeholder {
+  padding-left: 39px;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #959a9d;
+}
+
+.type .pricelist-baner .price-form input[type="text"]:-ms-input-placeholder {
+  padding-left: 39px;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #959a9d;
+}
+
+.type .pricelist-baner .price-form input[type="text"]::-ms-input-placeholder {
+  padding-left: 39px;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #959a9d;
+}
+
+.type .pricelist-baner .price-form input[type="text"]::placeholder {
+  padding-left: 39px;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #959a9d;
+}
+
+.type .pricelist-baner .price-form input[type="submit"] {
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background: #ffc24d;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+  padding: 25px 15px;
+}
+
+.type .pricelist-baner .polici-wraper .polici-text,
+.type .pricelist-baner .polici-wraper a {
+  color: #fff;
+}
+
+.examples {
+  position: relative;
+  top: -5px;
+  padding: 50px 0;
+  background-color: #f2f9ff;
+}
+
+.examples .main-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.examples .main-desc {
+  text-align: center;
+  max-width: 541px;
+  margin-bottom: 48px;
+}
+
+.examples .example-list {
+  max-width: 621px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(29, 31, 33, 0.12);
+          box-shadow: 0px 0px 20px rgba(29, 31, 33, 0.12);
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.examples .example-list .example-item {
+  max-width: 216px;
+  background: #ffc24d;
+  border-radius: 100px;
+  padding: 28px 30px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 100px;
+}
+
+.examples .example-list .example-item a {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #4b5258;
+}
+
+.examples .example-list .example-item:hover {
+  background-color: #ffc24d;
+}
+
+.examples .example-list .example-item:hover a {
+  color: #fff;
+}
+
+.examples .example-list .active-item {
+  background-color: #ffc24d;
+}
+
+.examples .example-list .active-item a {
+  color: #fff;
+}
+
+.examples .example-img {
+  display: block;
+  border-radius: 30px;
+}
+
+.slider {
+  position: relative;
+  top: -7px;
+  background-image: url(../img/green-bg-bt.svg);
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 130px 0;
+}
+
+.slider .photo-wraper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.slider .photo-wraper .line {
+  position: absolute;
+  top: 0;
+  left: 49.5%;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  z-index: 4;
+  cursor: move;
+}
+
+.slider .photo-wraper .line::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 63px;
+  width: 63px;
+  background-image: url(../img/slider-clip-btn.svg);
+  background-size: 100%;
+}
+
+.slider .photo-wraper .photo-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.slider .photo-wraper .photo-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.slider .main-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slider .main-desc {
+  text-align: center;
+  max-width: 541px;
+  margin-bottom: 54px;
+}
+
+.slider .slider-wraper {
+  position: relative;
+  max-width: 1024px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.slider .slider-wraper .text-wraper {
+  padding: 60px 50px;
+}
+
+.slider .slider-wraper .text-wraper .slide-title {
+  font-family: "Mont";
+  font-size: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #4b5258;
+  margin-bottom: 25px;
+}
+
+.slider .slider-wraper .text-wraper .slide-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #4b5258;
+  margin-bottom: 6px;
+}
+
+.slider .slider-wraper .text-wraper .slide-desc .desc {
+  font-weight: 400;
+}
+
+.slider .slider-wraper .text-wraper .slide-btn {
+  display: block;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #43aaff;
+  margin: 7px 0 0;
+  width: 206px;
+  border: 1px solid #43aaff;
+  border-radius: 100px;
+  padding: 20px;
+}
+
+.payment {
+  position: relative;
+  padding: 138px 0 210px;
+  background-image: url(../img/payment.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.payment .main-title {
+  font-family: "Mont";
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 600;
+  color: #4b5258;
+  max-width: 510px;
+  margin-bottom: 10px;
+}
+
+.payment .main-desc {
+  font-family: "Mont";
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 600;
+  color: #959a9d;
+  max-width: 457px;
+  margin-bottom: 41px;
+}
+
+.payment .contact-wraper {
+  max-width: 352px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 33px;
+}
+
+.payment .contact-wraper .payment-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #4b5258;
+  max-width: 290px;
+  margin-bottom: 10px;
+}
+
+.payment .contact-wraper .btn {
+  position: relative;
+  display: block;
+  height: 70px;
+  width: 125px;
+  border-radius: 20px;
+  margin: 0 5px 18px;
+}
+
+.payment .contact-wraper .btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.payment .contact-wraper .tg {
+  background-color: #43aaff;
+}
+
+.payment .contact-wraper .wha {
+  background-color: #7ad06d;
+}
+
+.payment .contact-wraper .reword-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #959a9d;
+  margin-left: 10px;
+}
+
+.inventar {
+  padding: 33px 0 48px;
+}
+
+.inventar img {
+  display: block;
+}
+
+.inventar .main-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.inventar .main-desc {
+  text-align: center;
+  max-width: 541px;
+  margin-bottom: 57px;
+  color: #959a9d;
+}
+
+.inventar .inventar-item {
+  max-width: 218px;
+  margin-bottom: 37px;
+}
+
+.inventar .inventar-item img {
+  margin-bottom: 16px;
+}
+
+.inventar .inventar-item .inventar-title {
+  font-family: "Mont";
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #4b5258;
+  margin-bottom: 6px;
+}
+
+.inventar .inventar-item .inventar-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: center;
+  color: #4b5258;
+}
+
+.inventar .inventar-form {
+  max-width: 275px;
+}
+
+.inventar .inventar-form input[type="text"] {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #959a9d;
+  width: 100%;
+  margin-bottom: 11px;
+  padding: 28px 56px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  display: block;
+  outline: none;
+}
+
+.inventar .inventar-form input[type="submit"] {
+  display: block;
+  font-family: "Mont";
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #ffc24d;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+  padding: 28px 10px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  border-radius: 100px;
+  width: 275px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+.inventar .inventar-form .polici-wraper {
+  max-width: 269px;
+}
+
+.inventar .inventar-form .polici-wraper .polici {
+  margin-right: 13px;
+}
+
+.inventar .inventar-form .polici-wraper .polici-text,
+.inventar .inventar-form .polici-wraper a {
+  color: #959a9d;
+}
+
+.gift {
+  position: relative;
+  padding: 135px 0 150px;
+  background-image: url(../img/gift-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gift .gift-title {
+  font-family: "Mont";
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 501px;
+  margin-bottom: 36px;
+}
+
+.gift .gift-title .main-sm-title {
+  font-weight: 600;
+}
+
+.gift .gift-block {
+  max-width: 409px;
+  padding: 23px 26px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border-radius: 30px;
+}
+
+.gift .gift-block img {
+  height: 70px;
+  width: 70px;
+}
+
+.gift .text-wraper {
+  margin-left: 23px;
+}
+
+.gift .gift-block-title {
+  font-family: "Mont";
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #4b5258;
+}
+
+.gift .gift-block-desc {
+  font-family: "Mont";
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #959a9d;
+  margin-bottom: 10px;
+}
+
+.gift .gift-btn {
+  font-family: "Mont";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #43aaff;
+  width: 150px;
+  border: 2px solid #43AAFF;
+  border-radius: 10px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.sertificats {
+  padding: 50px 0 30px;
+}
+
+.sertificats .main-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sertificats .main-desc {
+  text-align: center;
+}
+
+.order {
+  padding: 60px 0 0;
+}
+
+.order .order-container {
+  background-image: url(../img/order-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 30px;
+  padding: 49px 59px 59px;
+}
+
+.order .order-container .order-title {
+  font-family: "Mont";
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: #fff;
+  max-width: 340px;
+}
+
+.order .order-container .order-title .order-sm {
+  font-weight: 600;
+}
+
+.order .order-container .order-btn {
+  display: block;
+  width: 306px;
+  font-family: "Mont";
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 25px 30px;
+  background: #ffc24d;
+  -webkit-box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.order .order-container .order-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.order .order-container .messager-wraper .btn {
+  width: 140px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 60px;
+  margin: 0 5px 25px;
+}
+
+.order .order-container .contact-info a {
+  font-family: "Mont";
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.order .order-container .contact-info .work-days {
+  position: relative;
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+.order .order-container .contact-info .work-days:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #20ff87;
+}
+
+.question {
+  padding: 95px 0 0;
+}
+
+.question .main-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.question .question-list {
+  margin-bottom: 12px;
+}
+
+.question .question-list .question-item {
+  position: relative;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 25px 30px;
+  margin-bottom: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.question .question-list .question-item:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 30px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #43aaff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  background-image: url(../img/arrowDown.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.question .question-list .question-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.question .question-list .question-item:hover:after {
+  -webkit-transform: translateY(-50%) scale(1.05);
+          transform: translateY(-50%) scale(1.05);
+}
+
+.question .question-list .question-item .question-title {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #4b5258;
+}
+
+.question .question-list .question-item .question-desc {
+  font-family: "Mont";
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #4b5258;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.question .question-list .show .question-desc {
+  height: auto;
+  opacity: 1;
+}
+
+.question .question-list .show:hover:after {
+  -webkit-transform: rotate(-180deg) translateY(-50%) scale(1.05);
+          transform: rotate(-180deg) translateY(-50%) scale(1.05);
+}
+
+.question .question-list .show:after {
+  -webkit-transform: rotate(-180deg) translateY(-50%);
+          transform: rotate(-180deg) translateY(-50%);
+}
+
+footer {
+  padding: 0 0 56px;
+}
+
+footer a,
+footer .footer-text {
+  font-family: "Mont";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+  color: #4b5258;
+}
+
+footer img {
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 995px) {
+  header .logo {
+    z-index: 5;
+  }
+  header .responcive-btn {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #43aaff;
+    border-radius: 5px;
+    z-index: 5;
+    background: transparent;
+    padding: 10px 5px;
+  }
+  header .responcive-btn .btn-row {
+    height: 3px;
+    width: 100%;
+    background-color: #43aaff;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  header .responce-wraper {
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    min-height: 100vh;
+    width: 100vw;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    z-index: 2;
+  }
+  header .hide {
+    position: absolute;
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  .calculation .cat-list .cat-item {
+    width: 100%;
+  }
+  .calculation .cat-list .cat-item a {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .calculation .calc-container {
+    padding: 40px 0;
+  }
+  .calculation .calc-container .phone-img,
+  .calculation .calc-container .img-wraper {
+    display: none;
+  }
+  .services .block {
+    padding-top: 20px;
+  }
+  .services .block img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #43aaff;
+    margin: 0px auto 20px auto;
+    display: block;
+  }
+  .services .block .services-block-title,
+  .services .block .services-block-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .services .our-work .consalting-container {
+    padding: 42px 20px;
+  }
+  .services .our-work .consalting-container .consalting-form {
+    width: 100%;
+  }
+  .services .our-work .consalting-container .consalting-form input[type="text"] {
+    margin: 0;
+    width: 60%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .services .our-work .consalting-container .consalting-form input[type="submit"] {
+    margin: 0;
+    width: 40%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
