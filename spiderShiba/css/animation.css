@@ -1,0 +1,144 @@
+/*
+The CSS export should solely be used as a reference.
+For a more detailed animation export the JSON file should be used.
+*/
+#Ellipse_8 {
+    transform: translateX(-50%) translateY(-50%);
+    animation: Ellipse_8__rotation__1 324ms 0ms ease-in forwards, Ellipse_8__rotation__2 241ms 324ms ease-out forwards, Ellipse_8__rotation__3 432ms 565ms linear forwards;
+}
+
+@keyframes Ellipse_8__rotation__1 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(150deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(150deg);
+    }
+}
+@keyframes Ellipse_8__rotation__2 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(150deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(20deg);
+    }
+}
+@keyframes Ellipse_8__rotation__3 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(20deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(150deg);
+    }
+}
+
+#Ellipse_9 {
+    transform: translateX(-50%) translateY(-50%);
+    animation: Ellipse_9__rotation__1 0ms 0ms linear forwards, Ellipse_9__rotation__2 203ms 0ms ease-in forwards, Ellipse_9__rotation__3 397ms 203ms ease-in-out forwards, Ellipse_9__rotation__4 397ms 600ms linear forwards;
+}
+
+@keyframes Ellipse_9__rotation__1 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(20deg);
+    }
+}
+@keyframes Ellipse_9__rotation__2 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(20deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(30deg);
+    }
+}
+@keyframes Ellipse_9__rotation__3 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(30deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(20deg);
+    }
+}
+@keyframes Ellipse_9__rotation__4 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(20deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+}
+
+#Ellipse_10 {
+    transform: translateX(-50%) translateY(-50%);
+    animation: Ellipse_10__rotation__1 300ms 0ms ease-in forwards, Ellipse_10__rotation__2 300ms 300ms ease-in-out forwards, Ellipse_10__rotation__3 397ms 600ms linear forwards;
+}
+
+@keyframes Ellipse_10__rotation__1 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(80deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(50deg);
+    }
+}
+@keyframes Ellipse_10__rotation__2 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(50deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(80deg);
+    }
+}
+@keyframes Ellipse_10__rotation__3 {
+    from {
+        transform: translateX(-50%) translateY(-50%) rotate(80deg);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+}
+
+#SpiderShiba_Inu {
+    transform: translateX(-50%) translateY(-50%);
+    animation: SpiderShiba_Inu__opacity__1 300ms 0ms linear forwards, SpiderShiba_Inu__opacity__2 377ms 300ms linear forwards, SpiderShiba_Inu__opacity__3 372ms 677ms linear forwards;
+}
+
+@keyframes SpiderShiba_Inu__opacity__1 {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+@keyframes SpiderShiba_Inu__opacity__2 {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+@keyframes SpiderShiba_Inu__opacity__3 {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
