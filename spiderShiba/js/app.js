@@ -41,7 +41,6 @@ window.addEventListener("load", function () {
 	cir[0].parentElement.style.height = w + "px";
 	for (let i = 0; i < cir.length; i++) {
 		let text = document.createElement("text");
-
 		cir[i].setAttribute("r", "45%");
 		if (radius === null || circulance === null) {
 			radius = cir[i].getBoundingClientRect().height / 2;
