@@ -1,15 +1,16 @@
 window.addEventListener("load", function () {
-	let adres = document.querySelector("#contractAdres"),
-		modal = document.querySelector(".modal-wraper"),
-		adresMsg = document.querySelector("#copiedMsg");
-	adres.addEventListener("click", function (e) {
-		let data = e.target.textContent;
-		navigator.clipboard.writeText(data);
-		adresMsg.classList.remove("hideMsg");
-		setTimeout(() => {
-			adresMsg.classList.add("hideMsg");
-		}, 1500);
-	});
+	let adres = document.querySelectorAll(".adress-copied");
+	for (let i = 0; i < adres.length; i++) {
+		adres[i].addEventListener("click", function (e) {
+			let data = this.textContent;
+			let adresMsg = this.parentElement.querySelector(".copiedMsg");
+			navigator.clipboard.writeText(data);
+			adresMsg.classList.remove("hideMsg");
+			setTimeout(() => {
+				adresMsg.classList.add("hideMsg");
+			}, 1500);
+		});
+	}
 
 	// running text
 	let num = 200;
@@ -18,11 +19,9 @@ window.addEventListener("load", function () {
 	}
 	function runningText() {
 		let marq = document.querySelector("#marq");
-
 		let text = document.createElement("p");
 		text.className = "marq-text";
 		text.innerText = "WARNING: this is not a meme coin";
-
 		marq.appendChild(text);
 	}
 	// toggle menu
@@ -48,11 +47,8 @@ window.addEventListener("load", function () {
 			radius = cir[i].getBoundingClientRect().height / 2;
 			circulance = 2 * Math.PI * radius;
 		}
-		console.log(radius, circulance);
 		let fillColor = cir[i].dataset.fill,
 			strokeDash = cir[i].dataset.percent;
-
-		console.log(percent);
 		cir[i].style.stroke = fillColor;
 		cir[i].style.strokeDasharray = (strokeDash * circulance) / 100 + ` ${circulance - (strokeDash * circulance) / 100}`;
 		cir[i].style.strokeDashoffset = "-" + (percent * circulance) / 100;
@@ -67,7 +63,6 @@ window.addEventListener("load", function () {
 			for (let a = 0; a < item.length; a++) {
 				item[a].classList.remove("active");
 			}
-
 			this.classList.toggle("active");
 		});
 	}

@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: ;
+  font-size: 16px;
 }
 img {
   height: auto;
@@ -187,6 +187,8 @@ a:hover {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.494);
   cursor: pointer;
+  max-width: 400px;
+  overflow: hidden;
 }
 .contract-wraper .copiedMsg {
   position: absolute;
@@ -259,6 +261,10 @@ a:hover {
   position: relative;
   padding: 50px 0 0;
   background-color: #101932;
+  background-image: url(../img/partner-bg.png);
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  background-size: 40%;
   overflow: hidden;
 }
 .more .more-list {
@@ -275,70 +281,6 @@ a:hover {
 }
 .more .more-list li img:hover {
   opacity: 1;
-}
-.more .net {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 50%;
-  background-image: url(../img/net.png);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  aspect-ratio: 1/1;
-}
-.more .net .icon-orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80%;
-  width: 80%;
-  border-radius: 50%;
-  -webkit-animation: 20s linear 0s infinite rotate-icon;
-  animation: 20s linear 0s infinite rotate-icon;
-}
-.more .net .icon-orbit .refresh-icon {
-  position: absolute;
-  right: 0;
-  top: 50%;
-}
-.more .net .icon-orbit .video-icon {
-  position: absolute;
-  left: 0;
-  top: 50%;
-}
-.more .net .icon-orbit .tringle-icon {
-  position: absolute;
-  left: 50%;
-  bottom: 0%;
-}
-@-webkit-keyframes rotate-icon {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-@keyframes rotate-icon {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-.more .net .img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.more .net .shiba {
-  height: 180px;
-  width: 193px;
 }
 .more .more-title {
   position: relative;
@@ -409,7 +351,7 @@ a:hover {
   margin-top: 30px;
 }
 .play {
-  padding: 50px 0 175px;
+  padding: 50px 0 145px;
   background-color: #101932;
 }
 .play .main-title {
@@ -453,6 +395,7 @@ a:hover {
 .block {
   padding: 36px 30px;
   border-radius: 30px;
+  margin-bottom: 30px;
 }
 .block img {
   height: 100%;
@@ -697,9 +640,6 @@ a:hover {
   color: #ffffff;
   opacity: 0.6;
 }
-.team .partner-list {
-  margin-bottom: ;
-}
 .team .partner-list img {
   opacity: 0.7;
   margin-bottom: 20px;
@@ -711,6 +651,8 @@ a:hover {
 .tokenomics {
   padding: 70px 0 130px;
   background-color: #101d3f;
+}
+.tokenomics .main-title {
   margin-bottom: 60px;
 }
 .blue {
@@ -862,6 +804,7 @@ svg {
   margin-bottom: 80px;
 }
 .comunity .comunity-list img {
+  margin: 15px;
   opacity: 0.8;
   transition: 0.4s;
 }
@@ -882,6 +825,7 @@ svg {
   transform: scale(1.5);
 }
 .comunity .adres-wraper {
+  position: relative;
   max-width: 700px;
   padding: 23px 55px;
   background: rgba(0, 0, 0, 0.3);
@@ -902,6 +846,38 @@ svg {
   font-size: 25px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.8);
+  max-width: 400px;
+  overflow: hidden;
+}
+.comunity .adres-wraper .copiedMsg {
+  position: absolute;
+  top: 110px;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(156, 255, 152, 0.704);
+  color: #fff;
+  border-radius: 5px;
+  font-family: "SF Pro Display", "Roboto", sans-serif;
+  font-size: 16px;
+  transition: 0.4s;
+}
+.comunity .adres-wraper .copiedMsg:after {
+  position: absolute;
+  content: "";
+  top: -8px;
+  left: 5px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(156, 255, 152, 0.704);
+}
+.comunity .adres-wraper .hideMsg {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  width: 0;
 }
 footer {
   padding: 40px 0;
@@ -995,32 +971,87 @@ footer .copyr {
   }
 }
 @media screen and (max-width: 1190px) {
+  .roadmap .roadmap-list .roadmap-item:nth-child(1)::before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    left: -12%;
+    top: 205px;
+    width: 2px;
+    background-color: #384d70;
+  }
   .roadmap .roadmap-list .right {
     width: 85%;
-    left: 0;
+    left: 10%;
     margin-bottom: 20px;
   }
   .roadmap .roadmap-list .right::after {
-    left: auto;
-    right: -12.8%;
+    left: -12.8%;
   }
   .roadmap .roadmap-list .left {
+    left: 10%;
     width: 85%;
     margin-bottom: 20px;
   }
   .roadmap .roadmap-list .left::after {
-    right: -12.8%;
+    left: -12.8%;
   }
   .roadmap .roadmap-list::after {
-    left: 95%;
+    left: 0%;
   }
 }
 @media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 40px;
+  }
+  .head-title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .head-block .main-sm-desc {
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .head-block .main-md-desc {
+    font-size: 22px;
+    line-height: 26px;
+  }
   .head-block .btn-wraper .btn {
     width: 100%;
     margin: 0 0 15px;
   }
+  .head-block .contract-wraper {
+    margin-bottom: 30px;
+  }
   .head-block .contract-wraper .contract-adres {
-    font-size: 15px;
+    font-size: 14px;
+  }
+  .more {
+    padding-top: 20px;
+    background-size: 80%;
+    background-position: center 0%;
+  }
+  .more .more-list li {
+    max-width: 115px;
+    margin: 5px;
+  }
+  .play .play-wraper img {
+    margin-bottom: 30px;
+  }
+  .play .block img {
+    height: auto;
+  }
+  .roadmap .roadmap-list:after {
+    height: 92.2%;
+  }
+  .roadmap .roadmap-list .item-num-wraper {
+    margin-bottom: 30px;
+  }
+  .team .partner-list li {
+    max-width: 115px;
+    margin: 5px;
+  }
+  .comunity .adres-wraper .adres {
+    font-size: 14px;
   }
 }

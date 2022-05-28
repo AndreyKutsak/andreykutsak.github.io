@@ -12,6 +12,10 @@ $("#slider").owlCarousel({
 			items: 1,
 			margin: 0,
 		},
+		400: {
+			items: 2,
+			margin: 5,
+		},
 		800: {
 			items: 4,
 			nav: false,
