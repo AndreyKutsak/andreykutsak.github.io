@@ -231,7 +231,7 @@ a:hover {
   font-weight: 500;
   color: #fff50099;
   padding: 0 8px;
-  min-width: 220px;
+  min-width: 280px;
   -webkit-animation-name: moveText;
   animation-name: moveText;
   -webkit-animation-timing-function: infinite;
@@ -695,7 +695,7 @@ a:hover {
 .colors .haph:last-child {
   margin-left: 20%;
 }
-svg {
+.tokenomics {
   background-image: url(../img/shiba-image.svg);
   background-position: center center;
   background-repeat: no-repeat;
