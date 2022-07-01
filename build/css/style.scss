@@ -1,0 +1,84 @@
+@import "../../src/css/varibles.scss";
+@import "../../src/css/functions.scss";
+// main-titles
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+html {
+  font-size: 16px;
+}
+.main-user-name {
+  font-family: $Ghotam;
+  font-size: size(14);
+  line-height: size(13);
+  color: $black600;
+}
+.user-name {
+  font-family: $Ghotam;
+  font-size: size(14);
+  line-height: 15px;
+  font-weight: 600;
+  color: $black600;
+}
+
+.sidebar-title {
+  font-family: $Ghotam;
+  font-size: size(12);
+  font-weight: bold;
+  line-height: size(11);
+  text-transform: uppercase;
+  color: $black600;
+}
+.post-desc {
+  font-family: $Ghotam;
+  font-size: size(14);
+  line-height: 150%;
+  color: $black600;
+}
+.footer-title {
+  font-family: $Ghotam;
+  font-size: size(12);
+  font-weight: 600;
+  line-height: size(11);
+  color: $black600;
+}
+.container {
+  max-width: size(1200);
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.content-bg {
+  padding: 40px 0;
+  background-color: $mainBg;
+  .main-wraper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content-container {
+    max-width: size(850);
+  }
+}
+.preloader-wraper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .preload-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+@media screen and(max-width:1335px) {
+  html {
+    font-size: 10px;
+  }
+}
