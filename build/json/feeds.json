@@ -1,0 +1,86 @@
+{
+  "pageType": "feeds",
+  "posts": {
+    "id1": {
+      "usersLiked": ["Ted Bell", "Annette Nguyen", "Cody Hawkins"],
+      "useravatarSrc": "/img/post-user-1.png",
+      "userName": "Theresa Steward",
+      "userJob": "iOS developer",
+      "userPostDesc": "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins).",
+      "postLikeCount": "42",
+      "comented": "9",
+      "postPhoto": false,
+      "loadedFile": false
+    },
+    "id2": {
+      "usersLiked": ["Ted Bell", "Annette Nguyen", "Cody Hawkins"],
+      "useravatarSrc": "/img/post-user-1.png",
+      "userName": "Theresa Steward",
+      "userJob": "iOS developer",
+      "userPostDesc": "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins).",
+      "postLikeCount": "42",
+      "comented": "9",
+      "postPhoto": false,
+      "loadedFile": false
+    },
+    "id3": {
+      "usersLiked": ["Ted Bell", "Annette Nguyen", "Cody Hawkins"],
+      "useravatarSrc": "/img/post-user-2.png",
+      "userName": "Theresa Steward",
+      "userJob": "iOS developer",
+      "userPostDesc": "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins).",
+      "postLikeCount": "42",
+      "comented": "7",
+      "postPhoto": false,
+      "loadedFile": false
+    },
+    "id4": {
+      "usersLiked": ["Ted Bell", "Annette Nguyen", "Cody Hawkins"],
+      "useravatarSrc": "/img/post-user-3.png",
+      "userName": "Theresa Steward",
+      "userJob": "iOS developer",
+      "userPostDesc": "What did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on tWhat did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins).",
+      "postLikeCount": "42",
+      "comented": "9",
+      "postPhoto": false,
+      "loadedFile": false
+    },
+    "id5": {
+      "usersLiked": ["Ted Bell", "Annette Nguyen", "Cody Hawkins"],
+      "useravatarSrc": "/img/post-user-4.png",
+      "userName": "Theresa Steward",
+      "userJob": "iOS developer",
+      "userPostDesc": "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins).",
+      "postLikeCount": "42",
+      "comented": "8",
+      "postPhoto": "./img/post-img.jpg",
+      "loadedFile": {
+        "file": {
+          "iconSrc": "img/file-ico.png",
+          "fileName": "iOS 11 guidelines for UX/UI designers",
+          "fileType": "PDF file",
+          "fileSize": " 324 kb",
+          "fileDownloadLink": "/files/test.pdf"
+        },
+        "file1": {
+          "iconSrc": "img/file-ico.png",
+          "fileName": "iOS 11 guidelines for UX/UI designers",
+          "fileType": "PDF file",
+          "fileSize": " 324 kb",
+          "fileDownloadLink": "/files/test.pdf"
+        }
+      }
+    },
+    "id6": {
+      "usersLiked": ["Ted Bell", "Annette Nguyen", "Cody Hawkins"],
+      "useravatarSrc": "/img/post-user-1.png",
+      "userName": "Theresa Steward",
+      "userJob": "iOS developer",
+      "userPostDesc": "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins).",
+      "postLikeCount": "42",
+      "comented": "9",
+      "postPhoto": false,
+      "loadedFile": false
+    }
+  }
+}
