@@ -3,116 +3,24 @@
     "userImg": "https://media-exp1.licdn.com/dms/image/C4D03AQGiFgdLljHq_w/profile-displayphoto-shrink_200_200/0/1613123424589?e=1661990400&v=beta&t=M3Dve6p6YaYKp2uA0Sio5yNVN9FRqssEg8XOXOcHJTM",
     "userName": "Viktoriya Ivanonvna",
     "chatLink": "../json/viktoria.json",
-    "chat": {
-      "msg1": { "msg": "hello", "time": "20.12.20220 14:07:22", "user": "me" },
-      "msg2": {
-        "msg": "hello",
-        "time": "20.12.20220 14:07:26",
-        "user": "ivan"
-      },
-      "msg3": {
-        "msg": "how are you ",
-        "time": "20.12.20220 14:07:28",
-        "user": "me"
-      },
-      "msg4": {
-        "msg": "i`m fine",
-        "time": "20.12.20220 14:07:32",
-        "user": "ivan"
-      },
-      "msg5": {
-        "msg": "and you",
-        "time": "20.12.20220 14:07:35",
-        "user": "me"
-      },
-      "msg6": { "msg": "fine", "time": "20.12.20220 14:07:3", "user": "ivan" }
-    }
+    "time": "20.12.20220 14:07:22"
   },
   "chat2": {
     "userImg": "https://media-exp1.licdn.com/dms/image/C4D03AQFbzQes7h5y0g/profile-displayphoto-shrink_400_400/0/1582739380919?e=1661990400&v=beta&t=K1W-RNaUe5BjP8GY-ppbxpLvsstwAmBx0bIer5KpUBA",
     "userName": "Anna Velichko",
-    "chatLink": "../json/viktoria.json",
-    "chat": {
-      "msg1": { "msg": "hello", "time": "20.12.20220 14:07:22", "user": "me" },
-      "msg2": {
-        "msg": "hello",
-        "time": "20.12.20220 14:07:26",
-        "user": "ivan"
-      },
-      "msg3": {
-        "msg": "how are you ",
-        "time": "20.12.20220 14:07:28",
-        "user": "me"
-      },
-      "msg4": {
-        "msg": "i`m fine",
-        "time": "20.12.20220 14:07:32",
-        "user": "ivan"
-      },
-      "msg5": {
-        "msg": "and you",
-        "time": "20.12.20220 14:07:35",
-        "user": "me"
-      },
-      "msg6": { "msg": "fine", "time": "20.12.20220 14:07:3", "user": "ivan" }
-    }
+    "chatLink": "../json/anna.json",
+    "time": "20.12.20220 14:07:22"
   },
   "chat3": {
     "userImg": "https://media-exp1.licdn.com/dms/image/C5603AQFBuWUTv9kvGg/profile-displayphoto-shrink_800_800/0/1517441975378?e=1661990400&v=beta&t=tKIvHSk9qvW9ueanEJNKGMZAUlPEcpA9aOiXPrNjewc",
     "userName": "Andrey Ivanov",
-    "chatLink": "../json/viktoria.json",
-    "chat": {
-      "msg1": { "msg": "hello", "time": "20.12.20220 14:07:22", "user": "me" },
-      "msg2": {
-        "msg": "hello",
-        "time": "20.12.20220 14:07:26",
-        "user": "ivan"
-      },
-      "msg3": {
-        "msg": "how are you ",
-        "time": "20.12.20220 14:07:28",
-        "user": "me"
-      },
-      "msg4": {
-        "msg": "i`m fine",
-        "time": "20.12.20220 14:07:32",
-        "user": "ivan"
-      },
-      "msg5": {
-        "msg": "and you",
-        "time": "20.12.20220 14:07:35",
-        "user": "me"
-      },
-      "msg6": { "msg": "fine", "time": "20.12.20220 14:07:3", "user": "ivan" }
-    }
+    "chatLink": "../json/andrey.json",
+    "time": "20.12.20220 14:07:22"
   },
   "chat4": {
     "userImg": "https://media-exp1.licdn.com/dms/image/C4E03AQFKmvPcgstoFw/profile-displayphoto-shrink_800_800/0/1516928053393?e=1661990400&v=beta&t=AqaaDxaybkjobdB4_PFc7_cVpd0NwkrEL4gqsBdnx_c",
     "userName": "Anton Pushilin",
-    "chatLink": "../json/viktoria.json",
-    "chat": {
-      "msg1": { "msg": "hello", "time": "20.12.20220 14:07:22", "user": "me" },
-      "msg2": {
-        "msg": "hello",
-        "time": "20.12.20220 14:07:26",
-        "user": "ivan"
-      },
-      "msg3": {
-        "msg": "how are you ",
-        "time": "20.12.20220 14:07:28",
-        "user": "me"
-      },
-      "msg4": {
-        "msg": "i`m fine",
-        "time": "20.12.20220 14:07:32",
-        "user": "ivan"
-      },
-      "msg5": {
-        "msg": "and you",
-        "time": "20.12.20220 14:07:35",
-        "user": "me"
-      },
-      "msg6": { "msg": "fine", "time": "20.12.20220 14:07:3", "user": "ivan" }
-    }
+    "chatLink": "../json/anton.json",
+    "time": "20.12.20220 14:07:22"
   }
 }

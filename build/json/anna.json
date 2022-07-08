@@ -1,0 +1,36 @@
+{
+  "user": "Anna Velichko",
+  "msg": {
+    "msg1": {
+      "msg": "hello",
+      "time": "20.12.20220 14:07:22",
+      "user": "me",
+      "class": "right"
+    },
+    "msg2": {
+      "msg": "hello",
+      "time": "20.12.20220 14:07:26",
+      "user": "ivan",
+      "class": "left"
+    },
+    "msg3": {
+      "msg": "how are you ",
+      "time": "20.12.20220 14:07:28",
+      "user": "me",
+      "class": "right"
+    },
+    "msg4": {
+      "msg": "i`m fine",
+      "time": "20.12.20220 14:07:32",
+      "user": "ivan",
+      "class": "left"
+    },
+    "msg5": {
+      "msg": "and you",
+      "time": "20.12.20220 14:07:35",
+      "user": "me",
+      "class": "right"
+    },
+    "msg6": { "msg": "fine", "time": "20.12.20220 14:07:3", "user": "ivan" }
+  }
+}

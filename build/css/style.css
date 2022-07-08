@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Gotam;
+  src: url(../fonts/Gotham-Thin.woff);
+  src: url(../fonts/GothamBold.woff);
+  src: url(../fonts/GothamLight.woff);
+  src: url(../fonts/GothamMedium.woff);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,14 +26,14 @@ html {
 }
 
 .main-user-name {
-  font-family: "Ghotem", "Roboto", sans-serif;
+  font-family: "Gotam", "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 0.8125rem;
   color: #181818;
 }
 
 .user-name {
-  font-family: "Ghotem", "Roboto", sans-serif;
+  font-family: "Gotam", "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 15px;
   font-weight: 600;
@@ -33,7 +41,7 @@ html {
 }
 
 .sidebar-title {
-  font-family: "Ghotem", "Roboto", sans-serif;
+  font-family: "Gotam", "Roboto", sans-serif;
   font-size: 0.75rem;
   font-weight: bold;
   line-height: 0.6875rem;
@@ -42,14 +50,14 @@ html {
 }
 
 .post-desc {
-  font-family: "Ghotem", "Roboto", sans-serif;
+  font-family: "Gotam", "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 150%;
   color: #181818;
 }
 
 .footer-title {
-  font-family: "Ghotem", "Roboto", sans-serif;
+  font-family: "Gotam", "Roboto", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 0.6875rem;
@@ -65,6 +73,7 @@ html {
 .content-bg {
   padding: 40px 0;
   background-color: #e5e5e5;
+  overflow: hidden;
 }
 
 .content-bg .main-wraper {
@@ -90,13 +99,20 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 1335px) {
   html {
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content-container {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

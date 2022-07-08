@@ -1,5 +1,12 @@
 @import "../../src/css/varibles.scss";
 @import "../../src/css/functions.scss";
+@font-face {
+  font-family: "Gotam";
+  src: url(../fonts/Gotham-Thin.woff);
+  src: url(../fonts/GothamBold.woff);
+  src: url(../fonts/GothamLight.woff);
+  src: url(../fonts/GothamMedium.woff);
+}
 // main-titles
 * {
   box-sizing: border-box;
@@ -58,6 +65,7 @@ html {
 .content-bg {
   padding: 40px 0;
   background-color: $mainBg;
+  overflow: hidden;
   .main-wraper {
     display: flex;
     justify-content: space-between;
@@ -74,11 +82,17 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
   }
 }
 @media screen and(max-width:1335px) {
   html {
     font-size: 10px;
+  }
+}
+@media screen and(max-width:900px) {
+  .content-container {
+    width: 100%;
+    margin: 0 auto;
   }
 }
