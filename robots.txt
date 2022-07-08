@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /*html
-Allow: /*css
-Allow: /*jpg
-Allow:/*png
-Allow:/*js
-host: https://github.andreykutsak.github.io

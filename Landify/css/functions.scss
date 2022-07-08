@@ -1,4 +1,0 @@
-@function rem($size) {
-  $convSize: ($size / 16) + rem;
-  @return $convSize;
-}
