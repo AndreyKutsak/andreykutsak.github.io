@@ -1,0 +1,42 @@
+html {
+  font-size: 12px;
+}
+.head-section {
+  .partner-wraper {
+    .partner-list {
+      li {
+        width: 50%;
+      }
+    }
+  }
+}
+// choice
+.choice {
+  .fx-container {
+    .block {
+      width: 100%;
+    }
+  }
+}
+
+// invest{
+
+.invest {
+  .fx-container {
+    .img-wraper {
+      .arrow-up {
+        transform: translateX(-45%);
+      }
+    }
+  }
+}
+// subscribe form
+.subscribe {
+  .form-bg {
+    .subscribe-form {
+      input[type="submit"] {
+        width: 30%;
+      }
+    }
+  }
+}

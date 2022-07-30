@@ -1,0 +1,18 @@
+// invest
+.invest {
+  .fx-container .img-wraper {
+    .text-wraper {
+      border-radius: 0;
+    }
+    .invest-label {
+      width: 100%;
+      bottom: 0;
+      transform: translate(0, 100%);
+      border-radius: 0 0 10px 10px;
+      .invest-label-text,
+      .invest-label-desc {
+        text-align: center;
+      }
+    }
+  }
+}

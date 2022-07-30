@@ -1,0 +1,20 @@
+@import "varibles.scss";
+@import "functions.scss";
+
+@mixin main-title($fsz, $lh, $color) {
+  font-family: $inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: size($fsz);
+  line-height: size($lh);
+  color: $color;
+  span {
+    color: $orange50;
+  }
+}
+@mixin main-desc($fsz, $lh, $color) {
+  font-family: $gilroy;
+  font-size: size($fsz);
+  line-height: size($lh);
+  color: $color;
+}

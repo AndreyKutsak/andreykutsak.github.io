@@ -1,0 +1,229 @@
+@import "varibles.scss";
+html {
+  font-size: 14px;
+}
+
+.head-section {
+  header.flex-container {
+    position: relative;
+    margin-bottom: 30px;
+    .toggle-btn {
+      position: relative;
+      display: block;
+      height: 50px;
+      width: 50px;
+      margin-left: auto;
+      border: 2px solid $white;
+      border-radius: 3px;
+      padding: 8px;
+      z-index: 5;
+      cursor: pointer;
+      .row {
+        position: absolute;
+        left: 50%;
+        width: 70%;
+        height: 2px;
+        transform-origin: center;
+        border-radius: 3px;
+        background-color: $white;
+        margin-bottom: 11px;
+        transition: 0.4s;
+        &:nth-child(1) {
+          top: 25%;
+          transform: translate(-50%, -25%);
+        }
+        &:nth-child(2) {
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:nth-child(3) {
+          top: 75%;
+          transform: translate(-50%, -75%);
+        }
+      }
+    }
+    .active {
+      .row {
+        &:nth-child(1) {
+          transform-origin: 10%;
+          transform: translate(-50%, -25%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: translate(500%, -50%);
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform-origin: 15%;
+          transform: translate(-50%, -75%) rotate(-45deg);
+        }
+      }
+    }
+    .main-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: $modalBg;
+      transition: 0.4s;
+
+      .head-menu {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 20px;
+        li {
+          text-align: center;
+          width: 100%;
+          a {
+            padding: 15px 0;
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .hide {
+      transform: translateY(-500%);
+    }
+  }
+  .fx-container {
+    flex-direction: column;
+    align-items: center;
+    .block {
+      width: 100%;
+      .text-wraper {
+        width: 100%;
+        .head-title,
+        .head-desc {
+          width: 80%;
+          text-align: center;
+          margin: 15px auto;
+        }
+        .btn-wraper {
+          margin: 15px auto;
+        }
+        .video-wraper {
+          margin: 0 auto;
+        }
+      }
+      .block-lg-image {
+        width: 100%;
+        display: block;
+        margin: 20px auto;
+      }
+    }
+  }
+
+  .partner-wraper {
+    .partner-list {
+      justify-content: center;
+      li {
+        margin: 15px 0;
+        width: 30%;
+      }
+    }
+  }
+}
+// choice
+.choice {
+  padding: 30px 0;
+  &:after {
+    background-image: none;
+  }
+  &:before {
+    background-image: none;
+  }
+  .fx-container {
+    flex-wrap: wrap;
+    .block {
+      width: 38%;
+    }
+  }
+}
+.increase {
+  padding: 30px 0;
+  .fx-container {
+    flex-direction: column;
+    .block {
+      width: 100%;
+      .main-title,
+      .block-desc {
+        width: 100%;
+        margin: 15px auto;
+        text-align: center;
+      }
+      .btn {
+        display: block;
+        max-width: 200px;
+        margin: 20px auto;
+      }
+      .img-wraper {
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+.ways {
+  padding: 30px 0;
+  .fx-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.invest {
+  padding: 30px 0;
+  .fx-container {
+    flex-direction: column;
+    .main-desc,
+    .main-title {
+      text-align: center;
+    }
+    .btn {
+      display: block;
+      margin: 20px auto;
+    }
+    .invest-wraper {
+      margin-right: 0;
+      .img-wraper {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.finding {
+  padding: 30px 0;
+  .fx-container {
+    flex-direction: column;
+    .block {
+      &:nth-child(2) {
+        max-width: 100%;
+      }
+      width: 100%;
+      .finding-title,
+      .finding-desc {
+        margin: 10px auto;
+        text-align: center;
+      }
+      .finding-lg-image {
+        display: block;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+footer {
+  .fx-container,
+  .list-wraper {
+    flex-wrap: wrap;
+    justify-content: center;
+    .logo {
+      margin-right: auto;
+    }
+    .block {
+      width: 40%;
+    }
+  }
+}
